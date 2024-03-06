@@ -17,8 +17,8 @@ function Footer(props) {
                         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                             <div className="col">
                                 <div className="logo">
-                                    <Link to='/' className="flex items-center gap-3">
-                                        <img src={LogoImg} className="h-10" alt="LogoImg"/>
+                                    <Link to='/' className="flex items-center gap-2">
+                                        <img src={LogoImg} className="h-10 w-7" alt="LogoImg"/>
                                         <span className="font-[500] text-xl">nosres</span>
                                     </Link>
                                 </div>
@@ -33,14 +33,14 @@ function Footer(props) {
                                                 className="text-[#525252] hover:text-primary transition cursor-pointer"/>
                                 </div>
                                 <h3 className="mt-8 text-gray-600 font-semibold">Get Newsletter</h3>
-                                <p className="mt-1 text-gray-500 text-[14px]">Sign up for the latest Nosres news and
+                                <p className="mt-1 text-gray-500 text-[12px]">Sign up for the latest Nosres news and
                                     articles. By signing up you are agreeing to
                                     our Privacy Policy.</p>
                             </div>
 
                             <div className="col">
                                 <h3 className="font-semibold text-gray-600">Nosres Inc.</h3>
-                                <ul className="mt-4 space-y-2 text-gray-500 text-[14px]">
+                                <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
                                         <Link to='/'>About Nosres</Link>
                                     </li>
@@ -67,7 +67,7 @@ function Footer(props) {
 
                             <div className="col">
                                 <h3 className="font-semibold text-gray-600">Business Portfolio</h3>
-                                <ul className="mt-4 space-y-2 text-gray-500 text-[14px]">
+                                <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
                                         <Link to='/'>Marketplace</Link>
                                     </li>
@@ -85,7 +85,7 @@ function Footer(props) {
 
                             <div className="col">
                                 <h3 className="font-semibold text-gray-600">Nosres Support</h3>
-                                <ul className="mt-4 space-y-2 text-gray-500 text-[14px]">
+                                <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
                                         <Link to='/'>Support Center</Link>
                                     </li>
@@ -109,7 +109,7 @@ function Footer(props) {
 
                             <div className="col">
                                 <h3 className="font-semibold text-gray-600">Community</h3>
-                                <ul className="mt-4 space-y-2 text-gray-500 text-[14px]">
+                                <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
                                         <Link to='/'>Events</Link>
                                     </li>
@@ -132,7 +132,7 @@ function Footer(props) {
                         <div
                             className="copyright border-t border-gray-400 sm:flex items-center justify-between pt-4 mt-10">
                             <div className="left">
-                                <ul className="flex items-center gap-4 text-gray-500 text-[14px]">
+                                <ul className="flex items-center gap-4 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
                                         <Link to='/'>Terms</Link>
                                     </li>
@@ -146,12 +146,12 @@ function Footer(props) {
                                         <Link to='/'>Sitemap</Link>
                                     </li>
                                 </ul>
-                                <p className="mt-1 text-gray-500 text-[14px]">© {currentYear} Nosres Inc. All rights
+                                <p className="mt-1 text-gray-500 text-[12px]">© {currentYear} Nosres Inc. All rights
                                     reserved</p>
                             </div>
                             <div className="right mt-4 sm:mt-0 flex items-center gap-2">
                                 <img src={FlugImg} className="w-4" alt="FlugImg"/>
-                                <Link to='/' className="text-gray-500 text-[14px]">United States</Link>
+                                <Link to='/' className="text-gray-500 text-[12px]">United States</Link>
                             </div>
                         </div>
                     </footer>

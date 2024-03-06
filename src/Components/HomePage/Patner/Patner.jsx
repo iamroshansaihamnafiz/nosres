@@ -21,8 +21,8 @@ function Patner(props) {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                        <div className="col image-box bg-white shadow">
-                            <img src={patnerImg1} className="w-full" alt="patnerImg"/>
+                        <div className="col image-box bg-white shadow rounded-md">
+                            <img src={patnerImg1} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-4 py-4">
                                 <h2 className="font-semibold">Expand your business</h2>
                                 <p className="mt-3 text-[14px] text-justify">
@@ -35,8 +35,9 @@ function Patner(props) {
                                 </p>
                             </div>
                         </div>
-                        <div className="col image-box bg-white shadow">
-                            <img src={patnerImg3} className="w-full" alt="patnerImg"/>
+
+                        <div className="col image-box bg-white shadow rounded-md">
+                            <img src={patnerImg3} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-4 py-4">
                                 <h2 className="font-semibold">Strengthen your brand</h2>
                                 <p className="mt-3 text-[14px] text-justify">
@@ -47,8 +48,9 @@ function Patner(props) {
                                 </p>
                             </div>
                         </div>
-                        <div className="col image-box bg-white shadow">
-                            <img src={patnerImg2} className="w-full" alt="patnerImg"/>
+
+                        <div className="col image-box bg-white shadow rounded-md">
+                            <img src={patnerImg2} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-4 py-4">
                                 <h2 className="font-semibold">Get exposure to our management team</h2>
                                 <p className="mt-3 text-[14px] text-justify">

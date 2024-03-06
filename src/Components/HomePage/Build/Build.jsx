@@ -10,10 +10,10 @@ function Build(props) {
             <section id="build-section">
                 <div className="container pt-16">
                     <div className="head-wrap text-center">
-                        <h1 className="font-semibold text-xl">
+                        <h1 className="font-semibold text-[24px]">
                             We build products and services to boost businesses growth.
                         </h1>
-                        <p className="mt-3 text-gray-500 text-[14px]">
+                        <p className="mt-3 text-[#ABABAB] text-[16px]">
                             Not only do we give people the possibility to sell their products in a trusted and secure
                             online<br/> marketplace, but we also provide them with the necessary tools and techniques
                             they

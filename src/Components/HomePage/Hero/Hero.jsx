@@ -5,12 +5,15 @@ import {Link} from "react-router-dom";
 function Hero(props) {
     return (
         <>
-            <section id="banner-section" className="bg-cover bg-no-repeat bg-center py-24"
+            <section id="banner-section" className="bg-cover bg-no-repeat bg-center py-[17rem]"
                      style={{backgroundImage: `url(${heroImage})`}}>
                 <div className="container">
                     <h1 className="text-2xl md:text-4xl text-gray-800 font-bold md:font-medium mb-4 capitalize">
                         Nosres is a<br/>
-                        dynamic business<br/>
+                        <span className="text-[#147EBD]">
+                            dynamic business
+                        </span>
+                        <br/>
                         <span className="text-primary">ecosystem.</span>
                     </h1>
                     <p>

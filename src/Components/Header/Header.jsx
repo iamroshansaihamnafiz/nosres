@@ -44,14 +44,14 @@ function Header(props) {
                 <header className="py-4 lg:py-2 shadow-sm bg-white w-full fixed lg:relative z-50">
                     <div className="container flex items-center justify-between">
                         <div className="logo">
-                            <Link to='/' className="flex items-center gap-3">
-                                <img src={LogoImg} className="h-10" alt="LogoImg"/>
+                            <Link to='/' className="flex items-center gap-2">
+                                <img src={LogoImg} className="h-10 w-7" alt="LogoImg"/>
                                 <span className="font-[500] text-xl">nosres</span>
                             </Link>
                         </div>
 
                         <div className="hidden lg:flex invest">
-                            <button className="text-primary px-6 py-1 border text-[14px]">Invest</button>
+                            <button className="text-primary rounded-full px-6 py-1 border text-[14px]">Invest</button>
                         </div>
 
                         <div className="hidden lg:flex search-bar relative">

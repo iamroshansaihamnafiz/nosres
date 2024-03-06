@@ -17,7 +17,8 @@ function WorkWith(props) {
                             Work with us
                         </h1>
                         <p className="mt-3 text-gray-500 text-[14px]">
-                            At Nosres, we attach great importance to an inclusive workplace where everyone has a<br/> voice
+                            At Nosres, we attach great importance to an inclusive workplace where everyone has
+                            a<br/> voice
                             and the opportunity to succeed.
                             Come join us as we scale up our business activities!<br/> Visit our careers page to view our
                             current job opportunities.
@@ -30,17 +31,17 @@ function WorkWith(props) {
                     </div>
 
                     <h1 className="mt-10 font-semibold text-xl">The latest posts from our blog</h1>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-4">
-                        <div className="col image-box bg-white shadow">
-                            <img src={blogImg1} className="w-full" alt="blogImg"/>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
+                        <div className="col image-box bg-white shadow rounded-md">
+                            <img src={blogImg1} className="w-full h-52 rounded-md" alt="blogImg"/>
                             <div className="content px-4 py-4">
                                 <h2 className="font-semibold text-[15px]">Choosing The Best Platform</h2>
                                 <p className="mt-2 text-[14px] text-gray-600">
                                     With so many different ways today to find
                                     information online
                                 </p>
-                                <div className="flex items-center gap-4 mt-2">
-                                    <img src={LogoImg} className="w-8" alt="LogoImg"/>
+                                <div className="flex items-center gap-3 mt-2">
+                                    <img src={LogoImg} className="w-7" alt="LogoImg"/>
                                     <div className="wrap">
                                         <p className="text-[14px] font-semibold">Nosres</p>
                                         <p className="text-[13px]">09 April 2023</p>
@@ -49,16 +50,16 @@ function WorkWith(props) {
                             </div>
                         </div>
 
-                        <div className="col image-box bg-white shadow">
-                            <img src={blogImg2} className="w-full" alt="blogImg"/>
+                        <div className="col image-box bg-white shadow rounded-md">
+                            <img src={blogImg2} className="w-full h-52 rounded-md" alt="blogImg"/>
                             <div className="content px-4 py-4">
                                 <h2 className="font-semibold text-[15px]">Choosing The Best Platform</h2>
                                 <p className="mt-2 text-[14px] text-gray-600">
                                     With so many different ways today to find
                                     information online
                                 </p>
-                                <div className="flex items-center gap-4 mt-2">
-                                    <img src={LogoImg} className="w-8" alt="LogoImg"/>
+                                <div className="flex items-center gap-3 mt-2">
+                                    <img src={LogoImg} className="w-7" alt="LogoImg"/>
                                     <div className="wrap">
                                         <p className="text-[14px] font-semibold">Nosres</p>
                                         <p className="text-[13px]">09 April 2023</p>
@@ -67,34 +68,16 @@ function WorkWith(props) {
                             </div>
                         </div>
 
-                        <div className="col image-box bg-white shadow">
-                            <img src={blogImg3} className="w-full" alt="blogImg"/>
+                        <div className="col image-box bg-white shadow rounded-md">
+                            <img src={blogImg3} className="w-full h-52 rounded-md" alt="blogImg"/>
                             <div className="content px-4 py-4">
                                 <h2 className="font-semibold text-[15px]">Choosing The Best Platform</h2>
                                 <p className="mt-2 text-[14px] text-gray-600">
                                     With so many different ways today to find
                                     information online
                                 </p>
-                                <div className="flex items-center gap-4 mt-2">
-                                    <img src={LogoImg} className="w-8" alt="LogoImg"/>
-                                    <div className="wrap">
-                                        <p className="text-[14px] font-semibold">Nosres</p>
-                                        <p className="text-[13px]">09 April 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col image-box bg-white shadow">
-                            <img src={blogImg4} className="w-full" alt="blogImg"/>
-                            <div className="content px-4 py-4">
-                                <h2 className="font-semibold text-[15px]">Choosing The Best Platform</h2>
-                                <p className="mt-2 text-[14px] text-gray-600">
-                                    With so many different ways today to find
-                                    information online
-                                </p>
-                                <div className="flex items-center gap-4 mt-2">
-                                    <img src={LogoImg} className="w-8" alt="LogoImg"/>
+                                <div className="flex items-center gap-3 mt-2">
+                                    <img src={LogoImg} className="w-7" alt="LogoImg"/>
                                     <div className="wrap">
                                         <p className="text-[14px] font-semibold">Nosres</p>
                                         <p className="text-[13px]">09 April 2023</p>
