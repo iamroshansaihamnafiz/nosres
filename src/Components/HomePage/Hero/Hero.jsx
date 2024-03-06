@@ -8,7 +8,7 @@ function Hero(props) {
             <section id="banner-section" className="bg-cover bg-no-repeat bg-center py-[17rem]"
                      style={{backgroundImage: `url(${heroImage})`}}>
                 <div className="container">
-                    <h1 className="text-2xl md:text-4xl text-gray-800 font-bold md:font-medium mb-4 capitalize">
+                    <h1 className="text-2xl md:text-4xl text-gray-800 font-bold md:font-medium mb-4">
                         Nosres is a<br/>
                         <span className="text-[#147EBD]">
                             dynamic business

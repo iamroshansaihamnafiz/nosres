@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {Link, NavLink} from "react-router-dom";
 import {AiOutlineSearch, AiOutlineClose} from "react-icons/ai";
+import {PiUserCircleThin} from "react-icons/pi";
 import {IoIosArrowDown} from "react-icons/io";
-import {TfiUser} from "react-icons/tfi";
 import {HiOutlineBars3} from "react-icons/hi2";
 import WhoImg1 from '../../assets/images/m1.svg';
 import WhoImg2 from '../../assets/images/m2.svg';
@@ -51,7 +51,7 @@ function Header(props) {
                         </div>
 
                         <div className="hidden lg:flex invest">
-                            <button className="text-primary rounded-full px-6 py-1 border text-[14px]">Invest</button>
+                            <button className="text-primary rounded px-6 py-1 border text-[14px]">Invest</button>
                         </div>
 
                         <div className="hidden lg:flex search-bar relative">
@@ -77,9 +77,9 @@ function Header(props) {
                                     <div className="grid grid-cols-3 gap-2 h-[280px] pt-4">
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={WhoImg1} className="w-14" alt="icon"/>
+                                                <img src={WhoImg1} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">About
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">About
                                                         Nosres</h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">Everything you need to
                                                         know about Nosres.</p>
@@ -89,9 +89,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={WhoImg2} className="w-14" alt="icon"/>
+                                                <img src={WhoImg2} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Newsroom
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -103,9 +103,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={WhoImg3} className="w-14" alt="icon"/>
+                                                <img src={WhoImg3} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Careers
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -117,9 +117,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={WhoImg4} className="w-14" alt="icon"/>
+                                                <img src={WhoImg4} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Investors
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -131,9 +131,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={WhoImg5} className="w-14" alt="icon"/>
+                                                <img src={WhoImg5} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Brand Resources
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -145,9 +145,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={WhoImg6} className="w-14" alt="icon"/>
+                                                <img src={WhoImg6} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Contact Us
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -174,9 +174,9 @@ function Header(props) {
                                     <div className="grid grid-cols-3 gap-2 h-[280px] pt-4">
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={UbImg1} className="w-14" alt="icon"/>
+                                                <img src={UbImg1} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Marketplace
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -189,9 +189,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={UbImg2} className="w-14" alt="icon"/>
+                                                <img src={UbImg2} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Pay
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -204,9 +204,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={UbImg3} className="w-14" alt="icon"/>
+                                                <img src={UbImg3} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Logistics
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -219,9 +219,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={UbImg4} className="w-14" alt="icon"/>
+                                                <img src={UbImg4} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Telecom
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -249,9 +249,9 @@ function Header(props) {
                                     <div className="grid grid-cols-3 gap-2 h-[280px] pt-4">
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={RsImg1} className="w-14" alt="icon"/>
+                                                <img src={RsImg1} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Support Center
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -263,9 +263,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={RsImg2} className="w-14" alt="icon"/>
+                                                <img src={RsImg2} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Nosres for Business
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -278,9 +278,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={RsImg3} className="w-14" alt="icon"/>
+                                                <img src={RsImg3} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Nosres for Career Seekers
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -293,9 +293,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={RsImg4} className="w-14" alt="icon"/>
+                                                <img src={RsImg4} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Nosres for Investors
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -307,9 +307,9 @@ function Header(props) {
 
                                         <div className="col hover:bg-[#F0F0F0] py-4 px-4 h-[100px] cursor-pointer">
                                             <div className="flex items-center gap-3">
-                                                <img src={RsImg5} className="w-14" alt="icon"/>
+                                                <img src={RsImg5} className="w-8" alt="icon"/>
                                                 <div className="text">
-                                                    <h2 className="text-[#252C32] font-[500] text-lg">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
                                                         Nosres for Media
                                                     </h2>
                                                     <p className="mt-1 text-xs text-[#828D9E]">
@@ -327,7 +327,7 @@ function Header(props) {
                             <Link to='/account'
                                   className="w-12 text-center text-gray-700 hover:text-primary transition relative">
                                 <div className="text-2xl">
-                                    <TfiUser/>
+                                    <PiUserCircleThin size={35}/>
                                 </div>
                             </Link>
                         </div>
@@ -455,7 +455,7 @@ function Header(props) {
                             <div
                                 className="border-b border-gray-300 pl-4 pb-3 text-[17px] font-[300] flex gap-2 items-center">
                                 <span>Account</span>
-                                <TfiUser/>
+                                <PiUserCircleThin size={30}/>
                             </div>
                         </Link>
                     </div>
