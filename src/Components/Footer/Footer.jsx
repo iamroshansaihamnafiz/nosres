@@ -39,7 +39,7 @@ function Footer(props) {
                             </div>
 
                             <div className="col">
-                                <h3 className="font-semibold text-gray-600">Nosres Inc.</h3>
+                                <h3 className="font-semibold text-gray-600">Nosres Inc. </h3>
                                 <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
                                         <Link to='/'>About Nosres</Link>
