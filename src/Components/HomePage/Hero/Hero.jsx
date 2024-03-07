@@ -5,10 +5,10 @@ import {Link} from "react-router-dom";
 function Hero(props) {
     return (
         <>
-            <section id="banner-section" className="bg-cover bg-no-repeat bg-center py-[17rem]"
+            <section id="banner-section" className="bg-cover bg-no-repeat bg-center h-[500px] py-[10rem]"
                      style={{backgroundImage: `url(${heroImage})`}}>
                 <div className="container">
-                    <h1 className="text-2xl md:text-4xl text-gray-800 font-bold md:font-medium mb-4">
+                    <h1 className="text-2xl md:text-[38px] leading-0 md:leading-10 text-gray-800 font-bold md:font-medium mb-4">
                         Nosres is a<br/>
                         <span className="text-[#147EBD]">
                             dynamic business

@@ -11,20 +11,20 @@ function Patner(props) {
             <section id="patner-section" className="bg-[#F1F2F2] mt-14">
                 <div className="container py-10">
                     <div className="head-wrap text-center">
-                        <h1 className="font-semibold text-xl">
+                        <h1 className="font-semibold text-[24px]">
                             Partner with us
                         </h1>
-                        <p className="mt-3 text-gray-500 text-[14px]">
+                        <p className="mt-3 text-[#ABABAB] text-[16px]">
                             We believe in the power of strategic partnerships. Your business is our<br/> business. Your
                             success is our success and vice versa.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                        <div className="col image-box bg-white border border-[#ABABAB] rounded-md">
+                        <div className="col image-box bg-white rounded-md">
                             <img src={patnerImg1} className="w-full rounded-md" alt="patnerImg"/>
-                            <div className="content px-4 py-4">
-                                <h2 className="font-semibold">Expand your business</h2>
+                            <div className="content px-6 py-6">
+                                <h2 className="font-semibold text-[16px]">Expand your business</h2>
                                 <p className="mt-3 text-[14px] text-justify">
                                     We conduct market research before we launch new products and services or expand into
                                     new
@@ -36,9 +36,9 @@ function Patner(props) {
                             </div>
                         </div>
 
-                        <div className="col image-box bg-white border border-[#ABABAB] rounded-md">
+                        <div className="col image-box bg-white rounded-md">
                             <img src={patnerImg3} className="w-full rounded-md" alt="patnerImg"/>
-                            <div className="content px-4 py-4">
+                            <div className="content px-6 py-6">
                                 <h2 className="font-semibold">Strengthen your brand</h2>
                                 <p className="mt-3 text-[14px] text-justify">
                                     At Nosres, we value entrepreneurship, passion, curiosity, creativity, innovation,
@@ -49,9 +49,9 @@ function Patner(props) {
                             </div>
                         </div>
 
-                        <div className="col image-box bg-white border border-[#ABABAB] rounded-md">
+                        <div className="col image-box bg-white rounded-md">
                             <img src={patnerImg2} className="w-full rounded-md" alt="patnerImg"/>
-                            <div className="content px-4 py-4">
+                            <div className="content px-6 py-6">
                                 <h2 className="font-semibold">Get exposure to our management team</h2>
                                 <p className="mt-3 text-[14px] text-justify">
                                     Our team is highly-skilled and analytical. We are passionate about what we do. Our

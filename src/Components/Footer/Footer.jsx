@@ -6,7 +6,7 @@ import {FaFacebookF} from "react-icons/fa6";
 import {IoLogoInstagram} from "react-icons/io5";
 import {FaLinkedin} from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
-import { RxPlus } from "react-icons/rx";
+import {RxPlus} from "react-icons/rx";
 
 function Footer(props) {
     const currentYear = new Date().getFullYear();
@@ -130,10 +130,9 @@ function Footer(props) {
                             </div>
                         </div>
 
-
                         {/* Mobile Footer */}
                         <div className="block lg:hidden">
-                            <div className="col pb-14">
+                            <div className="col pb-8">
                                 <div className="logo">
                                     <Link to='/' className="flex items-center gap-2">
                                         <img src={LogoImg} className="h-10 w-7" alt="LogoImg"/>
@@ -156,9 +155,9 @@ function Footer(props) {
                                     our Privacy Policy.</p>
                             </div>
 
-                            <details className="group px-4">
+                            <details className="group">
                                 <summary
-                                    className="relative border-b border-b-[#ABABAB] pb-4 flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[15px] font-[300] focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                    className="relative border-b border-b-[#ABABAB] pb-4 flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                     Nosres Inc.
                                     <RxPlus
                                         className="absolute right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:rotate-90"/>
@@ -188,9 +187,9 @@ function Footer(props) {
                                 </ul>
                             </details>
 
-                            <details className="group px-4 pt-8">
+                            <details className="group pt-8">
                                 <summary
-                                    className="relative border-b border-b-[#ABABAB] pb-4 flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[15px] font-[300] focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                    className="relative border-b border-b-[#ABABAB] pb-4 flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                     Business Portfolio
                                     <RxPlus
                                         className="absolute right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:rotate-90"/>
@@ -211,9 +210,9 @@ function Footer(props) {
                                 </ul>
                             </details>
 
-                            <details className="group px-4 pt-8">
+                            <details className="group pt-8">
                                 <summary
-                                    className="relative border-b border-b-[#ABABAB] pb-4 flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[15px] font-[300] focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                    className="relative border-b border-b-[#ABABAB] pb-4 flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                     Nosres Support
                                     <RxPlus
                                         className="absolute right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:rotate-90"/>
@@ -240,9 +239,9 @@ function Footer(props) {
                                 </ul>
                             </details>
 
-                            <details className="group px-4 pt-8">
+                            <details className="group pt-8">
                                 <summary
-                                    className="relative border-b border-b-[#ABABAB] pb-4 flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[15px] font-[300] focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                    className="relative border-b border-b-[#ABABAB] pb-4 flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                     Community
                                     <RxPlus
                                         className="absolute right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:rotate-90"/>
@@ -267,10 +266,9 @@ function Footer(props) {
                             </details>
                         </div>
 
-
                         {/* Copyright */}
                         <div
-                            className="copyright border-t border-gray-400 sm:flex items-center justify-between pt-4 mt-10">
+                            className="copyright border-t border-[#828D9E] sm:flex items-center justify-between pt-4 mt-10">
                             <div className="left">
                                 <ul className="flex items-center gap-4 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
@@ -287,7 +285,7 @@ function Footer(props) {
                                     </li>
                                 </ul>
                                 <p className="mt-1 text-gray-500 text-[12px]">© {currentYear} Nosres Inc. All rights
-                                    reserved</p>
+                                    reserved.</p>
                             </div>
                             <div className="right mt-4 sm:mt-0 flex items-center gap-2">
                                 <img src={FlugImg} className="w-4" alt="FlugImg"/>

@@ -12,10 +12,10 @@ function WorkWith(props) {
             <section id="work-with-section">
                 <div className="container pt-12">
                     <div className="head-wrap">
-                        <h1 className="font-semibold text-xl">
+                        <h1 className="font-semibold text-[24px]">
                             Work with us
                         </h1>
-                        <p className="mt-3 text-gray-500 text-[14px]">
+                        <p className="mt-3 text-gray-500 text-[16px]">
                             At Nosres, we attach great importance to an inclusive workplace where everyone has
                             a<br/> voice
                             and the opportunity to succeed.
@@ -23,18 +23,18 @@ function WorkWith(props) {
                             current job opportunities.
                         </p>
                         <Link to='/'
-                              className="flex items-center gap-2 rounded hover:text-primary py-3">
+                              className="flex items-center text-[14px] gap-1 rounded hover:text-primary py-3">
                             Learn More
                             <FaLongArrowAltRight/>
                         </Link>
                     </div>
 
-                    <h1 className="mt-10 font-semibold text-xl">The latest posts from our blog</h1>
+                    <h1 className="mt-10 font-semibold text-[24px]">The latest posts from our blog</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
-                        <div className="col image-box bg-white border border-[#ABABAB] rounded-md">
+                        <div className="col image-box bg-white shadow rounded-md">
                             <img src={blogImg1} className="w-full h-52 rounded-md rounded-b-none" alt="blogImg"/>
                             <div className="content px-4 py-4">
-                                <h2 className="font-semibold text-[15px]">Choosing The Best Platform</h2>
+                                <h2 className="font-semibold text-[16px]">Choosing The Best Platform</h2>
                                 <p className="mt-2 text-[14px] text-gray-600">
                                     With so many different ways today to find
                                     information online
@@ -49,10 +49,10 @@ function WorkWith(props) {
                             </div>
                         </div>
 
-                        <div className="col image-box bg-white border border-[#ABABAB] rounded-md">
+                        <div className="col image-box bg-white shadow rounded-md">
                             <img src={blogImg2} className="w-full h-52 rounded-md rounded-b-none" alt="blogImg"/>
                             <div className="content px-4 py-4">
-                                <h2 className="font-semibold text-[15px]">Choosing The Best Platform</h2>
+                                <h2 className="font-semibold text-[16px]">Choosing The Best Platform</h2>
                                 <p className="mt-2 text-[14px] text-gray-600">
                                     With so many different ways today to find
                                     information online
@@ -67,10 +67,10 @@ function WorkWith(props) {
                             </div>
                         </div>
 
-                        <div className="col image-box bg-white border border-[#ABABAB] rounded-md">
+                        <div className="col image-box bg-white shadow rounded-md">
                             <img src={blogImg3} className="w-full h-52 rounded-md rounded-b-none" alt="blogImg"/>
                             <div className="content px-4 py-4">
-                                <h2 className="font-semibold text-[15px]">Choosing The Best Platform</h2>
+                                <h2 className="font-semibold text-[16px]">Choosing The Best Platform</h2>
                                 <p className="mt-2 text-[14px] text-gray-600">
                                     With so many different ways today to find
                                     information online
@@ -87,7 +87,7 @@ function WorkWith(props) {
                     </div>
                     <div className="mt-8 flex items-center justify-center">
                         <Link to='/'
-                              className="flex text-[14px] items-center gap-2 border border-black rounded hover:bg-primary hover:text-white hover:border-primary py-2 px-6">
+                              className="flex text-[14px] items-center gap-1 border border-black rounded hover:bg-primary hover:text-white hover:border-primary py-2 px-6">
                             See More Post
                             <FaLongArrowAltRight/>
                         </Link>
