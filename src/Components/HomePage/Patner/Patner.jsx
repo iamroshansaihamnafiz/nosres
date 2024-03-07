@@ -25,7 +25,7 @@ function Patner(props) {
                             <img src={patnerImg1} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-6 py-6">
                                 <h2 className="font-semibold text-[16px]">Expand your business</h2>
-                                <p className="mt-3 text-[14px] text-justify">
+                                <p className="mt-3 text-[14px]">
                                     We conduct market research before we launch new products and services or expand into
                                     new
                                     markets. Besides, our research is carried out based on customer demographics.
@@ -40,7 +40,7 @@ function Patner(props) {
                             <img src={patnerImg3} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-6 py-6">
                                 <h2 className="font-semibold">Strengthen your brand</h2>
-                                <p className="mt-3 text-[14px] text-justify">
+                                <p className="mt-3 text-[14px]">
                                     At Nosres, we value entrepreneurship, passion, curiosity, creativity, innovation,
                                     and simplicity. Those values are deeply ingrained in our systems and are the pillars
                                     of our business. Thus, we can add value to your brand if you are looking to become a
@@ -53,7 +53,7 @@ function Patner(props) {
                             <img src={patnerImg2} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-6 py-6">
                                 <h2 className="font-semibold">Get exposure to our management team</h2>
-                                <p className="mt-3 text-[14px] text-justify">
+                                <p className="mt-3 text-[14px]">
                                     Our team is highly-skilled and analytical. We are passionate about what we do. Our
                                     specialties include marketing strategy, business operations analysis, business
                                     consultancy, corporate strategy, information technology, etc.

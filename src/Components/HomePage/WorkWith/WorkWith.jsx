@@ -22,8 +22,9 @@ function WorkWith(props) {
                             Come join us as we scale up our business activities!<br/> Visit our careers page to view our
                             current job opportunities.
                         </p>
+
                         <Link to='/'
-                              className="flex items-center text-[14px] gap-1 rounded hover:text-primary py-3">
+                              className="mt-4 w-[143px] flex text-[14px] items-center justify-center gap-2 border border-black rounded hover:bg-primary hover:text-white hover:border-primary py-2">
                             Learn More
                             <FaLongArrowAltRight/>
                         </Link>
@@ -42,7 +43,7 @@ function WorkWith(props) {
                                 <div className="flex items-center gap-3 mt-2">
                                     <img src={LogoImg} className="w-7" alt="LogoImg"/>
                                     <div className="wrap">
-                                        <p className="text-[14px] font-semibold">Nosres</p>
+                                        <h4 className="text-[14px] font-semibold">Nosres</h4>
                                         <p className="text-[13px]">09 April 2023</p>
                                     </div>
                                 </div>
@@ -60,7 +61,7 @@ function WorkWith(props) {
                                 <div className="flex items-center gap-3 mt-2">
                                     <img src={LogoImg} className="w-7" alt="LogoImg"/>
                                     <div className="wrap">
-                                        <p className="text-[14px] font-semibold">Nosres</p>
+                                        <h4 className="text-[14px] font-semibold">Nosres</h4>
                                         <p className="text-[13px]">09 April 2023</p>
                                     </div>
                                 </div>
@@ -78,7 +79,7 @@ function WorkWith(props) {
                                 <div className="flex items-center gap-3 mt-2">
                                     <img src={LogoImg} className="w-7" alt="LogoImg"/>
                                     <div className="wrap">
-                                        <p className="text-[14px] font-semibold">Nosres</p>
+                                        <h4 className="text-[14px] font-semibold">Nosres</h4>
                                         <p className="text-[13px]">09 April 2023</p>
                                     </div>
                                 </div>

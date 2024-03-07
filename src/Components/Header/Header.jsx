@@ -55,15 +55,15 @@ function Header(props) {
                         </div>
 
                         <div className="hidden lg:flex invest">
-                            <button className="text-primary rounded px-6 py-1 border text-[14px]">Invest</button>
+                            <button className="text-primary hover:bg-primary hover:text-white rounded px-6 py-1 border text-[14px]">Invest</button>
                         </div>
 
                         <div className="hidden lg:flex search-bar relative">
-                            <span className="absolute left-4 top-[10px] text-lg text-gray-400">
+                            <span className="absolute left-4 top-[12px] text-lg text-gray-400">
                                 <AiOutlineSearch size={16}/>
                             </span>
                             <input type="text"
-                                   className="border text-[12px] border-gray-300 rounded-full pl-9 py-2 focus:outline-none focus:border-primary focus:ring-0"
+                                   className="border text-[14px] border-gray-300 rounded-full pl-9 py-2 focus:outline-none focus:border-primary focus:ring-0"
                                    placeholder="Search..."/>
                         </div>
 
@@ -363,7 +363,7 @@ function Header(props) {
                         {/* Tab / Mobile Icons */}
                         <div className="lg:hidden tab-mobile flex items-center gap-2">
                             <div onClick={handleClick}
-                                 className="w-8 text-center text-gray-700 hover:text-primary transition cursor-pointer">
+                                 className="text-center text-gray-700 hover:text-primary transition cursor-pointer">
                                 <div className="text-2xl">
                                     {isMenuVisible ? <AiOutlineClose/> : <HiOutlineBars3/>}
                                 </div>
@@ -376,11 +376,11 @@ function Header(props) {
                 <div id="mobile_menu" className="block lg:hidden bg-white z-50 overflow-hidden w-full h-[100%]">
                     <div className="navbar-wrapper px-4 pt-20 space-y-5">
                         <div className="m-4 flex search-bar relative">
-                            <span className="absolute left-4 top-[10px] text-lg text-gray-400">
+                            <span className="absolute left-4 top-[12px] text-lg text-gray-400">
                                 <AiOutlineSearch size={16}/>
                             </span>
                             <input type="text"
-                                   className="w-full text-[12px] border border-gray-300 rounded-full pl-9 py-2 focus:outline-none focus:border-primary focus:ring-0"
+                                   className="w-full text-[14px] border border-gray-300 rounded-full pl-9 py-2 focus:outline-none focus:border-primary focus:ring-0"
                                    placeholder="Search..."/>
                         </div>
 
@@ -391,28 +391,28 @@ function Header(props) {
                                 <IoIosArrowDown
                                     className="absolute right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:rotate-180"/>
                             </summary>
-                            <ul className="mt-4 space-y-6">
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                            <ul className="mt-4 space-y-4">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>About Nosres</NavLink>
                                 </li>
 
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Newsroom</NavLink>
                                 </li>
 
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Careers</NavLink>
                                 </li>
 
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Investors</NavLink>
                                 </li>
 
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Brand Resources</NavLink>
                                 </li>
 
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Contact Us</NavLink>
                                 </li>
                             </ul>
@@ -425,20 +425,20 @@ function Header(props) {
                                 <IoIosArrowDown
                                     className="absolute right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:rotate-180"/>
                             </summary>
-                            <ul className="mt-4 space-y-6">
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                            <ul className="mt-4 space-y-4">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Marketplace</NavLink>
                                 </li>
 
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Pay</NavLink>
                                 </li>
 
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Logistics</NavLink>
                                 </li>
 
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Telecom</NavLink>
                                 </li>
                             </ul>
@@ -451,30 +451,30 @@ function Header(props) {
                                 <IoIosArrowDown
                                     className="absolute right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:rotate-180"/>
                             </summary>
-                            <ul className="mt-4 space-y-6">
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                            <ul className="mt-4 space-y-4">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Support Center</NavLink>
                                 </li>
 
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Nosres for Business</NavLink>
                                 </li>
 
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Nosres for Career Seekers</NavLink>
                                 </li>
 
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Nosres for Investors</NavLink>
                                 </li>
-                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b border-[#828D9E]">
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Nosres for Media</NavLink>
                                 </li>
                             </ul>
                         </details>
 
                         <div className="flex p-4 pt-0 invest">
-                            <button className="text-primary px-8 py-2 border text-[14px]">Invest</button>
+                            <button className="text-primary rounded hover:bg-primary hover:text-white px-6 py-1 border text-[14px]">Invest</button>
                         </div>
 
                         <Link to='/account'

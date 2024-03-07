@@ -8,6 +8,43 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+header p {
+    font-size: 14px !important;
+    color: #828D9E !important;
+}
+
+footer p {
+    font-size: 12px !important;
+    color: #828D9E !important;
+}
+
+footer ul li a {
+    color: #828D9E !important;
+}
+
+footer h3 {
+    font-size: 12px !important;
+}
+
+.copyright {
+    border-top: 0.5px solid #9999998f;
+}
+
+p {
+    color: #39393B !important;
+    font-size: 16px !important;
+}
+
+.image-box p {
+    font-size: 14px !important;
+    color: #828D9E !important;
+}
+
+.box p {
+    font-size: 14px !important;
+    color: #828D9E !important;
+}
+
 /*------------------- Mobile Menu -------------------*/
 #mobile_menu {
     position: fixed;

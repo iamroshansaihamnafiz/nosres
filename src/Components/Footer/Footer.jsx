@@ -1,6 +1,5 @@
 import React from 'react';
 import LogoImg from '../../assets/images/logo.svg';
-import FlugImg from '../../assets/images/flug.png';
 import {Link} from "react-router-dom";
 import {FaFacebookF} from "react-icons/fa6";
 import {IoLogoInstagram} from "react-icons/io5";
@@ -39,9 +38,9 @@ function Footer(props) {
                                     our Privacy Policy.</p>
                             </div>
 
-                            <div className="col">
+                            <div className="col mt-3">
                                 <h3 className="font-semibold text-gray-600">Nosres Inc.</h3>
-                                <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
+                                <ul className="mt-3 space-y-2 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
                                         <Link to='/'>About Nosres</Link>
                                     </li>
@@ -66,9 +65,9 @@ function Footer(props) {
                                 </ul>
                             </div>
 
-                            <div className="col">
+                            <div className="col mt-3">
                                 <h3 className="font-semibold text-gray-600">Business Portfolio</h3>
-                                <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
+                                <ul className="mt-3 space-y-2 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
                                         <Link to='/'>Marketplace</Link>
                                     </li>
@@ -84,9 +83,9 @@ function Footer(props) {
                                 </ul>
                             </div>
 
-                            <div className="col">
+                            <div className="col mt-3">
                                 <h3 className="font-semibold text-gray-600">Nosres Support</h3>
-                                <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
+                                <ul className="mt-3 space-y-2 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
                                         <Link to='/'>Support Center</Link>
                                     </li>
@@ -108,9 +107,9 @@ function Footer(props) {
                                 </ul>
                             </div>
 
-                            <div className="col">
+                            <div className="col mt-3">
                                 <h3 className="font-semibold text-gray-600">Community</h3>
-                                <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
+                                <ul className="mt-3 space-y-2 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
                                         <Link to='/'>Events</Link>
                                     </li>
@@ -268,7 +267,7 @@ function Footer(props) {
 
                         {/* Copyright */}
                         <div
-                            className="copyright border-t border-[#828D9E] sm:flex items-center justify-between pt-4 mt-10">
+                            className="copyright sm:flex items-center justify-between pt-4 mt-10">
                             <div className="left">
                                 <ul className="flex items-center gap-4 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
@@ -286,10 +285,6 @@ function Footer(props) {
                                 </ul>
                                 <p className="mt-1 text-gray-500 text-[12px]">© {currentYear} Nosres Inc. All rights
                                     reserved.</p>
-                            </div>
-                            <div className="right mt-4 sm:mt-0 flex items-center gap-2">
-                                <img src={FlugImg} className="w-4" alt="FlugImg"/>
-                                <Link to='/' className="text-gray-500 text-[12px]">United States</Link>
                             </div>
                         </div>
                     </footer>
