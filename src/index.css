@@ -9,7 +9,7 @@ body {
 }
 
 header p {
-    font-size: 14px !important;
+    font-size: 12px !important;
     color: #828D9E !important;
 }
 
@@ -20,6 +20,10 @@ footer p {
 
 footer ul li a {
     color: #828D9E !important;
+}
+
+footer ul li:hover a {
+    color: #4D7FB8 !important;
 }
 
 footer h3 {

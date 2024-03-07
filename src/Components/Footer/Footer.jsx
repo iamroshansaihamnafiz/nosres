@@ -267,7 +267,7 @@ function Footer(props) {
 
                         {/* Copyright */}
                         <div
-                            className="copyright sm:flex items-center justify-between pt-4 mt-10">
+                            className="copyright sm:flex  justify-between pt-4 mt-10">
                             <div className="left">
                                 <ul className="flex items-center gap-4 text-gray-500 text-[12px]">
                                     <li className="hover:text-primary">
@@ -285,6 +285,9 @@ function Footer(props) {
                                 </ul>
                                 <p className="mt-1 text-gray-500 text-[12px]">© {currentYear} Nosres Inc. All rights
                                     reserved.</p>
+                            </div>
+                            <div className="right">
+                                <p className="cursor-pointer">United States</p>
                             </div>
                         </div>
                     </footer>
