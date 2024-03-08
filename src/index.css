@@ -30,13 +30,18 @@ footer h3 {
     font-size: 12px !important;
 }
 
-.copyright {
-    border-top: 0.5px solid #9999998f;
-}
-
 p {
     color: #39393B !important;
     font-size: 16px !important;
+}
+
+/* Sub Heading */
+header h2 {
+    font-size: 14px !important;
+}
+
+h2 {
+    font-size: 24px !important;
 }
 
 .image-box p {
@@ -47,6 +52,10 @@ p {
 .box p {
     font-size: 14px !important;
     color: #828D9E !important;
+}
+
+.copyright {
+    border-top: 0.5px solid #9999998f;
 }
 
 /*------------------- Mobile Menu -------------------*/
@@ -76,5 +85,14 @@ p {
 
 .show-account-dropdown-menu {
     visibility: visible !important;
-    height: 195px !important;
+    height: 215px !important;
+}
+
+/* ------------------- Modal --------------------- */
+.rounded-lg .border-b {
+    align-items: center !important;
+}
+
+.rounded-lg button {
+    outline: none !important;
 }

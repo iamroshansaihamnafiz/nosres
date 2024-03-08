@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link, NavLink} from "react-router-dom";
-import {AiOutlineSearch, AiOutlineClose} from "react-icons/ai";
+import {AiOutlineClose, AiOutlineSearch} from "react-icons/ai";
 import {PiUserCircleThin} from "react-icons/pi";
 import {IoIosArrowDown} from "react-icons/io";
 import {HiOutlineBars3} from "react-icons/hi2";
@@ -372,28 +372,39 @@ function Header(props) {
 
                             <div className="five">
                                 <div className="dropdown inline-block relative">
-                                    <Link to='/' onClick={handleAccountClick}
-                                          className="text-center text-gray-700 hover:text-primary transition relative">
+                                    <div onClick={handleAccountClick}
+                                         className="text-center cursor-pointer text-gray-700 hover:text-primary transition relative">
                                         <PiUserCircleThin size={35}/>
-                                    </Link>
+                                    </div>
 
                                     <div id="account_dropdown_menu"
                                          className="account-dropdown-menu absolute text-gray-700 pt-1 for-account transition-all ease-linear duration-300 bg-white rounded shadow border">
                                         <div className="container">
                                             <div
-                                                className="col hover:bg-[#F0F0F0] flex items-center px-4 h-[85px] cursor-pointer">
+                                                className="col flex items-center px-2 h-[85px]">
                                                 <div className="flex items-center gap-3">
-                                                    <img src={WhoImg1} className="w-8" alt="icon"/>
+                                                    <PiUserCircleThin size={70}/>
                                                     <div className="text">
-                                                        <h2 className="text-[#252C32] font-[500] text-[14px]">
-                                                            About Nosres
+                                                        <h2 className="text-[#252C32] font-semibold text-[14px]">
+                                                            Nosres Account
                                                         </h2>
-                                                        <p className="mt-1 text-xs text-[#828D9E]">Everything you
-                                                            need
-                                                            to
-                                                            know about Nosres.</p>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <hr/>
+                                            <p className="mt-2">
+                                                <Link to='#' className="text-primary">
+                                                    Sign in
+                                                </Link> to your Nosres Account or <Link to='#' className="text-primary">
+                                                create
+                                            </Link> one. A Nosres account gives you access to
+                                                all Nosres services.
+                                            </p>
+                                            <div className="flex justify-start text-center">
+                                                <Link to='/'
+                                                      className="mt-2 w-[120px] py-2 flex text-[14px] items-center justify-center gap-2 border rounded text-primary hover:bg-primary hover:text-white hover:border-primary">
+                                                    Learn More
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
