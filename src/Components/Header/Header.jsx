@@ -25,7 +25,7 @@ import RsImg5 from '../../assets/images/rs5.svg';
 
 import LogoImg from '../../assets/images/logo.svg';
 
-import {Button, Modal} from 'flowbite-react';
+import {Modal} from 'flowbite-react';
 
 function Header(props) {
     // 👇️ Toggle class on click Show And Hide Menu Bar (Button)
