@@ -9,7 +9,7 @@ function Culture(props) {
                 <div className="container py-12">
                     <div className="head-wrap">
                         <h1 className="font-semibold text-[24px]">
-                            Our Values
+                            Nosres Culture
                         </h1>
                         <p className="mt-3 text-gray-500 text-[16px]">
                             At Nosres, entrepreneurship is valued, encouraged, and rewarded – it’s in our DNA. That’s

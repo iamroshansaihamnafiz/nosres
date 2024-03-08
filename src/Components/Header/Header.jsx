@@ -1,3 +1,4 @@
+'use client';
 import React, {useState} from 'react';
 import {Link, NavLink} from "react-router-dom";
 import {AiOutlineClose, AiOutlineSearch} from "react-icons/ai";
@@ -23,6 +24,8 @@ import RsImg4 from '../../assets/images/rs4.svg';
 import RsImg5 from '../../assets/images/rs5.svg';
 
 import LogoImg from '../../assets/images/logo.svg';
+
+import {Button, Modal} from 'flowbite-react';
 
 function Header(props) {
     // 👇️ Toggle class on click Show And Hide Menu Bar (Button)
@@ -52,6 +55,8 @@ function Header(props) {
             setAccountVisible(!isAccountVisible);
         }
     };
+
+    const [openModal, setOpenModal] = useState(false);
     return (
         <>
             <section id="header-section" className="relative">
@@ -531,7 +536,7 @@ function Header(props) {
                             </button>
                         </div>
 
-                        <Link to='/account'
+                        <Link to='#' onClick={() => setOpenModal(true)}
                               className="w-full text-center text-gray-700 hover:text-primary transition relative">
                             <div
                                 className="border-b border-gray-300 pl-4 pb-3 text-[14px] font-normal flex gap-2 items-center">
@@ -539,6 +544,41 @@ function Header(props) {
                                 <PiUserCircleThin size={22}/>
                             </div>
                         </Link>
+
+                        {/* Mobile Account Modal */}
+                        <Modal dismissible show={openModal} onClose={() => setOpenModal(false)}>
+                            <Modal.Header></Modal.Header>
+                            <Modal.Body>
+                                <div className="container">
+                                    <div
+                                        className="col flex items-center px-2 h-[85px]">
+                                        <div className="flex items-center gap-3">
+                                            <PiUserCircleThin size={70}/>
+                                            <div className="text">
+                                                <h2 className="text-[#252C32] font-semibold text-[14px]">
+                                                    Nosres Account
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <p className="mt-2">
+                                        <Link to='#' className="text-primary">
+                                            Sign in
+                                        </Link> to your Nosres Account or <Link to='#' className="text-primary">
+                                        create
+                                    </Link> one. A Nosres account gives you access to
+                                        all Nosres services.
+                                    </p>
+                                    <div className="flex justify-start text-center">
+                                        <Link to='/'
+                                              className="mt-2 w-[120px] py-2 flex text-[14px] items-center justify-center gap-2 border rounded text-primary hover:bg-primary hover:text-white hover:border-primary">
+                                            Learn More
+                                        </Link>
+                                    </div>
+                                </div>
+                            </Modal.Body>
+                        </Modal>
                     </div>
                 </div>
             </section>

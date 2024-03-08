@@ -15,7 +15,7 @@ function Value(props) {
                 <div className="container py-12">
                     <div className="head-wrap text-center">
                         <h1 className="font-semibold text-[24px]">
-                            Nosres Culture
+                            Our Values
                         </h1>
                         <p className="mt-3 text-gray-500 text-[16px]">
                             Nosres is founded on values that we all share, such as entrepreneurship, passion, curiosity,
