@@ -3,7 +3,7 @@ import LogoImg from '../../assets/images/logo.svg';
 import {Link} from "react-router-dom";
 import {FaFacebookF} from "react-icons/fa6";
 import {IoLogoInstagram} from "react-icons/io5";
-import {FaLinkedin, FaLongArrowAltRight} from "react-icons/fa";
+import {FaLinkedin} from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
 import {RxPlus} from "react-icons/rx";
 
