@@ -3,7 +3,7 @@ import LogoImg from '../../assets/images/logo.svg';
 import {Link} from "react-router-dom";
 import {FaFacebookF} from "react-icons/fa6";
 import {IoLogoInstagram} from "react-icons/io5";
-import {FaLinkedin} from "react-icons/fa";
+import {FaLinkedin, FaLongArrowAltRight} from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
 import {RxPlus} from "react-icons/rx";
 
@@ -36,6 +36,10 @@ function Footer(props) {
                                 <p className="mt-1 text-gray-500 text-[12px]">Sign up for the latest Nosres news and
                                     articles. By signing up you are agreeing to
                                     our Privacy Policy.</p>
+                                <Link to='/'
+                                      className="mt-3 flex w-[120px] justify-center text-[14px] items-center gap-1 border border-black rounded hover:bg-primary hover:text-white hover:border-primary py-2">
+                                    Subscribe
+                                </Link>
                             </div>
 
                             <div className="col mt-3">

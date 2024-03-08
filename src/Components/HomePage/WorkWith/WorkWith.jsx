@@ -89,7 +89,7 @@ function WorkWith(props) {
                     <div className="mt-8 flex items-center justify-center">
                         <Link to='/'
                               className="flex text-[14px] items-center gap-1 border border-black rounded hover:bg-primary hover:text-white hover:border-primary py-2 px-6">
-                            See More Post
+                            See More Posts
                             <FaLongArrowAltRight/>
                         </Link>
                     </div>

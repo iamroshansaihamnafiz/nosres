@@ -42,12 +42,12 @@ function Header(props) {
     // 👇️ Toggle class on click Show And Hide Account (Icon)
     const [isAccountVisible, setAccountVisible] = useState(false);
     const handleAccountClick = () => {
-        const account = document.getElementById('account_dropdown_menu');
+        const account = document.getElementById('account_card');
         if (account) {
             if (isAccountVisible) {
-                account.classList.remove('show-account-dropdown-menu');
+                account.classList.remove('show_account_card');
             } else {
-                account.classList.add('show-account-dropdown-menu');
+                account.classList.add('show_account_card');
             }
             setAccountVisible(!isAccountVisible);
         }
@@ -96,8 +96,8 @@ function Header(props) {
                                     className="for-who-we-are absolute invisible group-hover:visible max-h-0 group-hover:max-h-[200px] transition-all ease-linear duration-300 top-full left-0 right-0 overflow-hidden w-full bg-white border">
                                     <div className="container">
                                         <div className="grid grid-cols-3 gap-2 h-[200px] pt-2 pb-0">
-                                            <Link to='/about'
-                                                  className="col hover:bg-[#F0F0F0] flex items-center px-4 h-[85px] cursor-pointer">
+                                            <div
+                                                className="col hover:bg-[#F0F0F0] flex items-center px-4 h-[85px] cursor-pointer">
                                                 <div className="flex items-center gap-3">
                                                     <img src={WhoImg1} className="w-8" alt="icon"/>
                                                     <div className="text">
@@ -109,7 +109,7 @@ function Header(props) {
                                                             know about Nosres.</p>
                                                     </div>
                                                 </div>
-                                            </Link>
+                                            </div>
 
                                             <div
                                                 className="col hover:bg-[#F0F0F0] flex items-center px-4 h-[85px] cursor-pointer">
@@ -370,29 +370,26 @@ function Header(props) {
                                 </div>
                             </div>
 
-                            <div className="five">
-                                <div className="dropdown inline-block relative">
-                                    <Link to='/' onClick={handleAccountClick}
-                                          className="text-center text-gray-700 hover:text-primary transition relative">
-                                        <PiUserCircleThin size={35}/>
-                                    </Link>
-
-                                    <div id="account_dropdown_menu"
-                                         className="account-dropdown-menu absolute text-gray-700 pt-1 for-account transition-all ease-linear duration-300 bg-white rounded shadow border">
-                                        <div className="container">
-                                            <div
-                                                className="col hover:bg-[#F0F0F0] flex items-center px-4 h-[85px] cursor-pointer">
-                                                <div className="flex items-center gap-3">
-                                                    <img src={WhoImg1} className="w-8" alt="icon"/>
-                                                    <div className="text">
-                                                        <h2 className="text-[#252C32] font-[500] text-[14px]">
-                                                            About Nosres
-                                                        </h2>
-                                                        <p className="mt-1 text-xs text-[#828D9E]">Everything you
-                                                            need
-                                                            to
-                                                            know about Nosres.</p>
-                                                    </div>
+                            <div className="fore">
+                                <Link to='/' onClick={handleAccountClick}
+                                      className="text-center text-gray-700 hover:text-primary transition relative">
+                                    <PiUserCircleThin size={35}/>
+                                </Link>
+                                {/* Account Dropdown */}
+                                <div id="account_card"
+                                     className="for-account transition-all ease-linear duration-300 bg-white rounded shadow border">
+                                    <div className="container">
+                                        <div
+                                            className="col hover:bg-[#F0F0F0] flex items-center px-4 h-[85px] cursor-pointer">
+                                            <div className="flex items-center gap-3">
+                                                <img src={WhoImg1} className="w-8" alt="icon"/>
+                                                <div className="text">
+                                                    <h2 className="text-[#252C32] font-[500] text-[14px]">
+                                                        About Nosres
+                                                    </h2>
+                                                    <p className="mt-1 text-xs text-[#828D9E]">Everything you need
+                                                        to
+                                                        know about Nosres.</p>
                                                 </div>
                                             </div>
                                         </div>
