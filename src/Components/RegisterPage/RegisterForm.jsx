@@ -15,7 +15,7 @@ function RegisterForm(props) {
                         <div className="col">
                             <div className="wrap-one">
                                 <h2 className="font-normal">
-                                    By creating a Nosres Account you get<br/> accessto all products and services
+                                    By creating a Nosres Account you get<br/> access to all products and services
                                 </h2>
 
                                 <div className="icon-box flex gap-2 items-center mt-8">
@@ -77,8 +77,8 @@ function RegisterForm(props) {
                             </div>
                         </div>
 
-                        <div className="col">
-                            <form className="register_form w-[450px] px-6 py-6 bg-white rounded">
+                        <div className="col lg:flex justify-end">
+                            <form className="register_form w-full md:w-[450px] h-[450px] px-6 py-6 bg-white rounded">
                                 <div className="flex items-center gap-6">
                                     <div className="col">
                                         <label htmlFor="name" className="text-[14px]">First Name</label>
