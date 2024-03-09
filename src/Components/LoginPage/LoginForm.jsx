@@ -19,7 +19,7 @@ function LoginForm(props) {
                                 </div>
                                 <p className="mt-3">
                                     We build products and services to satisfy people’s<br/>
-                                    needs and desires, and boost businesses growth
+                                    needs and desires, and boost businesses growth.
                                 </p>
                             </div>
                         </div>
