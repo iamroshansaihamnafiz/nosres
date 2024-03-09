@@ -14,7 +14,7 @@ function RegisterForm(props) {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div className="col">
                             <div className="wrap-one">
-                                <h2 className="font-semibold">
+                                <h2 className="font-normal">
                                     By creating a Nosres Account you get<br/> accessto all products and services
                                 </h2>
 
@@ -40,12 +40,14 @@ function RegisterForm(props) {
                             </div>
 
                             <div className="wrap-two mt-8">
-                                <h2 className="font-semibold">
+                                <h2 className="font-normal">
                                     Nosres is a dynamic business ecosystem
                                 </h2>
 
                                 <div className="icon-box flex gap-2 items-start mt-6">
-                                    <FaCheck size={15} className="text-primary"/>
+                                    <div className="one">
+                                        <FaCheck size={15} className="text-primary"/>
+                                    </div>
                                     <p>
                                         Nosres is building a dynamic business ecosystem and
                                         inspire humanity to achieve more.
@@ -53,7 +55,9 @@ function RegisterForm(props) {
                                 </div>
 
                                 <div className="icon-box flex gap-2 items-start mt-4">
-                                    <FaCheck size={15} className="text-primary"/>
+                                    <div className="one">
+                                        <FaCheck size={15} className="text-primary"/>
+                                    </div>
                                     <p>
                                         Nosres is founded on values that we all share, such as
                                         entrepreneurship, passion, curiosity, creativity,
@@ -62,7 +66,9 @@ function RegisterForm(props) {
                                 </div>
 
                                 <div className="icon-box flex gap-2 items-start mt-4">
-                                    <FaCheck size={15} className="text-primary"/>
+                                    <div className="one">
+                                        <FaCheck size={15} className="text-primary"/>
+                                    </div>
                                     <p>
                                         We derive guidance from them to choose our<br/>
                                         business partners.
@@ -72,7 +78,7 @@ function RegisterForm(props) {
                         </div>
 
                         <div className="col">
-                            <form className="register_form px-8 py-8 bg-white shadow rounded">
+                            <form className="register_form w-[450px] px-6 py-6 bg-white rounded">
                                 <div className="flex items-center gap-6">
                                     <div className="col">
                                         <label htmlFor="name" className="text-[14px]">First Name</label>
