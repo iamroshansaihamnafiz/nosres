@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import {MdOutlineErrorOutline} from "react-icons/md";
 import {Link} from "react-router-dom";
 import LogoImg from '../../assets/images/logo.svg'
-import {FaCheck} from "react-icons/fa6";
 
 function LoginForm(props) {
     const [showPassword, setShowPassword] = useState(false);
