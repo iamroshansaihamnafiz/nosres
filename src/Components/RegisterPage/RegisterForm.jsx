@@ -103,7 +103,7 @@ function RegisterForm(props) {
                                         <input
                                             className="mt-1 valid_input rounded w-full py-1 px-3 text-[#ABABAB] text-[12px] focus:outline-none focus:border-red-500 focus:ring focus:ring-transparent"
                                             type="email"
-                                            placeholder="johndoe@gmail.com"
+                                            placeholder="johndoe@mail.com"
                                         />
                                         <div
                                             className="absolute inset-y-0 right-0 top-1 text-red-600 flex items-center pr-3 pointer-events-none">

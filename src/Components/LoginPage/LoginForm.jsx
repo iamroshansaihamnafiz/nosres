@@ -35,7 +35,7 @@ function LoginForm(props) {
                                         <input
                                             className="mt-1 valid_input rounded w-full py-1 px-3 text-[#ABABAB] text-[12px] focus:outline-none focus:border-red-500 focus:ring focus:ring-transparent"
                                             type="email"
-                                            placeholder="johndoe@gmail.com"
+                                            placeholder="johndoe@mail.com"
                                         />
                                         <div
                                             className="absolute inset-y-0 right-0 top-1 text-red-600 flex items-center pr-3 pointer-events-none">
@@ -82,7 +82,7 @@ function LoginForm(props) {
 
                                 <div className="mt-4 text-center">
                                     <span className="text-[#828D9E] text-[12px]">
-                                        Don't have any account? <Link to='/' className="text-primary">Sign in</Link>
+                                        Don't have any account? <Link to='/' className="text-primary">Sign up</Link>
                                     </span>
                                 </div>
                             </form>
