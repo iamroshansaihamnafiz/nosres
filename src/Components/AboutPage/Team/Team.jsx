@@ -20,11 +20,8 @@ function Team(props) {
                             Meet the team
                         </h1>
                         <p className="mt-3 text-gray-500 text-[16px]">
-                            At Nosres, entrepreneurship is valued, encouraged, and rewarded – it’s in our DNA. That’s
-                            why we’re striving to<br/>
-                            create an entrepreneurial culture by offering an environment where people act and think like
-                            entrepreneurs, and<br/>
-                            empower themselves. This makes us different in the business community
+                            We are entrepreneurs and we are passionate about what we are doing. We are curious and we<br/>
+                            use our creative thinking and innovative ideas to develop intuitive products and services.
                         </p>
                     </div>
 

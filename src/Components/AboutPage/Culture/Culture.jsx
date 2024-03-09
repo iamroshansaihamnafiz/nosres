@@ -16,7 +16,7 @@ function Culture(props) {
                             why we’re striving to<br/>
                             create an entrepreneurial culture by offering an environment where people act and think like
                             entrepreneurs, and<br/>
-                            empower themselves. This makes us different in the business community
+                            empower themselves. This makes us different in the business community.
                         </p>
 
                         <Link to='/'
