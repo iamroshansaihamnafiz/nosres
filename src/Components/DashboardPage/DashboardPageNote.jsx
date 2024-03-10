@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
 import LogoImg from "../../assets/images/logo.svg";
 import userImg from '../../assets/images/dashboard/user.jpg';
@@ -21,35 +21,16 @@ import {MdHelp} from "react-icons/md";
 import {HiOutlineMenuAlt2} from "react-icons/hi";
 
 function DashboardPage(props) {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const toggleSidebar = () => {
-        setIsMenuOpen((prev) => !prev);
-    };
-
-    // 👇️ Toggle class on click Show And Hide Account (Icon)
-    const [isAccountVisible, setAccountVisible] = useState(false);
-    const handleDaAccountClick = () => {
-        const account = document.getElementById('account_da_dropdown_menu');
-        if (account) {
-            if (isAccountVisible) {
-                account.classList.remove('show-account-dropdown-menu');
-            } else {
-                account.classList.add('show-account-dropdown-menu');
-            }
-            setAccountVisible(!isAccountVisible);
-        }
-    };
-    const currentYear = new Date().getFullYear();
     return (
         <>
-            <section id="dashboard-section" className="bg-[#F9FAFB]">
+            <section id="dashboard-section">
                 <nav
                     className="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
                     <div className="px-3 py-2 lg:px-5 lg:pl-3">
                         <div className="flex items-center justify-between">
                             <div className="flex items-center justify-start rtl:justify-end">
-                                <button onClick={toggleSidebar} type="button"
+                                <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar"
+                                        aria-controls="logo-sidebar" type="button"
                                         className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
                                     <span className="sr-only">Open sidebar</span>
                                     <HiOutlineMenuAlt2 className="w-6 h-6"/>
@@ -68,7 +49,7 @@ function DashboardPage(props) {
                                             <GoQuestion/>
                                             <h4 className="text-[14px]">Help</h4>
                                         </div>
-                                        <button onClick={handleDaAccountClick} type="button"
+                                        <button type="button"
                                                 className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                                                 aria-expanded="false" data-dropdown-toggle="dropdown-user">
                                             <span className="sr-only">Open user menu</span>
@@ -76,50 +57,48 @@ function DashboardPage(props) {
                                                  src={userImg}
                                                  alt="user"/>
                                         </button>
-
-                                        {/* User Image Dropdown */}
-                                        <div id="account_da_dropdown_menu"
-                                             className="account-dropdown-menu absolute text-gray-700 pt-1 for-account transition-all ease-linear duration-300 bg-white rounded shadow border">
-                                            <div className="container">
-                                                <div className="px-4 py-3" role="none">
-                                                    <div className="flex box items-center gap-3">
-                                                        <div className="one">
-                                                            <img className="w-9 h-9 rounded-full"
-                                                                 src={userImg}
-                                                                 alt="user"/>
-                                                        </div>
-                                                        <div className="two">
-                                                            <h4 className="text-[14px] font-[500]">John Doe</h4>
-                                                            <p>@janedoe</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <ul className="py-1" role="none">
-                                                    <li>
-                                                        <div
-                                                            className="px-4 py-2 flex items-center gap-2 hover:bg-gray-100 hover:text-primary">
-                                                            <MdHelp size={25}/>
-                                                            <Link to="#"
-                                                                  className="text-[14px]"
-                                                                  role="menuitem">Help & Support
-                                                            </Link>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div
-                                                            className="px-4 py-2 flex items-center gap-2 hover:bg-gray-100 hover:text-primary">
-                                                            <MdLogout size={23}/>
-                                                            <Link to="#"
-                                                                  className="text-[14px]"
-                                                                  role="menuitem">Sign Out
-                                                            </Link>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
                                     </div>
 
+                                    {/* User Image Dropdown */}
+                                    <div
+                                        className="z-50 w-[250px] hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow"
+                                        id="dropdown-user">
+                                        <div className="px-4 py-3" role="none">
+                                            <div className="flex box items-center gap-3">
+                                                <div className="one">
+                                                    <img className="w-9 h-9 rounded-full"
+                                                         src={userImg}
+                                                         alt="user"/>
+                                                </div>
+                                                <div className="two">
+                                                    <h4 className="text-[14px] font-[500]">John Doe</h4>
+                                                    <p>@janedoe</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul className="py-1" role="none">
+                                            <li>
+                                                <div
+                                                    className="px-4 py-2 flex items-center gap-2 hover:bg-gray-100 hover:text-primary">
+                                                    <MdHelp size={25}/>
+                                                    <Link to="#"
+                                                          className="text-[14px]"
+                                                          role="menuitem">Help & Support
+                                                    </Link>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div
+                                                    className="px-4 py-2 flex items-center gap-2 hover:bg-gray-100 hover:text-primary">
+                                                    <MdLogout size={23}/>
+                                                    <Link to="#"
+                                                          className="text-[14px]"
+                                                          role="menuitem">Sign Out
+                                                    </Link>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -128,9 +107,9 @@ function DashboardPage(props) {
 
                 {/* Sidebar */}
                 <aside id="logo-sidebar"
-                       className={`fixed top-0 ${isMenuOpen ? 'left-0' : '-left-[1000px]'} sm:left-0 z-40 w-64 h-screen pt-0 transition-all duration-300 ease-in-out border-r border-gray-200 sm:translate-x-0`}
+                       className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
                        aria-label="Sidebar">
-                    <div className="h-full px-3 pb-4 pt-20 overflow-y-auto bg-white">
+                    <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
                         <ul className="space-y-1 font-medium">
                             <li>
                                 <Link to="#"
@@ -195,17 +174,6 @@ function DashboardPage(props) {
                                 </Link>
                             </li>
                         </ul>
-
-                        <div className="bottom-div absolute left-6 bottom-10">
-                            <div className="flex space-x-2">
-                                <Link to='#' className="text-[12px] hover:text-primary">Terms</Link>
-                                <Link to='#' className="text-[12px] hover:text-primary">Privacy</Link>
-                                <Link to='#' className="text-[12px] hover:text-primary">Support</Link>
-                            </div>
-                            <h6 className="mt-1 text-gray-500 text-[12px]">
-                                © {currentYear} Nosres Inc. All rights reserved
-                            </h6>
-                        </div>
                     </div>
                 </aside>
 
