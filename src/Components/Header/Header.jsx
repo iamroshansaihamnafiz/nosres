@@ -378,7 +378,7 @@ function Header(props) {
                             <div className="five">
                                 <div className="dropdown inline-block relative">
                                     <div onClick={handleAccountClick}
-                                         className="text-center cursor-pointer text-gray-700 hover:text-primary transition relative">
+                                         className="text-center cursor-pointer text-primary transition relative">
                                         <HiUserCircle size={35}/>
                                     </div>
 
@@ -388,7 +388,7 @@ function Header(props) {
                                             <div
                                                 className="col flex items-center px-2 h-[85px]">
                                                 <div className="flex items-center gap-3">
-                                                    <HiUserCircle size={70}/>
+                                                    <HiUserCircle size={70} className="text-primary"/>
                                                     <div className="text">
                                                         <h2 className="text-[#252C32] font-semibold text-[14px]">
                                                             Nosres Account

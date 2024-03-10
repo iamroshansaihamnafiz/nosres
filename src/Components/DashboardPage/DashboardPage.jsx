@@ -77,7 +77,7 @@ function DashboardPage(props) {
                                             <div className="dropdown inline-block relative">
                                                 <div onClick={handleAccountClick}
                                                      className="text-center cursor-pointer text-gray-700 hover:text-primary transition relative">
-                                                    <HiUserCircle size={35}/>
+                                                    <HiUserCircle className="text-primary" size={35}/>
                                                 </div>
 
                                                 <div id="account_da_dropdown_menu"
