@@ -82,7 +82,7 @@ function LoginForm(props) {
 
                                 <div className="mt-4 text-center">
                                     <span className="text-[#828D9E] text-[12px]">
-                                        Don't have any account? <Link to='/' className="text-primary">Sign up</Link>
+                                        Don't have an account? <Link to='/' className="text-primary">Sign up</Link>
                                     </span>
                                 </div>
                             </form>
