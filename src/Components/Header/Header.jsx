@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import {Link, NavLink} from "react-router-dom";
 import {AiOutlineClose, AiOutlineSearch} from "react-icons/ai";
-import {PiUserCircleThin} from "react-icons/pi";
+import { HiUserCircle } from "react-icons/hi";
 import {IoIosArrowDown} from "react-icons/io";
 import {HiOutlineBars3} from "react-icons/hi2";
 import WhoImg1 from '../../assets/images/m1.svg';
@@ -379,7 +379,7 @@ function Header(props) {
                                 <div className="dropdown inline-block relative">
                                     <div onClick={handleAccountClick}
                                          className="text-center cursor-pointer text-gray-700 hover:text-primary transition relative">
-                                        <PiUserCircleThin size={35}/>
+                                        <HiUserCircle size={35}/>
                                     </div>
 
                                     <div id="account_dropdown_menu"
@@ -388,7 +388,7 @@ function Header(props) {
                                             <div
                                                 className="col flex items-center px-2 h-[85px]">
                                                 <div className="flex items-center gap-3">
-                                                    <PiUserCircleThin size={70}/>
+                                                    <HiUserCircle size={70}/>
                                                     <div className="text">
                                                         <h2 className="text-[#252C32] font-semibold text-[14px]">
                                                             Nosres Account
@@ -541,7 +541,7 @@ function Header(props) {
                             <div
                                 className="border-b border-gray-300 pl-4 pb-3 text-[14px] font-normal flex gap-2 items-center">
                                 <span>Account</span>
-                                <PiUserCircleThin size={22}/>
+                                <HiUserCircle size={22}/>
                             </div>
                         </Link>
 
@@ -553,7 +553,7 @@ function Header(props) {
                                     <div
                                         className="col flex items-center px-2 h-[85px]">
                                         <div className="flex items-center gap-3">
-                                            <PiUserCircleThin size={70}/>
+                                            <HiUserCircle size={70}/>
                                             <div className="text">
                                                 <h2 className="text-[#252C32] font-semibold text-[14px]">
                                                     Nosres Account
