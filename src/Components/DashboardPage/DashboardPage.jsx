@@ -215,7 +215,7 @@ function DashboardPage(props) {
                 <div className="p-4 sm:ml-64 bg-gray-50 h-screen">
                     <div className="p-4 rounded mt-14">
                         <div className="grid grid-cols-1 mb-4">
-                            <div className="col w-full lg:w-[500px] h-full lg:h-[240px] py-8 px-8 bg-white rounded">
+                            <div className="col w-full lg:w-[642px] h-full lg:h-[240px] py-8 px-8 bg-white rounded">
                                 <div className="flex box items-center gap-3">
                                     <div className="one">
                                         <HiUserCircle className="w-12 h-12 text-primary"/>
