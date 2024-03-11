@@ -1,5 +1,5 @@
 'use client';
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {HiOutlineMenuAlt2, HiUserCircle} from "react-icons/hi";
 import {Link} from "react-router-dom";
 import LogoImg from "../../assets/images/logo.svg";
@@ -17,7 +17,6 @@ import {
     HiOutlineMinusCircle,
     HiOutlineCamera
 } from "react-icons/hi2";
-import {Datepicker} from 'flowbite-react';
 
 function PersonalInfoPage(props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,6 +70,210 @@ function PersonalInfoPage(props) {
         handleRemoveClick();
         setOpenProfileImageModal(false);
     };
+
+    // For Username Type
+    const constantPart = "auth.nosres.com/@";
+    const [inputValue, setInputValue] = useState('');
+
+    const handleInputChange = (e) => {
+        const userInput = e.target.value;
+
+        // Check if the user's input already includes the constant part
+        if (userInput.startsWith(constantPart)) {
+            setInputValue(userInput);
+        } else {
+            setInputValue(constantPart + userInput);
+        }
+    };
+
+    const handleKeyDown = (e) => {
+        // Handle backspace to prevent repetition
+        if (e.key === 'Backspace' && inputValue === constantPart) {
+            e.preventDefault(); // Prevent backspace from removing the constant part
+        }
+    };
+
+    // ------------------ One ------------------//
+    const [selectedOptionOne, setSelectedOptionOne] = useState('');
+    const [isOptionsVisibleOne, setIsOptionsVisibleOne] = useState(false);
+
+    const selectBoxRef = useRef(null);
+
+    const handleOptionClickOne = (option) => {
+        setSelectedOptionOne(option);
+        toggleOptionsVisibilityOne();
+    };
+
+    const toggleOptionsVisibilityOne = () => {
+        setIsOptionsVisibleOne(!isOptionsVisibleOne);
+    };
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (selectBoxRef.current && !selectBoxRef.current.contains(event.target)) {
+                setIsOptionsVisibleOne(false);
+            }
+        };
+
+        document.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
+
+    // ------------------ Two ------------------//
+    const [selectedOptionTwo, setSelectedOptionTwo] = useState('');
+    const [isOptionsVisibleTwo, setIsOptionsVisibleTwo] = useState(false);
+
+    const selectBoxRefTwo = useRef(null);
+
+    const handleOptionClickTwo = (option) => {
+        setSelectedOptionTwo(option);
+        toggleOptionsVisibilityTwo();
+    };
+
+    const toggleOptionsVisibilityTwo = () => {
+        setIsOptionsVisibleTwo(!isOptionsVisibleTwo);
+    };
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (selectBoxRefTwo.current && !selectBoxRefTwo.current.contains(event.target)) {
+                setIsOptionsVisibleTwo(false);
+            }
+        };
+
+        document.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
+
+    // ------------------ Three ------------------//
+    const [selectedOptionThree, setSelectedOptionThree] = useState('');
+    const [isOptionsVisibleThree, setIsOptionsVisibleThree] = useState(false);
+
+    const selectBoxRefThree = useRef(null);
+
+    const handleOptionClickThree = (option) => {
+        setSelectedOptionThree(option);
+        toggleOptionsVisibilityThree();
+    };
+
+    // For Birthday Year
+    const startYear = 1972;
+    const endYear = 2024;
+    const yearOptions = [];
+
+    for (let year = startYear; year <= endYear; year++) {
+        yearOptions.push(
+            <li key={year} onClick={() => handleOptionClickThree(`${year}`)}>
+                {year}
+            </li>
+        );
+    }
+
+    const toggleOptionsVisibilityThree = () => {
+        setIsOptionsVisibleThree(!isOptionsVisibleThree);
+    };
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (selectBoxRefThree.current && !selectBoxRefThree.current.contains(event.target)) {
+                setIsOptionsVisibleThree(false);
+            }
+        };
+
+        document.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
+
+    // ------------------ Gender Select ------------------//
+    const [selectedOptionGender, setSelectedOptionGender] = useState('');
+    const [isOptionsVisibleGender, setIsOptionsVisibleGender] = useState(false);
+
+    const selectBoxRefGender = useRef(null);
+
+    const handleOptionClickGender = (option) => {
+        setSelectedOptionGender(option);
+        toggleOptionsVisibilityGender();
+    };
+
+    const toggleOptionsVisibilityGender = () => {
+        setIsOptionsVisibleGender(!isOptionsVisibleGender);
+    };
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (selectBoxRefGender.current && !selectBoxRefGender.current.contains(event.target)) {
+                setIsOptionsVisibleGender(false);
+            }
+        };
+
+        document.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
+
+    // ------------------ Country Select ------------------//
+    const [selectedOptionCountry, setSelectedOptionCountry] = useState('');
+    const [isOptionsVisibleCountry, setIsOptionsVisibleCountry] = useState(false);
+
+    const selectBoxRefCountry = useRef(null);
+
+    const handleOptionClickCountry = (option) => {
+        setSelectedOptionCountry(option);
+        toggleOptionsVisibilityCountry();
+    };
+
+    const toggleOptionsVisibilityCountry = () => {
+        setIsOptionsVisibleCountry(!isOptionsVisibleCountry);
+    };
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (selectBoxRefCountry.current && !selectBoxRefCountry.current.contains(event.target)) {
+                setIsOptionsVisibleCountry(false);
+            }
+        };
+
+        document.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
+
+
+    // ------------------ Language Select ------------------//
+    const [selectedOptionLanguage, setSelectedOptionLanguage] = useState('');
+    const [isOptionsVisibleLanguage, setIsOptionsVisibleLanguage] = useState(false);
+
+    const selectBoxRefLanguage = useRef(null);
+
+    const handleOptionClickLanguage = (option) => {
+        setSelectedOptionLanguage(option);
+        toggleOptionsVisibilityLanguage();
+    };
+
+    const toggleOptionsVisibilityLanguage = () => {
+        setIsOptionsVisibleLanguage(!isOptionsVisibleLanguage);
+    };
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (selectBoxRefLanguage.current && !selectBoxRefLanguage.current.contains(event.target)) {
+                setIsOptionsVisibleLanguage(false);
+            }
+        };
+
+        document.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
 
     // Name change popup
     const [openNameModal, setOpenNameModal] = useState(false);
@@ -406,15 +609,26 @@ function PersonalInfoPage(props) {
                                     </Modal.Header>
                                     <Modal.Body>
                                         <div className="modal_body box">
-                                            <h4 className="text-[16px]">Name</h4>
+                                            <h4 className="text-[14px]">First Name</h4>
                                             <input
                                                 className="mt-1 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"
                                                 type="text"
-                                                placeholder="John Doe"
+                                                placeholder="John"
                                             />
-                                            <p className="mt-2">
-                                                Up to 15 characters (letters, numbers, or _)
-                                            </p>
+
+                                            <h4 className="text-[14px] mt-6">Middle Name (Optional)</h4>
+                                            <input
+                                                className="mt-1 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"
+                                                type="text"
+                                                placeholder="Enter your middle name"
+                                            />
+
+                                            <h4 className="text-[14px] mt-6">Last Name</h4>
+                                            <input
+                                                className="mt-1 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"
+                                                type="text"
+                                                placeholder="Doe"
+                                            />
                                         </div>
                                     </Modal.Body>
                                     <Modal.Footer>
@@ -448,11 +662,14 @@ function PersonalInfoPage(props) {
                                     </Modal.Header>
                                     <Modal.Body>
                                         <div className="modal_body box">
-                                            <h4 className="text-[16px]">Username</h4>
+                                            <h4 className="text-[14px]">Username</h4>
                                             <input
                                                 className="mt-1 valid_input rounded w-full py-1 px-3 text-[#ABABAB] text-[12px] focus:outline-none focus:border-primary focus:ring focus:ring-transparent"
                                                 type="text"
                                                 placeholder="auth.nosres.com/@"
+                                                value={inputValue}
+                                                onChange={handleInputChange}
+                                                onKeyDown={handleKeyDown}
                                             />
                                             <p className="mt-2">
                                                 Up to 15 characters (letters, numbers, or _)
@@ -489,9 +706,101 @@ function PersonalInfoPage(props) {
                                         <h4 className="text-[16px]">Change Birthday</h4>
                                     </Modal.Header>
                                     <Modal.Body>
-                                        <div className="modal_body box h-[500px]">
+                                        <div className="modal_body box">
                                             <h4 className="text-[16px]">Birthday</h4>
-                                            <Datepicker autoHide={false}/>
+
+                                            <div className="flex gap-2">
+                                                <div className="select-box mt-2" ref={selectBoxRef}>
+                                                    <div className="select-option flex"
+                                                         onClick={toggleOptionsVisibilityOne}>
+                                                        <input type="text" placeholder="Month"
+                                                               readOnly
+                                                               value={selectedOptionOne}
+                                                               className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
+                                                    </div>
+                                                    {isOptionsVisibleOne && (
+                                                        <div className="content">
+                                                            <ul className="options">
+                                                                <li onClick={() => handleOptionClickOne("January")}>January</li>
+                                                                <li onClick={() => handleOptionClickOne("February")}>February</li>
+                                                                <li onClick={() => handleOptionClickOne("March")}>March</li>
+                                                                <li onClick={() => handleOptionClickOne("April")}>April</li>
+                                                                <li onClick={() => handleOptionClickOne("May")}>May</li>
+                                                                <li onClick={() => handleOptionClickOne("June")}>June</li>
+                                                                <li onClick={() => handleOptionClickOne("July")}>July</li>
+                                                                <li onClick={() => handleOptionClickOne("August")}>August</li>
+                                                                <li onClick={() => handleOptionClickOne("September")}>September</li>
+                                                                <li onClick={() => handleOptionClickOne("October")}>October</li>
+                                                                <li onClick={() => handleOptionClickOne("November")}>November</li>
+                                                                <li onClick={() => handleOptionClickOne("December")}>December</li>
+                                                            </ul>
+                                                        </div>
+                                                    )}
+                                                </div>
+
+                                                <div className="select-box mt-2" ref={selectBoxRefTwo}>
+                                                    <div className="select-option flex"
+                                                         onClick={toggleOptionsVisibilityTwo}>
+                                                        <input type="text" placeholder="Day"
+                                                               readOnly
+                                                               value={selectedOptionTwo}
+                                                               className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
+                                                    </div>
+                                                    {isOptionsVisibleTwo && (
+                                                        <div className="content">
+                                                            <ul className="options">
+                                                                <li onClick={() => handleOptionClickTwo("1")}>1</li>
+                                                                <li onClick={() => handleOptionClickTwo("2")}>2</li>
+                                                                <li onClick={() => handleOptionClickTwo("3")}>3</li>
+                                                                <li onClick={() => handleOptionClickTwo("4")}>4</li>
+                                                                <li onClick={() => handleOptionClickTwo("5")}>5</li>
+                                                                <li onClick={() => handleOptionClickTwo("6")}>6</li>
+                                                                <li onClick={() => handleOptionClickTwo("7")}>7</li>
+                                                                <li onClick={() => handleOptionClickTwo("8")}>8</li>
+                                                                <li onClick={() => handleOptionClickTwo("9")}>9</li>
+                                                                <li onClick={() => handleOptionClickTwo("10")}>10</li>
+                                                                <li onClick={() => handleOptionClickTwo("11")}>11</li>
+                                                                <li onClick={() => handleOptionClickTwo("12")}>12</li>
+                                                                <li onClick={() => handleOptionClickTwo("13")}>13</li>
+                                                                <li onClick={() => handleOptionClickTwo("14")}>14</li>
+                                                                <li onClick={() => handleOptionClickTwo("15")}>15</li>
+                                                                <li onClick={() => handleOptionClickTwo("16")}>16</li>
+                                                                <li onClick={() => handleOptionClickTwo("17")}>17</li>
+                                                                <li onClick={() => handleOptionClickTwo("18")}>18</li>
+                                                                <li onClick={() => handleOptionClickTwo("19")}>19</li>
+                                                                <li onClick={() => handleOptionClickTwo("20")}>20</li>
+                                                                <li onClick={() => handleOptionClickTwo("21")}>21</li>
+                                                                <li onClick={() => handleOptionClickTwo("22")}>22</li>
+                                                                <li onClick={() => handleOptionClickTwo("23")}>23</li>
+                                                                <li onClick={() => handleOptionClickTwo("24")}>24</li>
+                                                                <li onClick={() => handleOptionClickTwo("25")}>25</li>
+                                                                <li onClick={() => handleOptionClickTwo("26")}>26</li>
+                                                                <li onClick={() => handleOptionClickTwo("27")}>27</li>
+                                                                <li onClick={() => handleOptionClickTwo("29")}>29</li>
+                                                                <li onClick={() => handleOptionClickTwo("30")}>30</li>
+                                                            </ul>
+                                                        </div>
+                                                    )}
+                                                </div>
+
+                                                <div className="select-box mt-2" ref={selectBoxRefThree}>
+                                                    <div className="select-option flex"
+                                                         onClick={toggleOptionsVisibilityThree}>
+                                                        <input type="text" placeholder="Year"
+                                                               readOnly
+                                                               value={selectedOptionThree}
+                                                               className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
+                                                    </div>
+                                                    {isOptionsVisibleThree && (
+                                                        <div className="content">
+                                                            <ul className="options">
+                                                                {yearOptions}
+                                                            </ul>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+
                                             <p className="mt-2">
                                                 Your date of birth is required to identify which services you qualify
                                                 for.
@@ -535,11 +844,23 @@ function PersonalInfoPage(props) {
                                                 as delivering more targeted advertisements to you within Nosres
                                                 products and services.
                                             </p>
-                                            <select
-                                                className="mt-2 rounded w-full py-1 focus:ring focus:ring-transparent text-black text-[14px] focus:outline-none">
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                            </select>
+                                            <div className="select-box mt-2" ref={selectBoxRefGender}>
+                                                <div className="select-option flex"
+                                                     onClick={toggleOptionsVisibilityGender}>
+                                                    <input type="text" placeholder="Select"
+                                                           readOnly
+                                                           value={selectedOptionGender}
+                                                           className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
+                                                </div>
+                                                {isOptionsVisibleGender && (
+                                                    <div className="content gender_content">
+                                                        <ul className="options">
+                                                            <li onClick={() => handleOptionClickGender("Male")}>Male</li>
+                                                            <li onClick={() => handleOptionClickGender("Female")}>Female</li>
+                                                        </ul>
+                                                    </div>
+                                                )}
+                                            </div>
                                         </div>
                                     </Modal.Body>
                                     <Modal.Footer>
@@ -573,15 +894,28 @@ function PersonalInfoPage(props) {
                                     </Modal.Header>
                                     <Modal.Body>
                                         <div className="modal_body box">
-                                            <h4 className="text-[16px]">Country</h4>
-                                            <select
-                                                className="mt-2 rounded w-full py-1 focus:ring focus:ring-transparent text-black text-[14px] focus:outline-none">
-                                                <option value="United States">United States</option>
-                                                <option value="Bangladesh">Bangladesh</option>
-                                                <option value="India">India</option>
-                                                <option value="Pakisthan">Pakisthan</option>
-                                                <option value="Albania">Albania</option>
-                                            </select>
+                                            <h4 className="text-[14px]">Country</h4>
+                                            <div className="select-box mt-2" ref={selectBoxRefCountry}>
+                                                <div className="select-option flex"
+                                                     onClick={toggleOptionsVisibilityCountry}>
+                                                    <input type="text" placeholder="Select"
+                                                           readOnly
+                                                           value={selectedOptionCountry}
+                                                           className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
+                                                </div>
+                                                {isOptionsVisibleCountry && (
+                                                    <div className="content gender_content">
+                                                        <ul className="options">
+                                                            <li onClick={() => handleOptionClickCountry("United States")}>United
+                                                                States
+                                                            </li>
+                                                            <li onClick={() => handleOptionClickCountry("India")}>India</li>
+                                                            <li onClick={() => handleOptionClickCountry("Bangladesh")}>Bangladesh</li>
+                                                            <li onClick={() => handleOptionClickCountry("Pakisthan")}>Pakisthan</li>
+                                                        </ul>
+                                                    </div>
+                                                )}
+                                            </div>
                                         </div>
                                     </Modal.Body>
                                     <Modal.Footer>
@@ -615,13 +949,25 @@ function PersonalInfoPage(props) {
                                     </Modal.Header>
                                     <Modal.Body>
                                         <div className="modal_body box">
-                                            <h4 className="text-[16px]">Language</h4>
-                                            <select
-                                                className="mt-2 rounded w-full py-1 focus:ring focus:ring-transparent text-black text-[14px] focus:outline-none">
-                                                <option value="English">English</option>
-                                                <option value="Hindi">Hindi</option>
-                                                <option value="Bangla">Bangla</option>
-                                            </select>
+                                            <h4 className="text-[14px]">Language</h4>
+                                            <div className="select-box mt-2" ref={selectBoxRefLanguage}>
+                                                <div className="select-option flex"
+                                                     onClick={toggleOptionsVisibilityLanguage}>
+                                                    <input type="text" placeholder="Select"
+                                                           readOnly
+                                                           value={selectedOptionLanguage}
+                                                           className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
+                                                </div>
+                                                {isOptionsVisibleLanguage && (
+                                                    <div className="content gender_content">
+                                                        <ul className="options">
+                                                            <li onClick={() => handleOptionClickLanguage("English")}>English</li>
+                                                            <li onClick={() => handleOptionClickLanguage("Hindi")}>Hindi</li>
+                                                            <li onClick={() => handleOptionClickLanguage("Bangla")}>Bangla</li>
+                                                        </ul>
+                                                    </div>
+                                                )}
+                                            </div>
                                         </div>
                                     </Modal.Body>
                                     <Modal.Footer>
