@@ -17,6 +17,7 @@ import {
     HiOutlineMinusCircle,
     HiOutlineCamera
 } from "react-icons/hi2";
+import {Datepicker} from 'flowbite-react';
 
 function PersonalInfoPage(props) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,12 +42,13 @@ function PersonalInfoPage(props) {
 
     const currentYear = new Date().getFullYear();
 
-    // Profile image change popup
-    const [openProfileImageModal, setOpenProfileImageModal] = useState(false);
-
     // Image Upload Function
     const [selectedFile, setSelectedFile] = useState(null);
     const fileInputRef = useRef(null);
+
+    // Profile image change popup
+    const [openProfileImageModal, setOpenProfileImageModal] = useState(false);
+
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -69,6 +71,25 @@ function PersonalInfoPage(props) {
         handleRemoveClick();
         setOpenProfileImageModal(false);
     };
+
+    // Name change popup
+    const [openNameModal, setOpenNameModal] = useState(false);
+
+    // Username change popup
+    const [openUsernameModal, setOpenUsernameModal] = useState(false);
+
+    // Birthday change popup
+    const [openBirthdayModal, setOpenBirthdayModal] = useState(false);
+
+    // Gender change popup
+    const [openGenderModal, setOpenGenderModal] = useState(false);
+
+    // Country change popup
+    const [openCountryModal, setOpenCountryModal] = useState(false);
+
+    // Language change popup
+    const [openLanguageModal, setOpenLanguageModal] = useState(false);
+
     return (
         <>
             <section id="dashboard-section" className="bg-[#F9FAFB]">
@@ -272,7 +293,8 @@ function PersonalInfoPage(props) {
                         </div>
 
                         {/* Profile Picture Pop-Up Start */}
-                        <Modal size="lg" dismissible show={openProfileImageModal} onClose={() => setOpenProfileImageModal(false)}>
+                        <Modal size="lg" dismissible show={openProfileImageModal}
+                               onClose={() => setOpenProfileImageModal(false)}>
                             <Modal.Header
                                 style={{
                                     backgroundColor: 'rgb(129 188 255 / 18%)',
@@ -366,15 +388,47 @@ function PersonalInfoPage(props) {
                                     </p>
                                 </div>
 
-                                <div className="box mt-6 rounded flex items-start justify-between bg-white border px-4 py-4">
+                                <div
+                                    className="box mt-6 rounded flex items-start justify-between bg-white border px-4 py-4">
                                     <div className="left">
                                         <h6 className="text-[14px]">Name</h6>
                                         <p className="mt-0">Jane Doe</p>
                                     </div>
-                                    <div className="right">
+                                    <div onClick={() => setOpenNameModal(true)} className="right">
                                         <button className="text-primary text-[14px]">Edit</button>
                                     </div>
                                 </div>
+                                {/* Name change Pop-Up Start */}
+                                <Modal size="lg" dismissible show={openNameModal}
+                                       onClose={() => setOpenNameModal(false)}>
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Change Name</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <h4 className="text-[16px]">Name</h4>
+                                            <input
+                                                className="mt-1 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"
+                                                type="text"
+                                                placeholder="John Doe"
+                                            />
+                                            <p className="mt-2">
+                                                Up to 15 characters (letters, numbers, or _)
+                                            </p>
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenNameModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
+                                            </button>
+                                            <button onClick={() => setOpenNameModal(false)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Name change Pop-Up End */}
 
                                 <div
                                     className="box rounded mt-4 flex items-start justify-between bg-white border px-4 py-4">
@@ -382,10 +436,41 @@ function PersonalInfoPage(props) {
                                         <h6 className="text-[14px]">Username</h6>
                                         <p className="mt-0">Janedoe</p>
                                     </div>
-                                    <div className="right">
+                                    <div onClick={() => setOpenUsernameModal(true)} className="right">
                                         <button className="text-primary text-[14px]">Edit</button>
                                     </div>
                                 </div>
+                                {/* Username change Pop-Up Start */}
+                                <Modal size="lg" dismissible show={openUsernameModal}
+                                       onClose={() => setOpenUsernameModal(false)}>
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Change Username</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <h4 className="text-[16px]">Username</h4>
+                                            <input
+                                                className="mt-1 valid_input rounded w-full py-1 px-3 text-[#ABABAB] text-[12px] focus:outline-none focus:border-primary focus:ring focus:ring-transparent"
+                                                type="text"
+                                                placeholder="auth.nosres.com/@"
+                                            />
+                                            <p className="mt-2">
+                                                Up to 15 characters (letters, numbers, or _)
+                                            </p>
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenUsernameModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
+                                            </button>
+                                            <button onClick={() => setOpenUsernameModal(false)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Username change Pop-Up End */}
 
                                 <div
                                     className="box rounded mt-4 flex items-start justify-between bg-white border px-4 py-4">
@@ -393,10 +478,38 @@ function PersonalInfoPage(props) {
                                         <h6 className="text-[14px]">Birthday</h6>
                                         <p className="mt-0">January 22, 2000</p>
                                     </div>
-                                    <div className="right">
+                                    <div onClick={() => setOpenBirthdayModal(true)} className="right">
                                         <button className="text-primary text-[14px]">Edit</button>
                                     </div>
                                 </div>
+                                {/* Birthday change Pop-Up Start */}
+                                <Modal size="lg" dismissible show={openBirthdayModal}
+                                       onClose={() => setOpenBirthdayModal(false)}>
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Change Birthday</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box h-[500px]">
+                                            <h4 className="text-[16px]">Birthday</h4>
+                                            <Datepicker autoHide={false}/>
+                                            <p className="mt-2">
+                                                Your date of birth is required to identify which services you qualify
+                                                for.
+                                            </p>
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenBirthdayModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
+                                            </button>
+                                            <button onClick={() => setOpenBirthdayModal(false)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Birthday change Pop-Up End */}
 
                                 <div
                                     className="box rounded mt-4 flex items-start justify-between bg-white border px-4 py-4">
@@ -404,10 +517,43 @@ function PersonalInfoPage(props) {
                                         <h6 className="text-[14px]">Gender</h6>
                                         <p className="mt-0">Female</p>
                                     </div>
-                                    <div className="right">
+                                    <div className="right" onClick={() => setOpenGenderModal(true)}>
                                         <button className="text-primary text-[14px]">Edit</button>
                                     </div>
                                 </div>
+                                {/* Gender change Pop-Up Start */}
+                                <Modal size="lg" dismissible show={openGenderModal}
+                                       onClose={() => setOpenGenderModal(false)}>
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Change Gender</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <h4 className="text-[16px]">Gender</h4>
+                                            <p className="mt-2">
+                                                Nosres uses this information to customize your experience, such
+                                                as delivering more targeted advertisements to you within Nosres
+                                                products and services.
+                                            </p>
+                                            <select
+                                                className="mt-2 rounded w-full py-1 focus:ring focus:ring-transparent text-black text-[14px] focus:outline-none">
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                            </select>
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenGenderModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
+                                            </button>
+                                            <button onClick={() => setOpenGenderModal(false)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Gender change Pop-Up End */}
 
                                 <div
                                     className="box rounded mt-4 flex items-start justify-between bg-white border px-4 py-4">
@@ -415,10 +561,41 @@ function PersonalInfoPage(props) {
                                         <h6 className="text-[14px]">Country / Region</h6>
                                         <p className="mt-0">United States</p>
                                     </div>
-                                    <div className="right">
+                                    <div className="right" onClick={() => setOpenCountryModal(true)}>
                                         <button className="text-primary text-[14px]">Edit</button>
                                     </div>
                                 </div>
+                                {/* Country change Pop-Up Start */}
+                                <Modal size="lg" dismissible show={openCountryModal}
+                                       onClose={() => setOpenCountryModal(false)}>
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Change Country</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <h4 className="text-[16px]">Country</h4>
+                                            <select
+                                                className="mt-2 rounded w-full py-1 focus:ring focus:ring-transparent text-black text-[14px] focus:outline-none">
+                                                <option value="United States">United States</option>
+                                                <option value="Bangladesh">Bangladesh</option>
+                                                <option value="India">India</option>
+                                                <option value="Pakisthan">Pakisthan</option>
+                                                <option value="Albania">Albania</option>
+                                            </select>
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenCountryModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
+                                            </button>
+                                            <button onClick={() => setOpenCountryModal(false)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Country change Pop-Up End */}
 
                                 <div
                                     className="box rounded mt-4 flex items-start justify-between bg-white border px-4 py-4">
@@ -426,10 +603,39 @@ function PersonalInfoPage(props) {
                                         <h6 className="text-[14px]">Language</h6>
                                         <p className="mt-0">English</p>
                                     </div>
-                                    <div className="right">
+                                    <div className="right" onClick={() => setOpenLanguageModal(true)}>
                                         <button className="text-primary text-[14px]">Edit</button>
                                     </div>
                                 </div>
+                                {/* Language change Pop-Up Start */}
+                                <Modal size="lg" dismissible show={openLanguageModal}
+                                       onClose={() => setOpenLanguageModal(false)}>
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Change Language</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <h4 className="text-[16px]">Language</h4>
+                                            <select
+                                                className="mt-2 rounded w-full py-1 focus:ring focus:ring-transparent text-black text-[14px] focus:outline-none">
+                                                <option value="English">English</option>
+                                                <option value="Hindi">Hindi</option>
+                                                <option value="Bangla">Bangla</option>
+                                            </select>
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenLanguageModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
+                                            </button>
+                                            <button onClick={() => setOpenLanguageModal(false)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Language change Pop-Up End */}
                             </div>
                         </div>
 
