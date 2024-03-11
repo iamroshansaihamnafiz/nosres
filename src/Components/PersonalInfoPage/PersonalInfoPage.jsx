@@ -43,6 +43,7 @@ function PersonalInfoPage(props) {
 
     // Profile image change popup
     const [openProfileImageModal, setOpenProfileImageModal] = useState(false);
+    const [modalSize, setModalSize] = useState('lg');
 
     // Image Upload Function
     const [selectedFile, setSelectedFile] = useState(null);
@@ -272,7 +273,7 @@ function PersonalInfoPage(props) {
                         </div>
 
                         {/* Profile Picture Pop-Up Start */}
-                        <Modal dismissible show={openProfileImageModal} onClose={() => setOpenProfileImageModal(false)}>
+                        <Modal size={modalSize} dismissible show={openProfileImageModal} onClose={() => setOpenProfileImageModal(false)}>
                             <Modal.Header
                                 style={{
                                     backgroundColor: 'rgb(129 188 255 / 18%)',
@@ -341,10 +342,10 @@ function PersonalInfoPage(props) {
                             <Modal.Footer>
                                 <div className="flex w-full items-center justify-between">
                                     <button onClick={handleCanceltClick}
-                                            className="px-10 text-[14px] py-2 bg-primary text-white rounded">Cancel
+                                            className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
                                     </button>
                                     <button onClick={handleSaveClick}
-                                            className="px-10 text-[14px] py-2 bg-blue-100 text-black rounded">Save
+                                            className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
                                     </button>
                                 </div>
                             </Modal.Footer>
@@ -376,7 +377,8 @@ function PersonalInfoPage(props) {
                                     </div>
                                 </div>
 
-                                <div className="box mt-4 flex items-start justify-between bg-white border px-4 py-4">
+                                <div
+                                    className="box rounded mt-4 flex items-start justify-between bg-white border px-4 py-4">
                                     <div className="left">
                                         <h6 className="text-[14px]">Username</h6>
                                         <p className="mt-0">Janedoe</p>
@@ -386,7 +388,8 @@ function PersonalInfoPage(props) {
                                     </div>
                                 </div>
 
-                                <div className="box mt-4 flex items-start justify-between bg-white border px-4 py-4">
+                                <div
+                                    className="box rounded mt-4 flex items-start justify-between bg-white border px-4 py-4">
                                     <div className="left">
                                         <h6 className="text-[14px]">Birthday</h6>
                                         <p className="mt-0">January 22, 2000</p>
@@ -396,7 +399,8 @@ function PersonalInfoPage(props) {
                                     </div>
                                 </div>
 
-                                <div className="box mt-4 flex items-start justify-between bg-white border px-4 py-4">
+                                <div
+                                    className="box rounded mt-4 flex items-start justify-between bg-white border px-4 py-4">
                                     <div className="left">
                                         <h6 className="text-[14px]">Gender</h6>
                                         <p className="mt-0">Female</p>
@@ -406,7 +410,8 @@ function PersonalInfoPage(props) {
                                     </div>
                                 </div>
 
-                                <div className="box mt-4 flex items-start justify-between bg-white border px-4 py-4">
+                                <div
+                                    className="box rounded mt-4 flex items-start justify-between bg-white border px-4 py-4">
                                     <div className="left">
                                         <h6 className="text-[14px]">Country / Region</h6>
                                         <p className="mt-0">United States</p>
@@ -416,7 +421,8 @@ function PersonalInfoPage(props) {
                                     </div>
                                 </div>
 
-                                <div className="box mt-4 flex items-start justify-between bg-white border px-4 py-4">
+                                <div
+                                    className="box rounded mt-4 flex items-start justify-between bg-white border px-4 py-4">
                                     <div className="left">
                                         <h6 className="text-[14px]">Language</h6>
                                         <p className="mt-0">English</p>
@@ -443,11 +449,12 @@ function PersonalInfoPage(props) {
                                     </p>
                                 </div>
 
-                                <div className="box mt-6 flex items-start justify-between bg-white border px-4 py-4">
+                                <div
+                                    className="box mt-6 rounded flex items-start justify-between bg-white border px-4 py-4">
                                     <div className="left">
                                         <h6 className="text-[14px]">Email Address</h6>
                                         <p className="mt-0">
-                                            janedoe@mail.com <span>(Primary)</span>
+                                            janedoe@mail.com
                                         </p>
                                     </div>
                                     <div className="right">
@@ -455,11 +462,12 @@ function PersonalInfoPage(props) {
                                     </div>
                                 </div>
 
-                                <div className="box mt-4 flex items-start justify-between bg-white border px-4 py-4">
+                                <div
+                                    className="box mt-4 rounded flex items-start justify-between bg-white border px-4 py-4">
                                     <div className="left">
-                                        <h6 className="text-[14px]">Phone Numbe</h6>
+                                        <h6 className="text-[14px]">Phone Number</h6>
                                         <p className="mt-0">
-                                            +123 234 234 566 <span>(Primary)</span>
+                                            +123 234 234 566
                                         </p>
                                     </div>
                                     <div className="right">
