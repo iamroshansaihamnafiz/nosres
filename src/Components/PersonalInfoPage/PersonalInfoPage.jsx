@@ -366,7 +366,7 @@ function PersonalInfoPage(props) {
                                     </p>
                                 </div>
 
-                                <div className="box mt-6 flex items-start justify-between bg-white border px-4 py-4">
+                                <div className="box mt-6 rounded flex items-start justify-between bg-white border px-4 py-4">
                                     <div className="left">
                                         <h6 className="text-[14px]">Name</h6>
                                         <p className="mt-0">Jane Doe</p>
