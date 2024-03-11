@@ -43,7 +43,6 @@ function PersonalInfoPage(props) {
 
     // Profile image change popup
     const [openProfileImageModal, setOpenProfileImageModal] = useState(false);
-    const [modalSize, setModalSize] = useState('lg');
 
     // Image Upload Function
     const [selectedFile, setSelectedFile] = useState(null);
@@ -273,7 +272,7 @@ function PersonalInfoPage(props) {
                         </div>
 
                         {/* Profile Picture Pop-Up Start */}
-                        <Modal size={modalSize} dismissible show={openProfileImageModal} onClose={() => setOpenProfileImageModal(false)}>
+                        <Modal size="lg" dismissible show={openProfileImageModal} onClose={() => setOpenProfileImageModal(false)}>
                             <Modal.Header
                                 style={{
                                     backgroundColor: 'rgb(129 188 255 / 18%)',
