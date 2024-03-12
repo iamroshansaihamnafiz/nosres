@@ -13,7 +13,7 @@ function WhyNeed(props) {
                             Why do you need a Nosres Account?
                         </h1>
                         <p className="mt-3 text-[#ABABAB] text-[16px]">
-                            We build a verity of products and services that change people's lives. Therefore, we want to
+                            We build a variety of products and services that change people's lives. Therefore, we want to
                             make<br/> it convenient for you to access all those services without a hitch.
                         </p>
                     </div>
