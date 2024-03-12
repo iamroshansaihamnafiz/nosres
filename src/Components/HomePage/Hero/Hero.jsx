@@ -20,7 +20,7 @@ function Hero(props) {
                         We mean business
                     </p>
                     <div className="mt-8">
-                        <Link to='/shop'
+                        <Link to='#'
                               className="bg-primary border border-primary px-8 py-3 text-white font-medium rounded-md hover:bg-transparent hover:text-primary transition">
                             Visit Nosres for Business
                         </Link>
