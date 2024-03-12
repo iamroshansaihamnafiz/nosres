@@ -5,6 +5,8 @@ import {Link} from "react-router-dom";
 import LogoImg from "../../assets/images/logo.svg";
 import {GoQuestion} from "react-icons/go";
 import {Modal} from 'flowbite-react';
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
     HiOutlineArrowRightOnRectangle,
     HiOutlineBell,
@@ -15,7 +17,8 @@ import {
     HiOutlineQuestionMarkCircle,
     HiOutlineShieldCheck,
     HiOutlineMinusCircle,
-    HiOutlineCamera
+    HiOutlineCamera,
+    HiOutlinePlusCircle
 } from "react-icons/hi2";
 
 function PersonalInfoPage(props) {
@@ -161,7 +164,7 @@ function PersonalInfoPage(props) {
     };
 
     // For Birthday Year
-    const startYear = 1972;
+    const startYear = 1900;
     const endYear = 2024;
     const yearOptions = [];
 
@@ -172,6 +175,19 @@ function PersonalInfoPage(props) {
             </li>
         );
     }
+
+    // For Birthday Date and Month
+    const monthLengths = {
+        January: 31, February: 28, March: 31, April: 30,
+        May: 31, June: 30, July: 31, August: 31,
+        September: 30, October: 31, November: 30, December: 31
+    }
+
+    const [selectedMonth, setSelectedMonth] = useState('January');
+
+    const handleMonthSelect = (month) => {
+        setSelectedMonth(month);
+    };
 
     const toggleOptionsVisibilityThree = () => {
         setIsOptionsVisibleThree(!isOptionsVisibleThree);
@@ -293,6 +309,37 @@ function PersonalInfoPage(props) {
     // Language change popup
     const [openLanguageModal, setOpenLanguageModal] = useState(false);
 
+    // --------------------- Email change popup START -----------------------//
+    const [openEmailModal, setOpenEmailModal] = useState(false);
+    const [openAddEmailModal, setOpenAddEmailModal] = useState(false);
+    const [openEmailPasswordModal, setOpenEmailPasswordModal] = useState(false);
+    const [openConfirmEmailModal, setOpenConfirmEmailModal] = useState(false);
+    // Function to close all Email popups
+    const closeAllEmailPopups = () => {
+        setOpenEmailModal(false);
+        setOpenAddEmailModal(false);
+        setOpenEmailPasswordModal(false);
+        setOpenConfirmEmailModal(false);
+    };
+    const notify = () => {
+        toast.info('✅ Your email has been verified', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+    }
+    const handleConfirmPopEmailButtonClick = () => {
+        notify();
+        closeAllEmailPopups();
+    };
+
+    // --------------------- Email change popup END -----------------------//
+
     return (
         <>
             <section id="dashboard-section" className="bg-[#F9FAFB]">
@@ -348,20 +395,18 @@ function PersonalInfoPage(props) {
                                                                 <Link to='/'
                                                                       className="px-4 py-2 cursor-pointer flex items-center gap-2 hover:bg-gray-100 hover:text-primary">
                                                                     <HiOutlineQuestionMarkCircle size={25}/>
-                                                                    <Link to="/"
-                                                                          className="text-[14px]"
+                                                                    <div className="text-[14px]"
                                                                           role="menuitem">Help & Support
-                                                                    </Link>
+                                                                    </div>
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link to='/'
                                                                       className="px-4 py-2 cursor-pointer flex items-center gap-2 hover:bg-gray-100 hover:text-primary">
                                                                     <HiOutlineArrowRightOnRectangle size={25}/>
-                                                                    <Link to="/"
-                                                                          className="text-[14px]"
+                                                                    <div className="text-[14px]"
                                                                           role="menuitem">Sign Out
-                                                                    </Link>
+                                                                    </div>
                                                                 </Link>
                                                             </li>
                                                         </ul>
@@ -719,20 +764,14 @@ function PersonalInfoPage(props) {
                                                                className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
                                                     </div>
                                                     {isOptionsVisibleOne && (
-                                                        <div className="content">
+                                                        <div className="info-content">
                                                             <ul className="options">
-                                                                <li onClick={() => handleOptionClickOne("January")}>January</li>
-                                                                <li onClick={() => handleOptionClickOne("February")}>February</li>
-                                                                <li onClick={() => handleOptionClickOne("March")}>March</li>
-                                                                <li onClick={() => handleOptionClickOne("April")}>April</li>
-                                                                <li onClick={() => handleOptionClickOne("May")}>May</li>
-                                                                <li onClick={() => handleOptionClickOne("June")}>June</li>
-                                                                <li onClick={() => handleOptionClickOne("July")}>July</li>
-                                                                <li onClick={() => handleOptionClickOne("August")}>August</li>
-                                                                <li onClick={() => handleOptionClickOne("September")}>September</li>
-                                                                <li onClick={() => handleOptionClickOne("October")}>October</li>
-                                                                <li onClick={() => handleOptionClickOne("November")}>November</li>
-                                                                <li onClick={() => handleOptionClickOne("December")}>December</li>
+                                                                {Object.keys(monthLengths).map((month, index) => (
+                                                                    <li key={index} onClick={() => {
+                                                                        handleMonthSelect(month);
+                                                                        handleOptionClickOne(month);
+                                                                    }}>{month}</li>
+                                                                ))}
                                                             </ul>
                                                         </div>
                                                     )}
@@ -747,37 +786,12 @@ function PersonalInfoPage(props) {
                                                                className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
                                                     </div>
                                                     {isOptionsVisibleTwo && (
-                                                        <div className="content">
+                                                        <div className="info-content">
                                                             <ul className="options">
-                                                                <li onClick={() => handleOptionClickTwo("1")}>1</li>
-                                                                <li onClick={() => handleOptionClickTwo("2")}>2</li>
-                                                                <li onClick={() => handleOptionClickTwo("3")}>3</li>
-                                                                <li onClick={() => handleOptionClickTwo("4")}>4</li>
-                                                                <li onClick={() => handleOptionClickTwo("5")}>5</li>
-                                                                <li onClick={() => handleOptionClickTwo("6")}>6</li>
-                                                                <li onClick={() => handleOptionClickTwo("7")}>7</li>
-                                                                <li onClick={() => handleOptionClickTwo("8")}>8</li>
-                                                                <li onClick={() => handleOptionClickTwo("9")}>9</li>
-                                                                <li onClick={() => handleOptionClickTwo("10")}>10</li>
-                                                                <li onClick={() => handleOptionClickTwo("11")}>11</li>
-                                                                <li onClick={() => handleOptionClickTwo("12")}>12</li>
-                                                                <li onClick={() => handleOptionClickTwo("13")}>13</li>
-                                                                <li onClick={() => handleOptionClickTwo("14")}>14</li>
-                                                                <li onClick={() => handleOptionClickTwo("15")}>15</li>
-                                                                <li onClick={() => handleOptionClickTwo("16")}>16</li>
-                                                                <li onClick={() => handleOptionClickTwo("17")}>17</li>
-                                                                <li onClick={() => handleOptionClickTwo("18")}>18</li>
-                                                                <li onClick={() => handleOptionClickTwo("19")}>19</li>
-                                                                <li onClick={() => handleOptionClickTwo("20")}>20</li>
-                                                                <li onClick={() => handleOptionClickTwo("21")}>21</li>
-                                                                <li onClick={() => handleOptionClickTwo("22")}>22</li>
-                                                                <li onClick={() => handleOptionClickTwo("23")}>23</li>
-                                                                <li onClick={() => handleOptionClickTwo("24")}>24</li>
-                                                                <li onClick={() => handleOptionClickTwo("25")}>25</li>
-                                                                <li onClick={() => handleOptionClickTwo("26")}>26</li>
-                                                                <li onClick={() => handleOptionClickTwo("27")}>27</li>
-                                                                <li onClick={() => handleOptionClickTwo("29")}>29</li>
-                                                                <li onClick={() => handleOptionClickTwo("30")}>30</li>
+                                                                {[...Array(monthLengths[selectedMonth]).keys()].map((day) => (
+                                                                    <li key={day + 1}
+                                                                        onClick={() => handleOptionClickTwo(day + 1)}>{day + 1}</li>
+                                                                ))}
                                                             </ul>
                                                         </div>
                                                     )}
@@ -792,7 +806,7 @@ function PersonalInfoPage(props) {
                                                                className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
                                                     </div>
                                                     {isOptionsVisibleThree && (
-                                                        <div className="content">
+                                                        <div className="info-content">
                                                             <ul className="options">
                                                                 {yearOptions}
                                                             </ul>
@@ -853,7 +867,7 @@ function PersonalInfoPage(props) {
                                                            className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
                                                 </div>
                                                 {isOptionsVisibleGender && (
-                                                    <div className="content gender_content">
+                                                    <div className="info-content gender_content">
                                                         <ul className="options">
                                                             <li onClick={() => handleOptionClickGender("Male")}>Male</li>
                                                             <li onClick={() => handleOptionClickGender("Female")}>Female</li>
@@ -904,7 +918,7 @@ function PersonalInfoPage(props) {
                                                            className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
                                                 </div>
                                                 {isOptionsVisibleCountry && (
-                                                    <div className="content gender_content">
+                                                    <div className="info-content gender_content">
                                                         <ul className="options">
                                                             <li onClick={() => handleOptionClickCountry("United States")}>United
                                                                 States
@@ -959,7 +973,7 @@ function PersonalInfoPage(props) {
                                                            className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300 "/>
                                                 </div>
                                                 {isOptionsVisibleLanguage && (
-                                                    <div className="content gender_content">
+                                                    <div className="info-content gender_content">
                                                         <ul className="options">
                                                             <li onClick={() => handleOptionClickLanguage("English")}>English</li>
                                                             <li onClick={() => handleOptionClickLanguage("Hindi")}>Hindi</li>
@@ -1008,10 +1022,212 @@ function PersonalInfoPage(props) {
                                             janedoe@mail.com
                                         </p>
                                     </div>
-                                    <div className="right">
+                                    <div className="right" onClick={() => setOpenEmailModal(true)}>
                                         <button className="text-primary text-[14px]">Edit</button>
                                     </div>
                                 </div>
+                                {/* Email change Pop-Up Start */}
+                                <Modal size="lg"
+                                       show={openEmailModal}
+                                       onClose={() => setOpenEmailModal(false)}
+                                       style={{
+                                           backgroundColor: 'rgb(17 24 39 / 50%)',
+                                           padding: '0',
+                                           borderRadius: '10px',
+                                       }}
+                                >
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Email Address</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <p>
+                                                Your email helps you sign in, receive notifications, reset your
+                                                password easily, and more. Your email in your profile is visible to
+                                                you only
+                                            </p>
+
+                                            <div className="mt-4 flex items-center justify-between">
+                                                <h4 className="text-[16px]">3 email addresses</h4>
+                                                <button onClick={() => setOpenAddEmailModal(true)}
+                                                        className="text-primary flex items-center text-[14px]">
+                                                    <HiOutlinePlusCircle size={17}/>
+                                                    Add new email addess
+                                                </button>
+                                            </div>
+
+                                            <div className="box mt-3 rounded bg-white border px-4 py-2">
+                                                <h6 className="text-[14px]">janedoe@mail.com</h6>
+                                                <p className="mt-0">
+                                                    Primary
+                                                </p>
+                                            </div>
+
+                                            <div
+                                                className="box mt-2 rounded flex items-start justify-between bg-white border px-4 py-4">
+                                                <div className="left">
+                                                    <h6 className="text-[14px]">
+                                                        janedoe55@mail.com
+                                                    </h6>
+                                                    <h6 className="mt-0 text-[14px] text-primary">
+                                                        Make Primary
+                                                    </h6>
+                                                </div>
+                                                <div className="right">
+                                                    <button className="text-primary flex items-center text-[14px]">
+                                                        <HiOutlineMinusCircle size={17}/>
+                                                        Remove
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                className="box mt-2 rounded flex items-start justify-between bg-white border px-4 py-4">
+                                                <div className="left">
+                                                    <h6 className="text-[14px]">
+                                                        janedoe22@mail.com
+                                                    </h6>
+                                                    <p className="mt-0">
+                                                        Confirm
+                                                    </p>
+                                                </div>
+                                                <div className="right">
+                                                    <button className="text-primary flex items-center text-[14px]">
+                                                        <HiOutlineMinusCircle size={17}/>
+                                                        Remove
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenEmailModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
+                                            </button>
+                                            <button onClick={() => setOpenEmailModal(false)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Email change Pop-Up End */}
+
+                                {/* Add Email Pop-Up Start */}
+                                <Modal size="lg"
+                                       show={openAddEmailModal}
+                                       onClose={() => setOpenAddEmailModal(false)}
+                                       style={{
+                                           backgroundColor: 'rgb(17 24 39 / 15%)',
+                                           padding: '0',
+                                           borderRadius: '10px',
+                                       }}
+                                >
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Add New Email Address</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <h4 className="text-[14px]">Enter New Email</h4>
+                                            <input
+                                                className="mt-1 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"
+                                                type="text"
+                                                placeholder="Enter new email"
+                                            />
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenAddEmailModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">
+                                                Back
+                                            </button>
+                                            <button onClick={() => setOpenEmailPasswordModal(true)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">
+                                                Continue
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Add Email Pop-Up End */}
+
+                                {/* Email Password Pop-Up Start */}
+                                <Modal size="lg"
+                                       show={openEmailPasswordModal}
+                                       onClose={() => setOpenEmailPasswordModal(false)}
+                                       style={{
+                                           backgroundColor: 'rgb(17 24 39 / 20%)',
+                                           padding: '0',
+                                           borderRadius: '10px',
+                                       }}
+                                >
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Enter Password</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <p>
+                                                For security purposes, please enter your password to add this<br/>
+                                                email.
+                                            </p>
+                                            <h4 className="text-[14px] mt-2">Enter Password</h4>
+                                            <input
+                                                className="mt-1 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"
+                                                type="text"
+                                                placeholder="******"
+                                            />
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenEmailPasswordModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">
+                                                Back
+                                            </button>
+                                            <button onClick={() => setOpenConfirmEmailModal(true)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">
+                                                Add Email
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Email Password Pop-Up End */}
+
+                                {/* Confirm Email Pop-Up Start */}
+                                <Modal size="lg"
+                                       show={openConfirmEmailModal}
+                                       onClose={() => setOpenConfirmEmailModal(false)}
+                                       style={{
+                                           backgroundColor: 'rgb(17 24 39 / 20%)',
+                                           padding: '0',
+                                           borderRadius: '10px',
+                                       }}
+                                >
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Confirm Email</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <p>
+                                                We’ll send you a confirmation link to janedoe22@gmail.com to
+                                                confirm this email address.
+                                            </p>
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenConfirmEmailModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">
+                                                Cancel
+                                            </button>
+                                            <button onClick={handleConfirmPopEmailButtonClick}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">
+                                                Confirm
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Confirm Email Pop-Up End */}
 
                                 <div
                                     className="box mt-4 rounded flex items-start justify-between bg-white border px-4 py-4">

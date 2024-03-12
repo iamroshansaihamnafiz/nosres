@@ -6,6 +6,9 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import DashboardPage from "./Components/DashboardPage/DashboardPage";
 import PersonalInfo from "./Pages/PersonalInfo";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import React from "react";
 
 function App() {
     return (
@@ -20,6 +23,7 @@ function App() {
                     <Route path="/personal-info" element={<PersonalInfo/>}/>
                 </Routes>
             </BrowserRouter>
+            <ToastContainer/>
         </>
     );
 }

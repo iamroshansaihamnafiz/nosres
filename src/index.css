@@ -183,7 +183,7 @@ h2 {
     margin-top: -4px;
 }
 
-.content {
+.info-content {
     background-color: white;
     border: 1px solid lightgray;
     position: absolute;
@@ -216,4 +216,3 @@ h2 {
 .gender_content {
     width: 90%;
 }
-
