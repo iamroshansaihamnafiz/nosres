@@ -178,7 +178,7 @@ function PersonalInfoPage(props) {
 
     // For Birthday Date and Month
     const monthLengths = {
-        January: 31, February: 28, March: 31, April: 30,
+        January: 31, February: 29, March: 31, April: 30,
         May: 31, June: 30, July: 31, August: 31,
         September: 30, October: 31, November: 30, December: 31
     }
@@ -340,6 +340,37 @@ function PersonalInfoPage(props) {
 
     // --------------------- Email change popup END -----------------------//
 
+
+    // --------------------- Phone change popup START -----------------------//
+    const [openPhoneModal, setOpenPhoneModal] = useState(false);
+    const [openAddPhoneModal, setOpenAddPhoneModal] = useState(false);
+    const [openPhoneVModal, setOpenPhoneVModal] = useState(false);
+    const [openConfirmVCodePhoneModal, setOpenConfirmVCodePhoneModal] = useState(false);
+    // Function to close all Email popups
+    const closeAllPhonePopups = () => {
+        setOpenPhoneModal(false);
+        setOpenAddPhoneModal(false);
+        setOpenPhoneVModal(false);
+        setOpenConfirmVCodePhoneModal(false);
+    };
+    const notifyP = () => {
+        toast.info('✅ Your phone has been verified', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+    }
+    const handleConfirmPopPhoneButtonClick = () => {
+        notifyP();
+        closeAllPhonePopups();
+    };
+    // --------------------- Phone change popup END -----------------------//
+
     return (
         <>
             <section id="dashboard-section" className="bg-[#F9FAFB]">
@@ -396,7 +427,7 @@ function PersonalInfoPage(props) {
                                                                       className="px-4 py-2 cursor-pointer flex items-center gap-2 hover:bg-gray-100 hover:text-primary">
                                                                     <HiOutlineQuestionMarkCircle size={25}/>
                                                                     <div className="text-[14px]"
-                                                                          role="menuitem">Help & Support
+                                                                         role="menuitem">Help & Support
                                                                     </div>
                                                                 </Link>
                                                             </li>
@@ -405,7 +436,7 @@ function PersonalInfoPage(props) {
                                                                       className="px-4 py-2 cursor-pointer flex items-center gap-2 hover:bg-gray-100 hover:text-primary">
                                                                     <HiOutlineArrowRightOnRectangle size={25}/>
                                                                     <div className="text-[14px]"
-                                                                          role="menuitem">Sign Out
+                                                                         role="menuitem">Sign Out
                                                                     </div>
                                                                 </Link>
                                                             </li>
@@ -511,13 +542,13 @@ function PersonalInfoPage(props) {
                         <div className="grid grid-cols-1 mb-4">
                             <div className="flex items-center mb-2 gap-2">
                                 <HiOutlineIdentification size={25} className="text-gray-500"/>
-                                <h3 className="text-[18px]">Personal Information</h3>
+                                <h6 className="text-[18px]">Personal Information</h6>
                             </div>
                             <hr/>
                             <div
                                 className="mt-8 col w-full lg:w-[650px] py-6 px-8 bg-white rounded">
                                 <div className="head mb-2">
-                                    <h3>Profile Picture</h3>
+                                    <h6>Profile Picture</h6>
                                 </div>
                                 <hr/>
                                 <div className="mt-4 sm:flex box items-center gap-3">
@@ -626,7 +657,7 @@ function PersonalInfoPage(props) {
                             <div
                                 className="mt-8 col w-full lg:w-[650px] py-6 px-8 bg-white rounded">
                                 <div className="head mb-2">
-                                    <h3>Primary Information</h3>
+                                    <h6>Primary Information</h6>
                                 </div>
                                 <hr/>
                                 <div className="mt-4 box">
@@ -1004,7 +1035,7 @@ function PersonalInfoPage(props) {
                             <div
                                 className="mt-8 col w-full lg:w-[650px] py-6 px-8 bg-white rounded">
                                 <div className="head mb-2">
-                                    <h3>Contact Information</h3>
+                                    <h6>Contact Information</h6>
                                 </div>
                                 <hr/>
                                 <div className="mt-4 box">
@@ -1044,7 +1075,7 @@ function PersonalInfoPage(props) {
                                             <p>
                                                 Your email helps you sign in, receive notifications, reset your
                                                 password easily, and more. Your email in your profile is visible to
-                                                you only
+                                                you only.
                                             </p>
 
                                             <div className="mt-4 flex items-center justify-between">
@@ -1052,7 +1083,7 @@ function PersonalInfoPage(props) {
                                                 <button onClick={() => setOpenAddEmailModal(true)}
                                                         className="text-primary flex items-center text-[14px]">
                                                     <HiOutlinePlusCircle size={17}/>
-                                                    Add new email addess
+                                                    Add new email address
                                                 </button>
                                             </div>
 
@@ -1229,6 +1260,7 @@ function PersonalInfoPage(props) {
                                 </Modal>
                                 {/* Confirm Email Pop-Up End */}
 
+                                {/*--------------------- Phone Start */}
                                 <div
                                     className="box mt-4 rounded flex items-start justify-between bg-white border px-4 py-4">
                                     <div className="left">
@@ -1237,10 +1269,221 @@ function PersonalInfoPage(props) {
                                             +123 234 234 566
                                         </p>
                                     </div>
-                                    <div className="right">
+                                    <div className="right" onClick={() => setOpenPhoneModal(true)}>
                                         <button className="text-primary text-[14px]">Edit</button>
                                     </div>
                                 </div>
+                                {/* Phone change Pop-Up Start */}
+                                <Modal size="lg"
+                                       show={openPhoneModal}
+                                       onClose={() => setOpenPhoneModal(false)}
+                                       style={{
+                                           backgroundColor: 'rgb(17 24 39 / 50%)',
+                                           padding: '0',
+                                           borderRadius: '10px',
+                                       }}
+                                >
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Phone Number</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <p>
+                                                Adding your phone number helps you receive notifications, reset your
+                                                password easily, and more. Your phone number in your profile is visible
+                                                to you only.
+                                            </p>
+
+                                            <div className="mt-4 flex items-center justify-between">
+                                                <h4 className="text-[16px]">3 phone numbers</h4>
+                                                <button onClick={() => setOpenAddPhoneModal(true)}
+                                                        className="text-primary flex items-center text-[14px]">
+                                                    <HiOutlinePlusCircle size={17}/>
+                                                    Add new phone number
+                                                </button>
+                                            </div>
+
+                                            <div className="box mt-3 rounded bg-white border px-4 py-2">
+                                                <h6 className="text-[14px]">+886 154 141 115</h6>
+                                                <p className="mt-0">
+                                                    Primary
+                                                </p>
+                                            </div>
+
+                                            <div
+                                                className="box mt-2 rounded flex items-start justify-between bg-white border px-4 py-4">
+                                                <div className="left">
+                                                    <h6 className="text-[14px]">
+                                                        +886 754 458 578
+                                                    </h6>
+                                                    <h6 className="mt-0 text-[14px] text-primary">
+                                                        Make Primary
+                                                    </h6>
+                                                </div>
+                                                <div className="right">
+                                                    <button className="text-primary flex items-center text-[14px]">
+                                                        <HiOutlineMinusCircle size={17}/>
+                                                        Remove
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                className="box mt-2 rounded flex items-start justify-between bg-white border px-4 py-4">
+                                                <div className="left">
+                                                    <h6 className="text-[14px]">
+                                                        +886 564 455 775
+                                                    </h6>
+                                                    <h6 className="mt-0 text-[14px] text-primary">
+                                                        Make Primary
+                                                    </h6>
+                                                </div>
+                                                <div className="right">
+                                                    <button className="text-primary flex items-center text-[14px]">
+                                                        <HiOutlineMinusCircle size={17}/>
+                                                        Remove
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenPhoneModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
+                                            </button>
+                                            <button onClick={() => setOpenPhoneModal(false)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Phone change Pop-Up End */}
+
+                                {/* Add Phone Pop-Up Start */}
+                                <Modal size="lg"
+                                       show={openAddPhoneModal}
+                                       onClose={() => setOpenAddPhoneModal(false)}
+                                       style={{
+                                           backgroundColor: 'rgb(17 24 39 / 15%)',
+                                           padding: '0',
+                                           borderRadius: '10px',
+                                       }}
+                                >
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Add New Phone Number</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <h4 className="text-[14px]">Country Code</h4>
+                                            <input
+                                                className="mt-1 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"
+                                                type="text"
+                                                placeholder="Code"
+                                            />
+
+                                            <h4 className="text-[14px] mt-4">Phone Number</h4>
+                                            <input
+                                                className="mt-1 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"
+                                                type="text"
+                                                placeholder="Enter your phone number"
+                                            />
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenAddPhoneModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">
+                                                Back
+                                            </button>
+                                            <button onClick={() => setOpenPhoneVModal(true)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">
+                                                Continue
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Add Phone Pop-Up End */}
+
+                                {/* Phone Verify Pop-Up Start */}
+                                <Modal size="lg"
+                                       show={openPhoneVModal}
+                                       onClose={() => setOpenPhoneVModal(false)}
+                                       style={{
+                                           backgroundColor: 'rgb(17 24 39 / 20%)',
+                                           padding: '0',
+                                           borderRadius: '10px',
+                                       }}
+                                >
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Get Verification Code</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <p>
+                                                Nosres will send you a verification code at +134522334 to make sure this
+                                                number is your.
+                                            </p>
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenPhoneVModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">
+                                                Back
+                                            </button>
+                                            <button onClick={() => setOpenConfirmVCodePhoneModal(true)}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">
+                                                Get Code
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* Phone Verify Pop-Up End */}
+
+                                {/* ConfirmV Code Phone Pop-Up Start */}
+                                <Modal size="lg"
+                                       show={openConfirmVCodePhoneModal}
+                                       onClose={() => setOpenConfirmVCodePhoneModal(false)}
+                                       style={{
+                                           backgroundColor: 'rgb(17 24 39 / 20%)',
+                                           padding: '0',
+                                           borderRadius: '10px',
+                                       }}
+                                >
+                                    <Modal.Header>
+                                        <h4 className="text-[16px]">Enter Verification Code</h4>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="modal_body box">
+                                            <p>
+                                                We've just send you an SMS at +134522334 with a verification code.
+                                                Please wait al least 5 minutes before requesting another verification
+                                                code.
+                                                <span className="text-primary cursor-pointer"> Resend Code</span>
+                                            </p>
+                                            <h4 className="text-[14px] mt-4">Enter Code</h4>
+                                            <input
+                                                className="mt-1 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"
+                                                type="text"
+                                                placeholder="Enter verification code"
+                                            />
+                                        </div>
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <div className="flex w-full items-center justify-between">
+                                            <button onClick={() => setOpenConfirmVCodePhoneModal(false)}
+                                                    className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">
+                                                Cancel
+                                            </button>
+                                            <button onClick={handleConfirmPopPhoneButtonClick}
+                                                    className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">
+                                                Verify
+                                            </button>
+                                        </div>
+                                    </Modal.Footer>
+                                </Modal>
+                                {/* ConfirmV Code Phone Pop-Up End */}
                             </div>
                         </div>
                     </div>
