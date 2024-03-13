@@ -42,7 +42,7 @@ function Footer(props) {
                                     <HiOutlineArrowRightCircle size={30}/>
                                     <Link to='/'
                                           className="text-[14px]">
-                                        Learn More
+                                        Subscribe
                                     </Link>
                                 </div>
                             </div>

@@ -35,7 +35,7 @@ function JobPageHeader(props) {
                         <div className="logo">
                             <Link to='/' className="flex items-center gap-2">
                                 <img src={LogoImg} className="h-10 w-7" alt="LogoImg"/>
-                                <span className="font-[500] text-[18px]">Caress</span>
+                                <span className="font-[500] text-[18px]">Careers</span>
                             </Link>
                         </div>
 
@@ -153,7 +153,7 @@ function JobPageHeader(props) {
                             <div className="five group">
                                 <Link to='/'
                                       className="group flex items-center justify-between gap-1 text-center text-primary bg-gray-100 py-1 px-2 rounded transition relative">
-                                    Create a Account
+                                    Create a Profile
                                 </Link>
                             </div>
                         </div>

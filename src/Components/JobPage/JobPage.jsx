@@ -2,7 +2,7 @@
 import React from 'react';
 import {AiOutlineSearch} from "react-icons/ai";
 import {Link} from "react-router-dom";
-import {RxCross1, RxPlus} from "react-icons/rx";
+import {RxPlus} from "react-icons/rx";
 import {Checkbox, Label, Select} from 'flowbite-react';
 import {
     HiOutlineUserGroup,
@@ -25,7 +25,7 @@ function JobPage(props) {
                         <p className="mt-2">
                             Find the role that perfectly matches your talents and ambitions. With our diverse array of
                             roles, you<br/>
-                            will find the perfect fit to propel your career forward
+                            will find the perfect fit to propel your career forward.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-8">
@@ -37,7 +37,7 @@ function JobPage(props) {
                                     </span>
                                     <input type="text"
                                            className="border w-full text-[14px] border-gray-300 rounded-full pl-10 py-2 focus:outline-none focus:border-primary focus:ring-0"
-                                           placeholder="Search be Keywords..."/>
+                                           placeholder="Search by keyword..."/>
                                 </div>
 
                                 <div className="filter-head mt-4 pb-2 flex items-center justify-between">
@@ -46,90 +46,148 @@ function JobPage(props) {
                                 </div>
                                 <hr/>
 
-                                <div className="category mt-4 pb-5">
-                                    <div className="flex items-center justify-between">
-                                        <h4 className="text-[14px]">Category</h4>
-                                        <button className="text-[14px] text-gray-500 hover:text-primary">
-                                            <RxCross1 size={13}/>
-                                        </button>
-                                    </div>
-
-                                    <div id="checkbox" className="mt-3">
-                                        <div className="flex items-center gap-2">
-                                            <Checkbox id="category1" defaultChecked/>
-                                            <Label htmlFor="category1" className="text-gray-500 font-normal">
-                                                Design
-                                            </Label>
+                                <details className="group mt-4 pb-5">
+                                    <summary
+                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                        Category
+                                        <RxPlus
+                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-90"/>
+                                    </summary>
+                                    <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
+                                        <div id="checkbox" className="mt-3">
+                                            <div className="flex items-center gap-2">
+                                                <Checkbox id="category1" defaultChecked/>
+                                                <Label htmlFor="category1" className="text-gray-500 font-normal">
+                                                    Design
+                                                </Label>
+                                            </div>
+                                            <div className="mt-2 flex items-center gap-2">
+                                                <Checkbox id="category2"/>
+                                                <Label htmlFor="category2" className="text-gray-500 font-normal">
+                                                    Engineering & Technology
+                                                </Label>
+                                            </div>
                                         </div>
-                                        <div className="mt-2 flex items-center gap-2">
-                                            <Checkbox id="category2"/>
-                                            <Label htmlFor="category2" className="text-gray-500 font-normal">
-                                                Engineering & Technology
-                                            </Label>
-                                        </div>
-                                    </div>
-                                </div>
+                                    </ul>
+                                </details>
                                 <hr/>
 
-                                <div className="location mt-4 pb-5">
-                                    <div className="flex items-center justify-between">
-                                        <h4 className="text-[14px]">Location</h4>
-                                        <button className="text-[14px] text-gray-500 hover:text-primary">
-                                            <RxCross1 size={13}/>
-                                        </button>
-                                    </div>
-
-                                    <div id="checkbox" className="mt-3">
-                                        <div className="flex items-center gap-2">
-                                            <Checkbox id="location1" defaultChecked/>
-                                            <Label htmlFor="location1" className="text-gray-500 font-normal">
-                                                In Ofice
-                                            </Label>
+                                <details className="group mt-4 pb-5">
+                                    <summary
+                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                        Location
+                                        <RxPlus
+                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-90"/>
+                                    </summary>
+                                    <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
+                                        <div id="checkbox" className="mt-3">
+                                            <div className="flex items-center gap-2">
+                                                <Checkbox id="location1" defaultChecked/>
+                                                <Label htmlFor="location1" className="text-gray-500 font-normal">
+                                                    In Office
+                                                </Label>
+                                            </div>
+                                            <div className="mt-2 flex items-center gap-2">
+                                                <Checkbox id="location2"/>
+                                                <Label htmlFor="location2" className="text-gray-500 font-normal">
+                                                    Remote
+                                                </Label>
+                                            </div>
+                                            <div className="mt-2 flex items-center gap-2">
+                                                <Checkbox id="location3"/>
+                                                <Label htmlFor="location3" className="text-gray-500 font-normal">
+                                                    Hybrid
+                                                </Label>
+                                            </div>
                                         </div>
-                                        <div className="mt-2 flex items-center gap-2">
-                                            <Checkbox id="location2"/>
-                                            <Label htmlFor="location2" className="text-gray-500 font-normal">
-                                                Remote
-                                            </Label>
-                                        </div>
-                                        <div className="mt-2 flex items-center gap-2">
-                                            <Checkbox id="location3"/>
-                                            <Label htmlFor="location3" className="text-gray-500 font-normal">
-                                                Hybrid
-                                            </Label>
-                                        </div>
-                                    </div>
-                                </div>
+                                    </ul>
+                                </details>
                                 <hr/>
 
-                                <div className="degree mt-4 pb-4">
-                                    <div className="flex items-center justify-between">
-                                        <h4 className="text-[14px]">Degree</h4>
-                                        <button className="text-[14px] text-gray-500 hover:text-primary">
-                                            <RxPlus size={13}/>
-                                        </button>
-                                    </div>
-                                </div>
+                                <details className="group mt-4 pb-5">
+                                    <summary
+                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                        Degree
+                                        <RxPlus
+                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-90"/>
+                                    </summary>
+                                    <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
+                                        <div id="checkbox" className="mt-3">
+                                            <div className="flex items-center gap-2">
+                                                <Checkbox id="degree1" defaultChecked/>
+                                                <Label htmlFor="degree1" className="text-gray-500 font-normal">
+                                                    Bachelor
+                                                </Label>
+                                            </div>
+                                            <div className="mt-2 flex items-center gap-2">
+                                                <Checkbox id="degree2"/>
+                                                <Label htmlFor="degree2" className="text-gray-500 font-normal">
+                                                    Master
+                                                </Label>
+                                            </div>
+                                            <div className="mt-2 flex items-center gap-2">
+                                                <Checkbox id="degree3"/>
+                                                <Label htmlFor="degree3" className="text-gray-500 font-normal">
+                                                    Ph.D.
+                                                </Label>
+                                            </div>
+                                            <div className="mt-2 flex items-center gap-2">
+                                                <Checkbox id="degree4"/>
+                                                <Label htmlFor="degree4" className="text-gray-500 font-normal">
+                                                    Pursing Degree
+                                                </Label>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </details>
                                 <hr/>
 
-                                <div className="degree mt-4 pb-4">
-                                    <div className="flex items-center justify-between">
-                                        <h4 className="text-[14px]">Job Type</h4>
-                                        <button className="text-[14px] text-gray-500 hover:text-primary">
-                                            <RxPlus size={13}/>
-                                        </button>
-                                    </div>
-                                </div>
+                                <details className="group mt-4 pb-5">
+                                    <summary
+                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                        Job Type
+                                        <RxPlus
+                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-90"/>
+                                    </summary>
+                                    <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
+                                        <div id="checkbox" className="mt-3">
+                                            <div className="flex items-center gap-2">
+                                                <Checkbox id="type1" defaultChecked/>
+                                                <Label htmlFor="type1" className="text-gray-500 font-normal">
+                                                    Intern
+                                                </Label>
+                                            </div>
+                                            <div className="mt-2 flex items-center gap-2">
+                                                <Checkbox id="type2"/>
+                                                <Label htmlFor="type2" className="text-gray-500 font-normal">
+                                                    Part-Time
+                                                </Label>
+                                            </div>
+                                            <div className="mt-2 flex items-center gap-2">
+                                                <Checkbox id="type3"/>
+                                                <Label htmlFor="type3" className="text-gray-500 font-normal">
+                                                    Full-Time
+                                                </Label>
+                                            </div>
+                                            <div className="mt-2 flex items-center gap-2">
+                                                <Checkbox id="type4"/>
+                                                <Label htmlFor="type4" className="text-gray-500 font-normal">
+                                                    Temporary
+                                                </Label>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </details>
                             </div>
                         </div>
 
-                        <div className="col lg:col-span-7">
+                        <div className="col lg:col-span-8">
                             <div className="box bg-white py-4 px-6 rounded flex items-center justify-between">
                                 <h4 className="text-primary text-[18px]">
                                     7 <span className="text-black">jobs</span>
                                 </h4>
                                 <div className="flex text-[14px] items-center gap-3">
-                                    <h4>Soft by:</h4>
+                                    <h4>Sort by:</h4>
                                     <div className="max-w-md">
                                         <Select id="job_filter">
                                             <option>Relevance</option>

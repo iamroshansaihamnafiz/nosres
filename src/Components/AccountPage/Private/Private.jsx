@@ -15,7 +15,7 @@ function Private(props) {
 
                         <div className="col">
                             <h1 className="text-[28px]">Safe, Secure and Private.</h1>
-                            <h6 className="mt-2 text-[16px]">
+                            <h6 className="mt-2 text-[16px] text-[#39393B]">
                                 You simply need one Nosres Account to access Nosres services like Nosres Marketplace,
                                 Nosres Pay, and so on. Please use a strong password for it and keep it confidential — do
                                 not share your credentials with anyone.
