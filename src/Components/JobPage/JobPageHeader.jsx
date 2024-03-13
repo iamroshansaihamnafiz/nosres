@@ -151,10 +151,10 @@ function JobPageHeader(props) {
                             </div>
 
                             <div className="five group">
-                                <Link to='/'
-                                      className="group flex items-center justify-between gap-1 text-center text-primary bg-gray-100 py-1 px-2 rounded transition relative">
+                                <button
+                                    className="text-primary hover:bg-primary hover:text-white rounded px-4 py-2 border text-[14px]">
                                     Create a Profile
-                                </Link>
+                                </button>
                             </div>
                         </div>
 
