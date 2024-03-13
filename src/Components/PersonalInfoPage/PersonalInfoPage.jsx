@@ -1427,7 +1427,7 @@ function PersonalInfoPage(props) {
                                         <div className="modal_body box">
                                             <p>
                                                 Nosres will send you a verification code at +134522334 to make sure this
-                                                number is your.
+                                                number is yours.
                                             </p>
                                         </div>
                                     </Modal.Body>

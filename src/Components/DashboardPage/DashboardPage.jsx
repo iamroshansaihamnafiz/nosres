@@ -135,13 +135,14 @@ function DashboardPage(props) {
                     <div className="h-full px-3 pb-4 pt-20 overflow-y-auto bg-white">
                         <ul className="space-y-1 font-medium">
                             <li>
-                                <Link to="#"
-                                      className="flex items-center p-2 rounded-lg hover:bg-gray-100 group">
+                                <div
+                                      className="flex text-[14px] items-center p-2 rounded-lg hover:bg-gray-100 group">
                                     <HiUserCircle size={30}
                                                   className="text-primary w-7 transition duration-75 group-hover:text-primary"/>
                                     <span className="ms-3 font-semibold">John Doe</span>
-                                </Link>
+                                </div>
                             </li>
+                            <hr/>
 
                             <li>
                                 <Link to="#"
