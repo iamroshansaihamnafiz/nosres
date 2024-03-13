@@ -21,7 +21,8 @@ function Team(props) {
                             Meet the team
                         </h1>
                         <p className="mt-3 text-gray-500 text-[16px]">
-                            We are entrepreneurs and we are passionate about what we are doing. We are curious and we<br/>
+                            We are entrepreneurs and we are passionate about what we are doing. We are curious and
+                            we<br/>
                             use our creative thinking and innovative ideas to develop intuitive products and services.
                         </p>
                     </div>
@@ -130,14 +131,13 @@ function Team(props) {
                         </div>
                     </div>
 
-                    <div className="mt-8 flex cursor-pointer items-center gap-1 justify-start">
-                        <div className="border gap-1 border-transparent hover:border hover:border-primary flex items-center hover:rounded px-4 py-1">
-                            <HiOutlineArrowRightCircle size={30} className="text-primary" />
-                            <Link to='/'
-                                  className="text-[14px] text-primary">
-                                Join Our Team!
-                            </Link>
-                        </div>
+                    <div
+                        className="mt-8 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
+                        <HiOutlineArrowRightCircle size={30}/>
+                        <Link to='/'
+                              className="text-[14px]">
+                            Join Our Team!
+                        </Link>
                     </div>
                 </div>
             </section>

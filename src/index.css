@@ -155,6 +155,10 @@ h2 {
     color: #39393B !important;
 }
 
+.modal_cntrl .max-w-lg {
+    border-radius: 10px !important;
+}
+
 /* ---------- Select Box Design ----------- */
 .select-option {
     position: relative;

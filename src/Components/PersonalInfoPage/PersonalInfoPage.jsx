@@ -1064,9 +1064,9 @@ function PersonalInfoPage(props) {
                                        onClose={() => setOpenEmailModal(false)}
                                        style={{
                                            backgroundColor: 'rgb(17 24 39 / 50%)',
-                                           padding: '0',
-                                           borderRadius: '10px',
+                                           padding: '0px',
                                        }}
+                                       className="modal_cntrl"
                                 >
                                     <Modal.Header>
                                         <h4 className="text-[16px]">Email Address</h4>
@@ -1082,7 +1082,7 @@ function PersonalInfoPage(props) {
                                             <div className="mt-4 flex items-center justify-between">
                                                 <h4 className="text-[16px]">3 email addresses</h4>
                                                 <button onClick={() => setOpenAddEmailModal(true)}
-                                                        className="text-primary flex items-center text-[14px]">
+                                                        className="text-primary flex items-center gap-1 text-[14px]">
                                                     <HiOutlinePlusCircle size={17}/>
                                                     Add new email address
                                                 </button>
@@ -1154,8 +1154,8 @@ function PersonalInfoPage(props) {
                                        style={{
                                            backgroundColor: 'rgb(17 24 39 / 15%)',
                                            padding: '0',
-                                           borderRadius: '10px',
                                        }}
+                                       className="modal_cntrl"
                                 >
                                     <Modal.Header>
                                         <h4 className="text-[16px]">Add New Email Address</h4>
@@ -1192,8 +1192,8 @@ function PersonalInfoPage(props) {
                                        style={{
                                            backgroundColor: 'rgb(17 24 39 / 20%)',
                                            padding: '0',
-                                           borderRadius: '10px',
                                        }}
+                                       className="modal_cntrl"
                                 >
                                     <Modal.Header>
                                         <h4 className="text-[16px]">Enter Password</h4>
@@ -1234,8 +1234,8 @@ function PersonalInfoPage(props) {
                                        style={{
                                            backgroundColor: 'rgb(17 24 39 / 20%)',
                                            padding: '0',
-                                           borderRadius: '10px',
                                        }}
+                                       className="modal_cntrl"
                                 >
                                     <Modal.Header>
                                         <h4 className="text-[16px]">Confirm Email</h4>
@@ -1283,8 +1283,8 @@ function PersonalInfoPage(props) {
                                        style={{
                                            backgroundColor: 'rgb(17 24 39 / 50%)',
                                            padding: '0',
-                                           borderRadius: '10px',
                                        }}
+                                       className="modal_cntrl"
                                 >
                                     <Modal.Header>
                                         <h4 className="text-[16px]">Phone Number</h4>
@@ -1300,7 +1300,7 @@ function PersonalInfoPage(props) {
                                             <div className="mt-4 flex items-center justify-between">
                                                 <h4 className="text-[16px]">3 phone numbers</h4>
                                                 <button onClick={() => setOpenAddPhoneModal(true)}
-                                                        className="text-primary flex items-center text-[14px]">
+                                                        className="text-primary flex gap-1 items-center text-[14px]">
                                                     <HiOutlinePlusCircle size={17}/>
                                                     Add new phone number
                                                 </button>
@@ -1324,7 +1324,8 @@ function PersonalInfoPage(props) {
                                                     </h6>
                                                 </div>
                                                 <div className="right">
-                                                    <button className="text-primary flex items-center text-[14px]">
+                                                    <button
+                                                        className="text-primary gap-1 flex items-center text-[14px]">
                                                         <HiOutlineMinusCircle size={17}/>
                                                         Remove
                                                     </button>
@@ -1342,7 +1343,8 @@ function PersonalInfoPage(props) {
                                                     </h6>
                                                 </div>
                                                 <div className="right">
-                                                    <button className="text-primary flex items-center text-[14px]">
+                                                    <button
+                                                        className="text-primary gap-1 flex items-center text-[14px]">
                                                         <HiOutlineMinusCircle size={17}/>
                                                         Remove
                                                     </button>
@@ -1370,8 +1372,8 @@ function PersonalInfoPage(props) {
                                        style={{
                                            backgroundColor: 'rgb(17 24 39 / 15%)',
                                            padding: '0',
-                                           borderRadius: '10px',
                                        }}
+                                       className="modal_cntrl"
                                 >
                                     <Modal.Header>
                                         <h4 className="text-[16px]">Add New Phone Number</h4>
@@ -1415,8 +1417,8 @@ function PersonalInfoPage(props) {
                                        style={{
                                            backgroundColor: 'rgb(17 24 39 / 20%)',
                                            padding: '0',
-                                           borderRadius: '10px',
                                        }}
+                                       className="modal_cntrl"
                                 >
                                     <Modal.Header>
                                         <h4 className="text-[16px]">Get Verification Code</h4>
@@ -1451,8 +1453,8 @@ function PersonalInfoPage(props) {
                                        style={{
                                            backgroundColor: 'rgb(17 24 39 / 20%)',
                                            padding: '0',
-                                           borderRadius: '10px',
                                        }}
+                                       className="modal_cntrl"
                                 >
                                     <Modal.Header>
                                         <h4 className="text-[16px]">Enter Verification Code</h4>

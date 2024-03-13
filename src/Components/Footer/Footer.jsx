@@ -37,14 +37,13 @@ function Footer(props) {
                                 <p className="mt-1 text-gray-500 text-[12px]">Sign up for the latest Nosres news and
                                     articles. By signing up you are agreeing to
                                     our Privacy Policy.</p>
-                                <div className="mt-3 flex cursor-pointer items-center gap-1 justify-start">
-                                    <div className="border gap-1 border-transparent hover:border hover:border-primary flex items-center hover:rounded px-4 py-1">
-                                        <HiOutlineArrowRightCircle size={30} className="text-primary" />
-                                        <Link to='/'
-                                              className="text-[14px] text-primary">
-                                            Learn More
-                                        </Link>
-                                    </div>
+                                <div
+                                    className="mt-3 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
+                                    <HiOutlineArrowRightCircle size={30}/>
+                                    <Link to='/'
+                                          className="text-[14px]">
+                                        Learn More
+                                    </Link>
                                 </div>
                             </div>
 
