@@ -216,3 +216,24 @@ h2 {
 .gender_content {
     width: 90%;
 }
+
+/*---------- Job Page Design ----------------*/
+.search-job input {
+    background-color: rgba(250, 250, 250, 0.73);
+}
+
+#checkbox input {
+    color: #4D7FB8 !important;
+}
+
+#checkbox input:focus {
+    outline: 0 !important;
+    border: 0 !important;
+    --tw-ring-opacity: 0 !important;
+}
+
+#job_filter {
+    border: 0 !important;
+    outline: 0 !important;
+    --tw-ring-opacity: 0 !important;
+}

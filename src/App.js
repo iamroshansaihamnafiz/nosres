@@ -10,6 +10,7 @@ import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import React from "react";
 import Accounts from "./Pages/Accounts";
+import Jobs from "./Pages/Jobs";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/dashboard" element={<DashboardPage/>}/>
                     <Route path="/personal-info" element={<PersonalInfo/>}/>
                     <Route path="/accounts" element={<Accounts/>}/>
+                    <Route path="/jobs" element={<Jobs/>}/>
                 </Routes>
             </BrowserRouter>
             <ToastContainer/>
