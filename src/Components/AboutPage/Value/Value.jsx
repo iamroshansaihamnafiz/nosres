@@ -6,7 +6,7 @@ import valueImg4 from '../../../assets/images/about/our-values-icon4.svg';
 import valueImg5 from '../../../assets/images/about/our-values-icon5.svg';
 import valueImg6 from '../../../assets/images/about/our-values-icon6.svg';
 import {Link} from "react-router-dom";
-import {FaLongArrowAltRight} from "react-icons/fa";
+import {HiOutlineArrowRightCircle} from "react-icons/hi2";
 
 function Value(props) {
     return (
@@ -72,12 +72,14 @@ function Value(props) {
                         </div>
                     </div>
 
-                    <div className="flex justify-center text-center">
-                        <Link to='/'
-                              className="mt-4 w-[143px] flex text-[14px] items-center justify-center gap-2 border border-black rounded hover:bg-primary hover:text-white hover:border-primary py-2">
-                            Learn More
-                            <FaLongArrowAltRight/>
-                        </Link>
+                    <div className="mt-4 flex cursor-pointer items-center gap-1 justify-center">
+                        <div className="border gap-1 border-transparent hover:border hover:border-primary flex items-center hover:rounded px-4 py-1">
+                            <HiOutlineArrowRightCircle size={30} className="text-primary" />
+                            <Link to='/'
+                                  className="text-[14px] text-primary">
+                                Learn More
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>

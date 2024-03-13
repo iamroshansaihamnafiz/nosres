@@ -3,7 +3,7 @@ import patnerImg1 from '../../../assets/images/patner1.png';
 import patnerImg2 from '../../../assets/images/patner2.png';
 import patnerImg3 from '../../../assets/images/patner3.png';
 import {Link} from "react-router-dom";
-import {FaLongArrowAltRight} from "react-icons/fa";
+import { HiOutlineArrowRightCircle } from "react-icons/hi2";
 
 function Patner(props) {
     return (
@@ -62,12 +62,14 @@ function Patner(props) {
                         </div>
                     </div>
 
-                    <div className="mt-8 flex items-center justify-center">
-                        <Link to='/'
-                              className="flex text-[14px] items-center gap-2 border border-black rounded hover:bg-primary hover:text-white hover:border-primary py-2 px-6">
-                            Learn More
-                            <FaLongArrowAltRight/>
-                        </Link>
+                    <div className="mt-8 flex cursor-pointer items-center gap-1 justify-center">
+                        <div className="border gap-1 border-transparent hover:border hover:border-primary flex items-center hover:rounded px-4 py-1">
+                            <HiOutlineArrowRightCircle size={30} className="text-primary" />
+                            <Link to='/'
+                                  className="text-[14px] text-primary">
+                                Learn More
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>

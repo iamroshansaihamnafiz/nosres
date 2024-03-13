@@ -4,6 +4,7 @@ import teamImg1 from "../../../assets/images/about/team.png";
 import {Link} from "react-router-dom";
 import {Modal} from 'flowbite-react';
 import {useState} from 'react';
+import {HiOutlineArrowRightCircle} from "react-icons/hi2";
 
 function Team(props) {
     const [openModal, setOpenModal] = useState(false);
@@ -129,11 +130,14 @@ function Team(props) {
                         </div>
                     </div>
 
-                    <div className="mt-8 flex items-center justify-start">
-                        <Link to='/'
-                              className="text-[14px] border border-primary bg-white text-primary rounded hover:bg-primary hover:text-white hover:border-primary py-2 px-6">
-                            Join Our Team!
-                        </Link>
+                    <div className="mt-8 flex cursor-pointer items-center gap-1 justify-start">
+                        <div className="border gap-1 border-transparent hover:border hover:border-primary flex items-center hover:rounded px-4 py-1">
+                            <HiOutlineArrowRightCircle size={30} className="text-primary" />
+                            <Link to='/'
+                                  className="text-[14px] text-primary">
+                                Join Our Team!
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>

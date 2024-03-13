@@ -459,14 +459,15 @@ function PersonalInfoPage(props) {
                     <div className="h-full px-3 pb-4 pt-20 overflow-y-auto bg-white">
                         <ul className="space-y-1 font-medium">
                             <li>
-                                <Link to="#"
-                                      className="flex items-center p-2 rounded-lg hover:bg-gray-100 group">
+                                <div
+                                    className="flex items-center text-[14px] p-2 rounded-lg hover:bg-gray-100 group">
                                     <HiUserCircle size={30}
                                                   className="text-primary w-7 transition duration-75 group-hover:text-primary"/>
                                     <span className="ms-3 font-semibold">John Doe</span>
-                                </Link>
+                                </div>
                             </li>
 
+                            <hr/>
                             <li>
                                 <Link to="#"
                                       className="flex items-center p-2 rounded-lg hover:bg-gray-100 group">
@@ -536,7 +537,7 @@ function PersonalInfoPage(props) {
                 </aside>
 
                 {/* Dashboard Body */}
-                <div className="p-4 sm:ml-64 bg-gray-50">
+                <div className="p-4 sm:ml-64 md:ml-80 bg-gray-50">
                     <div className="p-4 rounded mt-14">
                         {/* Profile Picture */}
                         <div className="grid grid-cols-1 mb-4">
@@ -555,7 +556,7 @@ function PersonalInfoPage(props) {
                                     <div className="one w-16 h-16 relative">
                                         <HiUserCircle className="w-16 h-16 text-primary"/>
                                         <HiOutlineCamera onClick={() => setOpenProfileImageModal(true)} size={20}
-                                                         className="cursor-pointer absolute bottom-[15%] right-[18%] bg-white rounded-full p-1"/>
+                                                         className="cursor-pointer absolute bottom-[15%] right-[18%] bg-white opacity-[0.5] rounded-full p-1"/>
                                     </div>
 
                                     <div className="two mt-2 sm:mt-0">
@@ -747,9 +748,9 @@ function PersonalInfoPage(props) {
                                                 onChange={handleInputChange}
                                                 onKeyDown={handleKeyDown}
                                             />
-                                            <p className="mt-2">
+                                            <h4 className="mt-2 text-gray-500 text-[12px]">
                                                 Up to 15 characters (letters, numbers, or _)
-                                            </p>
+                                            </h4>
                                         </div>
                                     </Modal.Body>
                                     <Modal.Footer>
@@ -846,10 +847,10 @@ function PersonalInfoPage(props) {
                                                 </div>
                                             </div>
 
-                                            <p className="mt-2">
+                                            <h4 className="mt-2 text-gray-500 text-[12px]">
                                                 Your date of birth is required to identify which services you qualify
                                                 for.
-                                            </p>
+                                            </h4>
                                         </div>
                                     </Modal.Body>
                                     <Modal.Footer>
@@ -1105,7 +1106,8 @@ function PersonalInfoPage(props) {
                                                     </h6>
                                                 </div>
                                                 <div className="right">
-                                                    <button className="text-primary flex items-center text-[14px]">
+                                                    <button
+                                                        className="text-primary flex gap-1 items-center text-[14px]">
                                                         <HiOutlineMinusCircle size={17}/>
                                                         Remove
                                                     </button>
@@ -1118,12 +1120,13 @@ function PersonalInfoPage(props) {
                                                     <h6 className="text-[14px]">
                                                         janedoe22@mail.com
                                                     </h6>
-                                                    <p className="mt-0">
+                                                    <h6 className="mt-0 text-[14px] cursor-pointer text-primary">
                                                         Confirm
-                                                    </p>
+                                                    </h6>
                                                 </div>
                                                 <div className="right">
-                                                    <button className="text-primary flex items-center text-[14px]">
+                                                    <button
+                                                        className="text-primary flex gap-1 items-center text-[14px]">
                                                         <HiOutlineMinusCircle size={17}/>
                                                         Remove
                                                     </button>
