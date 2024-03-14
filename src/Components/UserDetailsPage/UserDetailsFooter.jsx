@@ -10,7 +10,7 @@ const UserDetailsFooter = () => {
     const currentYear = new Date().getFullYear();
     return (
         <>
-            <section id="footer-section" className="bg-[#F4F4F4] mt-10">
+            <section id="footer-section" className="bg-[#F4F4F4]">
                 <div className="container py-10">
                     <footer>
                         <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-4">

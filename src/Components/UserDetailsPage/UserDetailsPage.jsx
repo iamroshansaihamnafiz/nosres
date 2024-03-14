@@ -3,10 +3,11 @@ import React, {useEffect, useRef, useState} from 'react';
 import {HiUserCircle} from "react-icons/hi";
 import {Link} from "react-router-dom";
 import {GoQuestion} from "react-icons/go";
+import {ImAttachment} from "react-icons/im";
 import {
     HiOutlineIdentification,
     HiOutlineFolder,
-    HiOutlineBookmark, HiOutlinePlusCircle
+    HiOutlineBookmark, HiOutlinePlusCircle, HiOutlineMinusCircle
 } from "react-icons/hi2";
 import {Checkbox, Label, Modal, Radio} from "flowbite-react";
 
@@ -130,12 +131,57 @@ const UserDetailsPage = () => {
 
     // Experience Popup
     const [openExperienceModal, setOpenExperienceModal] = useState(false);
+
+    // Skill Popup
+    const [openSkillModal, setOpenSkillModal] = useState(false);
+
+    // Resume Popup
+    const [openResumeModal, setOpenResumeModal] = useState(false);
+    // File Upload Function
+    const [selectedFile, setSelectedFile] = useState(null);
+    const fileInputRef = useRef(null);
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            setSelectedFile(file);
+        }
+    };
+
+    const handleRemoveClick = () => {
+        setSelectedFile(null);
+        // Reset the file input value to allow re-uploading the same file
+        if (fileInputRef.current) {
+            fileInputRef.current.value = '';
+        }
+    };
+
+
+    // Document Popup
+    const [openDocumentModal, setOpenDocumentModal] = useState(false);
+    // File Upload Function
+    const [selectedDocumentFile, setSelectedDocumentFile] = useState(null);
+    const fileInputDocumentRef = useRef(null);
+    const handleFileDocumentChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            setSelectedDocumentFile(file);
+        }
+    };
+
+    const handleDocumentRemoveClick = () => {
+        setSelectedDocumentFile(null);
+        // Reset the file input value to allow re-uploading the same file
+        if (fileInputDocumentRef.current) {
+            fileInputDocumentRef.current.value = '';
+        }
+    };
+
     return (
         <>
             <section id="user-details-section" className="bg-[#F9FAFB] h-[100%]">
-                <div className="container pt-16">
-                    <div className="mt-16 grid grid-cols-12 gap-8">
-                        <div className="col-span-5">
+                <div className="container py-16">
+                    <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        <div className="col lg:col-span-5">
                             {/* Sidebar */}
                             <aside id="logo-sidebar"
                                    aria-label="Sidebar">
@@ -193,7 +239,7 @@ const UserDetailsPage = () => {
                             </aside>
                         </div>
 
-                        <div className="col-span-7">
+                        <div className="col lg:col-span-7">
                             {/* Basic Information */}
                             <div className="grid grid-cols-1 mb-4 info-wrapper">
                                 <div
@@ -431,13 +477,13 @@ const UserDetailsPage = () => {
 
                                     <div
                                         className={`box rounded bg-white border ${isEducationBoxVisible ? '' : 'hidden'}`}>
-                                        <div className="grid grid-cols-2 mt-6 px-4 py-4">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 mt-6 px-4 py-4">
                                             <div className="col">
                                                 <h6 className="text-[14px]">School Name</h6>
                                                 <p className="mt-0">Harvard University</p>
                                             </div>
 
-                                            <div className="col">
+                                            <div className="col mt-4 sm:mt-0">
                                                 <h6 className="text-[14px]">Academic Degree</h6>
                                                 <p className="mt-0">MBA</p>
                                             </div>
@@ -677,13 +723,13 @@ const UserDetailsPage = () => {
 
                                     <div
                                         className={`box rounded bg-white border ${isExperienceBoxVisible ? '' : 'hidden'}`}>
-                                        <div className="grid grid-cols-2 mt-6 px-4 py-4">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 mt-6 px-4 py-4">
                                             <div className="col">
                                                 <h6 className="text-[14px]">Employer</h6>
                                                 <p className="mt-0">X Corporation</p>
                                             </div>
 
-                                            <div className="col">
+                                            <div className="col mt-4 sm:mt-0">
                                                 <h6 className="text-[14px]">Current Employer</h6>
                                                 <p className="mt-0">No</p>
                                             </div>
@@ -830,6 +876,256 @@ const UserDetailsPage = () => {
                                     </Modal.Footer>
                                 </Modal>
                                 {/* Experience Pop-Up End */}
+                            </div>
+
+                            {/* Skill */}
+                            <div className="grid grid-cols-1 mb-4 info-wrapper">
+                                <div className="col w-full py-6 px-8 bg-white rounded">
+                                    <div className="head mb-2">
+                                        <h6>Skills</h6>
+                                    </div>
+                                    <hr/>
+
+                                    {/* Skill File */}
+                                    <div
+                                        className="box mt-6 rounded flex items-start justify-between bg-white border px-4 py-4">
+                                        <div className="left">
+                                            <h6 className="text-[14px]">Ruby On Rails, Figma, Adobe XD</h6>
+                                        </div>
+                                        <div onClick={() => setOpenSkillModal(true)} className="right">
+                                            <button className="text-primary text-[14px]">Edit</button>
+                                        </div>
+                                    </div>
+                                    {/* Skill File change Pop-Up Start */}
+                                    <Modal size="lg" dismissible show={openSkillModal}
+                                           onClose={() => setOpenSkillModal(false)}>
+                                        <Modal.Header>
+                                            <h4 className="text-[16px]">Skills</h4>
+                                        </Modal.Header>
+                                        <Modal.Body>
+                                            <div className="modal_body box">
+                                                <p>
+                                                    Please list your skills, separated by commas (optional).
+                                                </p>
+                                                <h4 className="text-[14px] mt-4">Add Skills</h4>
+                                                <textarea cols="30" rows="3"
+                                                          className="mt-1 border border-gray-300 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"></textarea>
+                                            </div>
+                                        </Modal.Body>
+                                        <Modal.Footer>
+                                            <div className="flex w-full items-center justify-between">
+                                                <button onClick={() => setOpenSkillModal(false)}
+                                                        className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
+                                                </button>
+                                                <button onClick={() => setOpenSkillModal(false)}
+                                                        className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
+                                                </button>
+                                            </div>
+                                        </Modal.Footer>
+                                    </Modal>
+                                    {/* Skill File change Pop-Up End */}
+                                </div>
+
+                            </div>
+
+                            {/* Resume */}
+                            <div className="grid grid-cols-1 mb-4 info-wrapper">
+                                <div className="col w-full py-6 px-8 bg-white rounded">
+                                    <div className="head mb-2">
+                                        <h6>Résumé</h6>
+                                    </div>
+                                    <hr/>
+
+                                    {/* Resume File */}
+                                    <div
+                                        className="box mt-6 rounded flex items-start justify-between bg-white border px-4 py-4">
+                                        <div className="left flex items-center gap-1">
+                                            <ImAttachment size={15} className="text-gray-400"/>
+                                            <h6 className="text-[14px]">
+                                                Jane Doe_Resume
+                                            </h6>
+                                        </div>
+                                        <div onClick={() => setOpenResumeModal(true)} className="right">
+                                            <button className="text-primary text-[14px]">Edit</button>
+                                        </div>
+                                    </div>
+                                    {/* Resume File change Pop-Up Start */}
+                                    <Modal size="lg" dismissible show={openResumeModal}
+                                           onClose={() => setOpenResumeModal(false)}>
+                                        <Modal.Header>
+                                            <h4 className="text-[16px]">Resume</h4>
+                                        </Modal.Header>
+                                        <Modal.Body>
+                                            <div className="modal_body box">
+                                                <div className="flex mt-2 items-center justify-between">
+                                                    <div className="left mt-0">
+                                                        {selectedFile ? (
+                                                            <p className="text-primary">{selectedFile.name}</p>
+                                                        ) : (
+                                                            <div className="flex items-center gap-1">
+                                                                <ImAttachment size={15} className="text-gray-400"/>
+                                                                <h6 className="text-[14px]">
+                                                                    Jane Doe_Resume
+                                                                </h6>
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                    <div onClick={handleRemoveClick}
+                                                         className="right mt-0 cursor-pointer flex gap-1 items-center">
+                                                        <HiOutlineMinusCircle className="text-primary"/>
+                                                        <button className="text-primary text-[14px]">Remove</button>
+                                                    </div>
+                                                </div>
+
+                                                <div className="image-upload mt-4">
+                                                    <h4 className="text-[14px]">Upload Résumé</h4>
+                                                    <div className="flex items-center justify-center mt-3 w-full">
+                                                        <label htmlFor="dropzone-file"
+                                                               className="flex flex-col items-center justify-center w-full h-28 border-2 border-blue-300 border-dashed rounded-lg cursor-pointer bg-blue-50 hover:bg-blue-100">
+                                                            <div
+                                                                className="flex flex-col items-center justify-center pt-5 pb-6">
+                                                                <svg
+                                                                    className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                                                                    aria-hidden="true"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    fill="none" viewBox="0 0 20 16">
+                                                                    <path stroke="currentColor" strokeLinecap="round"
+                                                                          strokeLinejoin="round" strokeWidth="2"
+                                                                          d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                                                </svg>
+                                                                <p className="mb-2 text-sm text-gray-500 dark:text-gray-400"><span
+                                                                    className="font-semibold">Click to upload</span> or
+                                                                    drag and
+                                                                    drop</p>
+                                                                <p className="text-xs text-gray-500 dark:text-gray-400">
+                                                                    Supported file formats: .pdf, .doc, .docx, .txt
+                                                                </p>
+                                                            </div>
+                                                            <input id="dropzone-file" type="file"
+                                                                   accept=".pdf,.doc,.docx,.txt"
+                                                                   className="hidden"
+                                                                   onChange={handleFileChange}
+                                                                   ref={fileInputRef}
+                                                            />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Modal.Body>
+                                        <Modal.Footer>
+                                            <div className="flex w-full items-center justify-between">
+                                                <button onClick={() => setOpenResumeModal(false)}
+                                                        className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
+                                                </button>
+                                                <button onClick={() => setOpenResumeModal(false)}
+                                                        className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
+                                                </button>
+                                            </div>
+                                        </Modal.Footer>
+                                    </Modal>
+                                    {/* Resume File change Pop-Up End */}
+                                </div>
+
+                            </div>
+
+                            {/* Document */}
+                            <div className="grid grid-cols-1 mb-4 info-wrapper">
+                                <div className="col w-full py-6 px-8 bg-white rounded">
+                                    <div className="head mb-2">
+                                        <h6>Supporting Documents</h6>
+                                    </div>
+                                    <hr/>
+
+                                    {/* Resume File */}
+                                    <div
+                                        className="box mt-6 rounded flex items-start justify-between bg-white border px-4 py-4">
+                                        <div className="left flex items-center gap-1">
+                                            <ImAttachment size={15} className="text-gray-400"/>
+                                            <h6 className="text-[14px]">
+                                                Jane Doe_Document
+                                            </h6>
+                                        </div>
+                                        <div onClick={() => setOpenDocumentModal(true)} className="right">
+                                            <button className="text-primary text-[14px]">Edit</button>
+                                        </div>
+                                    </div>
+                                    {/* Resume File change Pop-Up Start */}
+                                    <Modal size="lg" dismissible show={openDocumentModal}
+                                           onClose={() => setOpenDocumentModal(false)}>
+                                        <Modal.Header>
+                                            <h4 className="text-[16px]">Supporting Documents</h4>
+                                        </Modal.Header>
+                                        <Modal.Body>
+                                            <div className="modal_body box">
+                                                <div className="flex mt-2 items-center justify-between">
+                                                    <div className="left mt-0">
+                                                        {selectedDocumentFile ? (
+                                                            <p className="text-primary">{selectedDocumentFile.name}</p>
+                                                        ) : (
+                                                            <div className="flex items-center gap-1">
+                                                                <ImAttachment size={15} className="text-gray-400"/>
+                                                                <h6 className="text-[14px]">
+                                                                    Jane Doe_Document
+                                                                </h6>
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                    <div onClick={handleDocumentRemoveClick}
+                                                         className="right mt-0 cursor-pointer flex gap-1 items-center">
+                                                        <HiOutlineMinusCircle className="text-primary"/>
+                                                        <button className="text-primary text-[14px]">Remove</button>
+                                                    </div>
+                                                </div>
+
+                                                <div className="image-upload mt-4">
+                                                    <h4 className="text-[14px]">Upload Supporting Documents</h4>
+                                                    <div className="flex items-center justify-center mt-3 w-full">
+                                                        <label htmlFor="dropzone-file"
+                                                               className="flex flex-col items-center justify-center w-full h-28 border-2 border-blue-300 border-dashed rounded-lg cursor-pointer bg-blue-50 hover:bg-blue-100">
+                                                            <div
+                                                                className="flex flex-col items-center justify-center pt-5 pb-6">
+                                                                <svg
+                                                                    className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                                                                    aria-hidden="true"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    fill="none" viewBox="0 0 20 16">
+                                                                    <path stroke="currentColor" strokeLinecap="round"
+                                                                          strokeLinejoin="round" strokeWidth="2"
+                                                                          d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                                                </svg>
+                                                                <p className="mb-2 text-sm text-gray-500 dark:text-gray-400"><span
+                                                                    className="font-semibold">Click to upload</span> or
+                                                                    drag and
+                                                                    drop</p>
+                                                                <p className="text-xs text-gray-500 dark:text-gray-400">
+                                                                    Supported file formats: .pdf, .doc, .docx, .txt
+                                                                </p>
+                                                            </div>
+                                                            <input id="dropzone-file" type="file"
+                                                                   accept=".pdf,.doc,.docx,.txt"
+                                                                   className="hidden"
+                                                                   onChange={handleFileDocumentChange}
+                                                                   ref={fileInputDocumentRef}
+                                                            />
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Modal.Body>
+                                        <Modal.Footer>
+                                            <div className="flex w-full items-center justify-between">
+                                                <button onClick={() => setOpenDocumentModal(false)}
+                                                        className="px-10 text-[14px] py-2 border border-primary bg-primary hover:text-black hover:bg-transparent hover:border-primary text-white rounded">Cancel
+                                                </button>
+                                                <button onClick={() => setOpenDocumentModal(false)}
+                                                        className="px-10 text-[14px] py-2 bg-blue-100 hover:bg-primary hover:text-white text-black rounded">Save
+                                                </button>
+                                            </div>
+                                        </Modal.Footer>
+                                    </Modal>
+                                    {/* Resume File change Pop-Up End */}
+                                </div>
+
                             </div>
                         </div>
                     </div>
