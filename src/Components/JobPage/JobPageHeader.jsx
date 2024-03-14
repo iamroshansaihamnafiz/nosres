@@ -152,7 +152,7 @@ function JobPageHeader(props) {
 
                             <div className="five group">
                                 <button
-                                    className="text-primary hover:bg-primary hover:text-white rounded px-4 py-2 border text-[14px]">
+                                    className="text-primary hover:bg-primary hover:text-white rounded px-4 py-1 border text-[14px]">
                                     Create a Profile
                                 </button>
                             </div>

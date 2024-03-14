@@ -161,6 +161,14 @@ function Footer(props) {
                                 <p className="mt-1 text-gray-500 text-[12px]">Sign up for the latest Nosres news and
                                     articles. By signing up you are agreeing to
                                     our Privacy Policy.</p>
+                                <div
+                                    className="lg:hidden mt-3 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
+                                    <HiOutlineArrowRightCircle size={30}/>
+                                    <Link to='/'
+                                          className="text-[14px]">
+                                        Subscribe
+                                    </Link>
+                                </div>
                             </div>
 
                             <details className="group">
