@@ -245,3 +245,14 @@ h2 {
     outline: 0 !important;
     --tw-ring-opacity: 0 !important;
 }
+
+/*----------------- User Details Page Design ----------------- */
+#radio_box input {
+    color: #4D7FB8 !important;
+}
+
+#radio_box input:focus {
+    outline: 0 !important;
+    border: 0 !important;
+    --tw-ring-opacity: 0 !important;
+}

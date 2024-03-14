@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import React from "react";
 import Accounts from "./Pages/Accounts";
 import Jobs from "./Pages/Jobs";
+import UserDetails from "./Pages/UserDetails";
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/personal-info" element={<PersonalInfo/>}/>
                     <Route path="/accounts" element={<Accounts/>}/>
                     <Route path="/jobs" element={<Jobs/>}/>
+                    <Route path="/user-details" element={<UserDetails/>}/>
                 </Routes>
             </BrowserRouter>
             <ToastContainer/>

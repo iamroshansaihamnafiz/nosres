@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 function Hero(props) {
     return (
         <>
-            <section id="banner-section" className="bg-cover bg-no-repeat bg-center h-[500px] py-[10rem]"
+            <section id="banner-section" className="bg-cover bg-no-repeat bg-center h-[450px] lg:h-[600px] py-[10rem]"
                      style={{backgroundImage: `url(${heroImage})`}}>
                 <div className="container">
                     <h1 className="text-2xl md:text-[38px] leading-0 md:leading-10 text-[#263F5C] font-bold md:font-medium mb-4">
