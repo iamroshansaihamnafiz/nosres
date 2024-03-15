@@ -276,6 +276,15 @@ h2 {
     border: none;
 }
 
+.swiper {
+    padding-bottom: 40px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+}
+
 
 /* ------------------- Media Query ----------------*/
 @media only screen and (max-width: 1100px) {
