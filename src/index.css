@@ -290,6 +290,21 @@ h2 {
     height: 12px !important;
 }
 
+/*--------------------- Blog page design ----------------*/
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    font-size: 15px !important;
+    background: white !important;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-prev:after {
+    font-size: 15px !important;
+    background: white !important;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
 /* ------------------- Media Query ----------------*/
 @media only screen and (max-width: 1100px) {
     #hiring-section .bimage_wrap::before {
