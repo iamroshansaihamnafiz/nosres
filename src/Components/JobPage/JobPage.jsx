@@ -51,7 +51,7 @@ function JobPage(props) {
                                         className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                         Category
                                         <RxPlus
-                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-90"/>
+                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-45"/>
                                     </summary>
                                     <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
                                         <div id="checkbox" className="mt-3">
@@ -74,10 +74,10 @@ function JobPage(props) {
 
                                 <details className="group mt-4 pb-5">
                                     <summary
-                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px] focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                         Location
                                         <RxPlus
-                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-90"/>
+                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-45"/>
                                     </summary>
                                     <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
                                         <div id="checkbox" className="mt-3">
@@ -109,7 +109,7 @@ function JobPage(props) {
                                         className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                         Degree
                                         <RxPlus
-                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-90"/>
+                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-45"/>
                                     </summary>
                                     <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
                                         <div id="checkbox" className="mt-3">
@@ -147,7 +147,7 @@ function JobPage(props) {
                                         className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[14px]  focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                         Job Type
                                         <RxPlus
-                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-90"/>
+                                            className="absolute hover:text-primary right-0 top-1 h-4 w-4 stroke-slate-700 transition duration-300 group-open:text-primary group-open:rotate-45"/>
                                     </summary>
                                     <ul className="mt-4 space-y-2 text-gray-500 text-[12px]">
                                         <div id="checkbox" className="mt-3">

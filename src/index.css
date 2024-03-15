@@ -256,3 +256,66 @@ h2 {
     border: 0 !important;
     --tw-ring-opacity: 0 !important;
 }
+
+/*------------------ Hiring Page Design ----------------------*/
+#hiring-section .bimage_wrap {
+    position: relative;
+}
+
+#hiring-section .bimage_wrap::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 115%;
+    width: 25%;
+    height: 2px;
+    border-top: 3px dotted #ccc;
+}
+
+#hiring-section .last-bimage-wrap::before {
+    border: none;
+}
+
+
+/* ------------------- Media Query ----------------*/
+@media only screen and (max-width: 1100px) {
+    #hiring-section .bimage_wrap::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 107%;
+        width: 25%;
+        height: 2px;
+        border-top: 3px dotted #ccc;
+    }
+
+    #hiring-section .last-bimage-wrap::before {
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #hiring-section .bimage_wrap::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 127%;
+        width: 25%;
+        height: 2px;
+        border-top: 3px dotted #ccc;
+    }
+
+    #hiring-section .third-bimage-wrap::before {
+        border: none;
+    }
+
+    #hiring-section .last-bimage-wrap::before {
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #hiring-section .bimage_wrap::before {
+        border: none;
+    }
+}

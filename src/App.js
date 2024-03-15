@@ -12,6 +12,7 @@ import React from "react";
 import Accounts from "./Pages/Accounts";
 import Jobs from "./Pages/Jobs";
 import UserDetails from "./Pages/UserDetails";
+import Hiring from "./Pages/Hiring";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                     <Route path="/accounts" element={<Accounts/>}/>
                     <Route path="/jobs" element={<Jobs/>}/>
                     <Route path="/user-details" element={<UserDetails/>}/>
+                    <Route path="/hiring" element={<Hiring/>}/>
                 </Routes>
             </BrowserRouter>
             <ToastContainer/>
