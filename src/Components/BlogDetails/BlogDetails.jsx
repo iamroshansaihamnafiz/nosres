@@ -1,6 +1,6 @@
 'use client';
 import React, {useState, useEffect} from 'react';
-import {HiChevronRight, HiOutlineArrowRightCircle} from "react-icons/hi2";
+import {HiChevronRight} from "react-icons/hi2";
 import {GoDotFill} from "react-icons/go";
 import userImage from '../../assets/images/blog/user-image.jpg';
 import postImage from '../../assets/images/blog/blog-feature.jpg';
@@ -20,6 +20,7 @@ import catImg7 from "../../assets/images/hiring/cblog7.jpeg";
 import {SiFacebook, SiTwitter, SiLinkedin,} from "react-icons/si";
 import {PiEnvelopeThin, PiLinkSimpleLight} from "react-icons/pi";
 import {Link} from 'react-scroll';
+import LogoImg from "../../assets/images/logo.svg";
 
 const BlogDetails = () => {
     // For Page link Copy
@@ -234,21 +235,23 @@ const BlogDetails = () => {
 
                         <div className="flex items-center gap-2 mt-3 image-box">
                             <div className="flex">
-                                <img src={userImage} className="w-7 h-7 rounded-full" alt="userImg"/>
-                                <img src={userImage} className="w-7 h-7 -ml-1 rounded-full" alt="userImg"/>
-                                <img src={userImage} className="w-7 h-7 -ml-1 rounded-full" alt="userImg"/>
+                                <img src={userImage} className="w-7 h-7 rounded-full ring-2 ring-white" alt="userImg"/>
+                                <img src={userImage} className="w-7 h-7 -ml-1 rounded-full ring-2 ring-white"
+                                     alt="userImg"/>
+                                <img src={userImage} className="w-7 h-7 -ml-1 rounded-full ring-2 ring-white"
+                                     alt="userImg"/>
                             </div>
                             <h4 className="text-[#39393B] text-[14px]">
-                                By <Link to='#' className="text-primary">Jamal Halam</Link>, <Link to='#'
-                                                                                                   className="text-primary">Jane
+                                By <Link to='#' className="text-primary cursor-pointer">Jamal Halam</Link>, <Link to='#'
+                                                                                                                  className="text-primary cursor-pointer">Jane
                                 Doe</Link>,
-                                and <Link to='#' className="text-primary">Jack Appleseed</Link><br/>
+                                and <Link to='#' className="text-primary cursor-pointer">Jack Appleseed</Link><br/>
                                 Contributor, Chief Marketing Officer, and CFO
                             </h4>
                         </div>
                         <div className="flex items-center ml-[85px] mt-1 gap-2 pb-4 text-[14px] text-[#828D9E]">
                             <h4>Published May 02, 2020</h4>
-                            <div className="dot text-gray-400"><GoDotFill size={12}/></div>
+                            <div className="dot text-[#828D9E]"><GoDotFill size={8}/></div>
                             <h4>Updated</h4>
                         </div>
                         <hr/>
@@ -257,7 +260,7 @@ const BlogDetails = () => {
                         <div id="introduction"
                              className={`point py-4 section ${activeSection === 'introduction' ? 'active_blog_tab' : ''}`}
                         >
-                            <h4 className="pb-2 text-[#828D9E]">
+                            <h4 className="pb-2 text-[12px] text-[#828D9E]">
                                 Soaring above a the world's majesty<br/>
                                 Photo credit: Pexels.com
                             </h4>
@@ -401,157 +404,148 @@ const BlogDetails = () => {
                             }}
                         >
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
+                                <div className="h-[350px] image-box bg-white shadow rounded-md">
                                     <img src={catImg1} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
-                                            Engineering & Technology
+                                            Choosing The Best Platform
                                         </h2>
                                         <p className="mt-2 text-[14px] text-gray-600">
-                                            We develop products and secure all forms of electronic data.
+                                            With so many different ways today to find
+                                            information online
                                         </p>
-                                        <div
-                                            className="mt-4 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
-                                            <HiOutlineArrowRightCircle size={30}/>
-                                            <Link to='/'
-                                                  className="text-[14px]">
-                                                See Related Jobs
-                                            </Link>
+                                        <div className="flex items-center gap-3 mt-2">
+                                            <img src={LogoImg} className="w-7" alt="LogoImg"/>
+                                            <div className="wrap">
+                                                <h4 className="text-[14px] font-semibold">Nosres</h4>
+                                                <p className="text-[13px]">09 April 2023</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
+                                <div className="h-[350px] image-box bg-white shadow rounded-md">
                                     <img src={catImg2} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
-                                            Human Resources
+                                            Choosing The Best Platform
                                         </h2>
                                         <p className="mt-2 text-[14px] text-gray-600">
-                                            Our employees are the greatest resource we have. Theyre the backbone of our
-                                            business
-                                            success.
+                                            With so many different ways today to find
+                                            information online
                                         </p>
-                                        <div
-                                            className="mt-4 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
-                                            <HiOutlineArrowRightCircle size={30}/>
-                                            <Link to='/'
-                                                  className="text-[14px]">
-                                                See Related Jobs
-                                            </Link>
+                                        <div className="flex items-center gap-3 mt-2">
+                                            <img src={LogoImg} className="w-7" alt="LogoImg"/>
+                                            <div className="wrap">
+                                                <h4 className="text-[14px] font-semibold">Nosres</h4>
+                                                <p className="text-[13px]">09 April 2023</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
+                                <div className="h-[350px] image-box bg-white shadow rounded-md">
                                     <img src={catImg3} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
-                                            Marketing
+                                            Choosing The Best Platform
                                         </h2>
                                         <p className="mt-2 text-[14px] text-gray-600">
-                                            Nosres is about imagination, logic and design. So, marketing is the spinal
-                                            cord to
-                                            our business.
+                                            With so many different ways today to find
+                                            information online
                                         </p>
-                                        <div
-                                            className="mt-4 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
-                                            <HiOutlineArrowRightCircle size={30}/>
-                                            <Link to='/'
-                                                  className="text-[14px]">
-                                                See Related Jobs
-                                            </Link>
+                                        <div className="flex items-center gap-3 mt-2">
+                                            <img src={LogoImg} className="w-7" alt="LogoImg"/>
+                                            <div className="wrap">
+                                                <h4 className="text-[14px] font-semibold">Nosres</h4>
+                                                <p className="text-[13px]">09 April 2023</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
+                                <div className="h-[350px] image-box bg-white shadow rounded-md">
                                     <img src={catImg4} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
-                                            Business Development
+                                            Choosing The Best Platform
                                         </h2>
                                         <p className="mt-2 text-[14px] text-gray-600">
-                                            We're constantly working on new strategies and initiatives to create
-                                            long-term value
-                                            for our business.
+                                            With so many different ways today to find
+                                            information online
                                         </p>
-                                        <div
-                                            className="mt-4 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
-                                            <HiOutlineArrowRightCircle size={30}/>
-                                            <Link to='/'
-                                                  className="text-[14px]">
-                                                See Related Jobs
-                                            </Link>
+                                        <div className="flex items-center gap-3 mt-2">
+                                            <img src={LogoImg} className="w-7" alt="LogoImg"/>
+                                            <div className="wrap">
+                                                <h4 className="text-[14px] font-semibold">Nosres</h4>
+                                                <p className="text-[13px]">09 April 2023</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
+                                <div className="h-[350px] image-box bg-white shadow rounded-md">
                                     <img src={catImg5} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
-                                            Finance
+                                            Choosing The Best Platform
                                         </h2>
                                         <p className="mt-2 text-[14px] text-gray-600">
-                                            Our main activity is to provide economic analysis to help improve key
-                                            business strategies.
+                                            With so many different ways today to find
+                                            information online
                                         </p>
-                                        <div
-                                            className="mt-4 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
-                                            <HiOutlineArrowRightCircle size={30}/>
-                                            <Link to='/'
-                                                  className="text-[14px]">
-                                                See Related Jobs
-                                            </Link>
+                                        <div className="flex items-center gap-3 mt-2">
+                                            <img src={LogoImg} className="w-7" alt="LogoImg"/>
+                                            <div className="wrap">
+                                                <h4 className="text-[14px] font-semibold">Nosres</h4>
+                                                <p className="text-[13px]">09 April 2023</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
+                                <div className="h-[350px] image-box bg-white shadow rounded-md">
                                     <img src={catImg6} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
-                                            Design
+                                            Choosing The Best Platform
                                         </h2>
                                         <p className="mt-2 text-[14px] text-gray-600">
-                                            We combine simplicity and usability to create painstakingly beautiful
-                                            products and services.
+                                            With so many different ways today to find
+                                            information online
                                         </p>
-                                        <div
-                                            className="mt-4 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
-                                            <HiOutlineArrowRightCircle size={30}/>
-                                            <Link to='/'
-                                                  className="text-[14px]">
-                                                See Related Jobs
-                                            </Link>
+                                        <div className="flex items-center gap-3 mt-2">
+                                            <img src={LogoImg} className="w-7" alt="LogoImg"/>
+                                            <div className="wrap">
+                                                <h4 className="text-[14px] font-semibold">Nosres</h4>
+                                                <p className="text-[13px]">09 April 2023</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
+                                <div className="h-[350px] image-box bg-white shadow rounded-md">
                                     <img src={catImg7} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
-                                            Business Operations
+                                            Choosing The Best Platform
                                         </h2>
                                         <p className="mt-2 text-[14px] text-gray-600">
-                                            We strive to make sure that the company's processes run smoothly and align
-                                            with strategic goals.
+                                            With so many different ways today to find
+                                            information online
                                         </p>
-                                        <div
-                                            className="mt-4 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
-                                            <HiOutlineArrowRightCircle size={30}/>
-                                            <Link to='/'
-                                                  className="text-[14px]">
-                                                See Related Jobs
-                                            </Link>
+                                        <div className="flex items-center gap-3 mt-2">
+                                            <img src={LogoImg} className="w-7" alt="LogoImg"/>
+                                            <div className="wrap">
+                                                <h4 className="text-[14px] font-semibold">Nosres</h4>
+                                                <p className="text-[13px]">09 April 2023</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
