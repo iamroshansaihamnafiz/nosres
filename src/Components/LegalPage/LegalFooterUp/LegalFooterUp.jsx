@@ -5,7 +5,7 @@ const LegalFooterUp = () => {
         <>
             <section id="footer-up-section">
                 <div className="container pt-16 pb-6 text-center">
-                    <h1 className="text-[20px]">
+                    <h1 className="text-[24px]">
                         Can’t find what you’re looking for?
                     </h1>
                     <div className="mt-8">

@@ -6,7 +6,7 @@ function FooterUp(props) {
         <>
             <section id="footer-up-section">
                 <div className="container pt-16 pb-6 text-center">
-                    <h1 className="text-[20px]">
+                    <h1 className="text-[24px]">
                         Create your Nosres Account and get access to all Nosres services.
                     </h1>
                     <div className="mt-8">

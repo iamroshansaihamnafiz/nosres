@@ -34,6 +34,15 @@ const SupportPageFooter = () => {
                                     <li className="hover:text-primary">
                                         <Link to='#'>Privacy</Link>
                                     </li>
+                                    <li className="hover:text-primary">
+                                        <Link to='#'>Careers</Link>
+                                    </li>
+                                    <li className="hover:text-primary">
+                                        <Link to='#'>Nosres Support</Link>
+                                    </li>
+                                    <li className="hover:text-primary">
+                                        <Link to='#'>Sitemap</Link>
+                                    </li>
                                 </ul>
 
                                 <p className="mt-[14px] text-gray-500 text-[12px]">© {currentYear} Nosres Inc. All
