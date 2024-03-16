@@ -16,6 +16,7 @@ import Hiring from "./Pages/Hiring";
 import Blog from "./Pages/Blog";
 import BlogDetail from "./Pages/BlogDetail";
 import Legal from "./Pages/Legal";
+import Support from "./Pages/Support";
 
 function App() {
     return (
@@ -35,6 +36,7 @@ function App() {
                     <Route path="/blog" element={<Blog/>}/>
                     <Route path="/blog-details" element={<BlogDetail/>}/>
                     <Route path="/legal" element={<Legal/>}/>
+                    <Route path="/support" element={<Support/>}/>
                 </Routes>
             </BrowserRouter>
             <ToastContainer/>
