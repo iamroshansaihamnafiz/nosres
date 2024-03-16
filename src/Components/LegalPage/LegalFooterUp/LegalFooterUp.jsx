@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 
 const LegalFooterUp = () => {
     return (
@@ -10,10 +9,10 @@ const LegalFooterUp = () => {
                         Can’t find what you’re looking for?
                     </h1>
                     <div className="mt-8">
-                        <Link to='/register'
-                              className="border border-primary px-8 py-3 text-white bg-primary font-medium rounded-md hover:bg-transparent hover:border-primary hover:text-primary transition">
+                        <button
+                            className="text-primary hover:bg-primary hover:text-white rounded px-6 py-2 border text-[14px]">
                             Contact Us
-                        </Link>
+                        </button>
                     </div>
                 </div>
             </section>
