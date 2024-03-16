@@ -180,7 +180,7 @@ const BlogDetails = () => {
                         <div className="relative">
                             <div
                                 className="hidden lg:block right_side_fixed z-[9999] absolute right-0 bg-white py-4 px-4 rounded w-[55px] text-[14px] mt-12">
-                                <ul className="space-y-3">
+                                <ul className="space-y-3 flex flex-col items-center">
 
                                     <li>
                                         <div>
@@ -206,14 +206,14 @@ const BlogDetails = () => {
                                     <li>
                                         <div>
                                             <Link to='#'>
-                                                <PiEnvelopeThin size={27} className="h-7 cursor-pointer text-gray-600"/>
+                                                <PiEnvelopeThin size={28} className="h-7 cursor-pointer text-gray-600"/>
                                             </Link>
                                         </div>
                                     </li>
                                     <li>
                                         <Tooltip content={copied ? "Copied" : "Link"} placement="bottom">
                                             <Link onClick={handleClick} to='#'>
-                                                <PiLinkSimpleLight size={25}
+                                                <PiLinkSimpleLight size={28}
                                                                    className="h-7 cursor-pointer text-blue-600"/>
                                             </Link>
                                         </Tooltip>
