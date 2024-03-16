@@ -305,6 +305,12 @@ h2 {
     border-radius: 10px;
 }
 
+.active_blog_tab {
+    font-size: 14px !important;
+    color: black !important;
+}
+
+
 /* ------------------- Media Query ----------------*/
 @media only screen and (max-width: 1100px) {
     #hiring-section .bimage_wrap::before {

@@ -1,7 +1,8 @@
 'use client';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {HiChevronRight, HiOutlineArrowRightCircle} from "react-icons/hi2";
 import {GoDotFill} from "react-icons/go";
+// import {Link} from "react-router-dom";
 import userImage from '../../assets/images/blog/user-image.jpg';
 import postImage from '../../assets/images/blog/blog-feature.jpg';
 import {Tooltip} from 'flowbite-react';
@@ -19,7 +20,7 @@ import catImg6 from "../../assets/images/hiring/cblog6.jpeg";
 import catImg7 from "../../assets/images/hiring/cblog7.jpeg";
 import {SiFacebook, SiTwitter, SiLinkedin,} from "react-icons/si";
 import {PiEnvelopeThin, PiLinkSimpleLight} from "react-icons/pi";
-import {Link} from 'react-scroll';
+import {Link, Button, Element, Events, animateScroll as scroll, scrollSpy} from 'react-scroll';
 
 const BlogDetails = () => {
     // For Page link Copy
@@ -41,97 +42,18 @@ const BlogDetails = () => {
             });
     };
 
-    const [activeSection, setActiveSection] = useState(null);
+    // For Click To Add ClassName
+    const [clickedbTab, setClickedbTab] = useState(false);
 
-    // For Outline
-    const scrollToOutlines = () => {
-        const outlinesSection = document.getElementById('outlines');
-        if (outlinesSection) {
-            const offsetTop = outlinesSection.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({top: offsetTop - 50, behavior: 'smooth'});
-        }
-    };
-
-    // For Introduction
-    const scrollToIntroduction = () => {
-        const introductionSection = document.getElementById('introduction');
-        if (introductionSection) {
-            const offsetTop = introductionSection.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({top: offsetTop - 50, behavior: 'smooth'});
-        }
-    };
-
-    // For Advantage
-    const scrollToAdvantage = () => {
-        const advantageSection = document.getElementById('advantage');
-        if (advantageSection) {
-            const offsetTop = advantageSection.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({top: offsetTop - 50, behavior: 'smooth'});
-        }
-    };
-
-    // For Engaging
-    const scrollToEngaging = () => {
-        const engagingSection = document.getElementById('engaging');
-        if (engagingSection) {
-            const offsetTop = engagingSection.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({top: offsetTop - 50, behavior: 'smooth'});
-        }
-    };
-
-    // For Discussion
-    const scrollToDiscussion = () => {
-        const discussionSection = document.getElementById('discussion');
-        if (discussionSection) {
-            const offsetTop = discussionSection.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({top: offsetTop - 50, behavior: 'smooth'});
-        }
-    };
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const sections = document.querySelectorAll('.section');
-            let currentActiveSection = null;
-
-            sections.forEach(section => {
-                const {top, bottom} = section.getBoundingClientRect();
-                const sectionHeight = bottom - top;
-
-                // Adjust this value as needed to control when a section becomes active
-                const threshold = sectionHeight / 2;
-
-                if (top <= threshold && bottom >= threshold) {
-                    currentActiveSection = section.id;
-                }
-            });
-
-            setActiveSection(currentActiveSection);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-
-    useEffect(() => {
-        const introductionSection = document.getElementById('introduction');
-
-        if (activeSection === 'advantage' && introductionSection) {
-            introductionSection.classList.remove('active_blog_tab');
-        }
-    }, [activeSection]);
-
+    const handleClickbTab = () => {
+        setClickedbTab(true);
+    }
 
     return (
         <>
             <section id="blog-details-section">
-                <div
-                    id="outlines"
-                    className={`container pt-24 section ${activeSection === 'outlines' ? 'active_blog_tab' : ''}`}
-                >
-                    <div className="flex items-center gap-2 text-[14px]">
+                <div className="container pt-24">
+                    <div className="flex items-center gap-2 text-[14px] text-primary">
                         <Link to='#' className="cursor-pointer">Home</Link> <HiChevronRight className="text-black"/>
                         <Link to='#'>Newsroom</Link> <HiChevronRight className="text-black"/> <span
                         className="text-[#828D9E]">Big Education Publisher Pearson to Phase Out Print Textbooks</span>
@@ -141,88 +63,131 @@ const BlogDetails = () => {
                         className="hidden lg:block left_side_fixed fixed z-[9999] bg-white py-4 rounded w-[150px] text-[14px] mt-12">
                         <ul className="space-y-3 text-primary">
                             <li>
-                                <Link to='#' onClick={scrollToOutlines}
-                                      className={`cursor-pointer ${activeSection === 'outlines' ? 'active_blog_tab' : ''}`}>
+                                <Link to="outline" className="cursor-pointer" smooth={true}
+                                      duration={500}
+                                      offset={-70}
+                                      activeClass="active_blog_tab"
+                                >
                                     Outline
                                 </Link>
                             </li>
                             <li>
-                                <Link to='#' onClick={scrollToIntroduction}
-                                      className={`cursor-pointer ${activeSection === 'introduction' ? 'active_blog_tab' : ''}`}>
+                                <Link
+                                    className="cursor-pointer"
+                                    activeClass="active_blog_tab"
+                                    to="introduction"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-50}
+                                    duration={500}
+                                >
                                     Introduction
                                 </Link>
                             </li>
                             <li>
-                                <Link to='#' onClick={scrollToAdvantage}
-                                      className={`cursor-pointer ${activeSection === 'advantage' ? 'active_blog_tab' : ''}`}>
+                                <Link
+                                    className="cursor-pointer"
+                                    activeClass="active_blog_tab"
+                                    to="advantage"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-50}
+                                    duration={500}
+                                >
                                     Huge Advantage
                                 </Link>
                             </li>
                             <li>
-                                <Link to='#' onClick={scrollToEngaging}
-                                      className={`cursor-pointer ${activeSection === 'engaging' ? 'active_blog_tab' : ''}`}>
+                                <Link
+                                    className="cursor-pointer"
+                                    activeClass="active_blog_tab"
+                                    to="engaging"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-50}
+                                    duration={500}
+                                >
                                     Engaging with Others
                                 </Link>
                             </li>
                             <li>
-                                <Link to='#' onClick={scrollToDiscussion}
-                                      className={`cursor-pointer ${activeSection === 'discussion' ? 'active_blog_tab' : ''}`}>
+                                <Link
+                                    className="cursor-pointer"
+                                    activeClass="active_blog_tab"
+                                    to="discussion"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-50}
+                                    duration={500}
+                                >
                                     Discussion
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    className="cursor-pointer"
+                                    activeClass="active_blog_tab"
+                                    to="source"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-50}
+                                    duration={500}
+                                >
+                                    Source
                                 </Link>
                             </li>
                         </ul>
                     </div>
-
                     {/* Right Side Fixed */}
-                    <div className="container fixed z-[9999]">
-                        <div className="relative">
-                            <div
-                                className="hidden lg:block right_side_fixed z-[9999] absolute right-0 bg-white py-4 px-4 rounded w-[55px] text-[14px] mt-12">
-                                <ul className="space-y-3">
+                    <div
+                        className="hidden right_side_fixed fixed z-[9999] right-[7%] top-[20%] bg-white py-4 px-4 rounded w-[55px] text-[14px] mt-12">
+                        <ul className="space-y-3">
+                            <li>
 
-                                    <li>
-                                        <Tooltip content="Facebook">
-                                            <Link to='#'>
-                                                <SiFacebook size={25} className="h-7 cursor-pointer text-[#0866FF]"/>
-                                            </Link>
-                                        </Tooltip>
-                                    </li>
-                                    <li>
-                                        <Tooltip content="Twitter">
-                                            <Link to='#'>
-                                                <SiTwitter size={22} className="h-7 cursor-pointer text-[#000000]"/>
-                                            </Link>
-                                        </Tooltip>
-                                    </li>
-                                    <li>
-                                        <Tooltip content="Linkedin">
-                                            <Link to='#'>
-                                                <SiLinkedin size={22} className="h-7 cursor-pointer text-primary"/>
-                                            </Link>
-                                        </Tooltip>
-                                    </li>
-                                    <li>
-                                        <Tooltip content="Envelope">
-                                            <Link to='#'>
-                                                <PiEnvelopeThin size={27} className="h-7 cursor-pointer text-gray-600"/>
-                                            </Link>
-                                        </Tooltip>
-                                    </li>
-                                    <li>
-                                        <Tooltip content={copied ? "Copied" : "Link"}>
-                                            <Link onClick={handleClick} to='#'>
-                                                <PiLinkSimpleLight size={25}
-                                                                   className="h-7 cursor-pointer text-blue-600"/>
-                                            </Link>
-                                        </Tooltip>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                            </li>
+                            <li>
+                                <Tooltip content="Facebook">
+                                    <Link to='#'>
+                                        <SiFacebook size={25} className="h-7 text-[#0866FF]"/>
+                                    </Link>
+                                </Tooltip>
+                            </li>
+                            <li>
+                                <Tooltip content="Twitter">
+                                    <Link to='#'>
+                                        <SiTwitter size={22} className="h-7 text-[#000000]"/>
+                                    </Link>
+                                </Tooltip>
+                            </li>
+                            <li>
+                                <Tooltip content="Linkedin">
+                                    <Link to='#'>
+                                        <SiLinkedin size={22} className="h-7 text-primary"/>
+                                    </Link>
+                                </Tooltip>
+                            </li>
+                            <li>
+                                <Tooltip content="Envelope">
+                                    <Link to='#'>
+                                        <PiEnvelopeThin size={27} className="h-7 text-gray-600"/>
+                                    </Link>
+                                </Tooltip>
+                            </li>
+                            <li>
+                                <Tooltip content="Link">
+                                    <Link to='#'>
+                                        <PiLinkSimpleLight size={25} className="h-7 text-blue-600"/>
+                                    </Link>
+                                </Tooltip>
+                            </li>
+                            <li>
+
+                            </li>
+                        </ul>
                     </div>
 
                     {/* Blog Content */}
-                    <div className="pt-14 blog-content w-full lg:w-[600px] mx-auto">
+                    <div className="pt-16 blog-content w-full lg:w-[600px] mx-auto">
                         <h1 className="text-[34px] font-semibold">
                             Big Education Publisher Pearson to Phase
                             Out Print Textbooks
@@ -254,13 +219,7 @@ const BlogDetails = () => {
                         <hr/>
                         <img src={postImage} className="mt-6 rounded" alt="postImage"/>
 
-                        <div id="introduction"
-                             className={`point py-4 section ${activeSection === 'introduction' ? 'active_blog_tab' : ''}`}
-                        >
-                            <h4 className="pb-2 text-[#828D9E]">
-                                Soaring above a the world's majesty<br/>
-                                Photo credit: Pexels.com
-                            </h4>
+                        <Element name="introduction" className="point py-6 text-justify">
                             <h4 className="text-[18px] font-semibold">Introduction</h4>
                             <p className="mt-1">
                                 The world’s largest education publisher, Pearson, has said it will gradually phase out
@@ -271,11 +230,9 @@ const BlogDetails = () => {
                                 about the company’s future direction. He told the BBC: “We are now over the digital
                                 tipping point.
                             </p>
-                        </div>
+                        </Element>
 
-                        <div id="advantage"
-                             className={`point py-4 section ${activeSection === 'advantage' ? 'active_blog_tab' : ''}`}
-                        >
+                        <Element name="advantage" className="point pt-6 text-justify">
                             <h4 className="text-[18px] font-semibold">Huge Advantage</h4>
                             <p className="mt-1">
                                 Pearson said a huge advantage of digital books is that they can be continually updated,
@@ -286,11 +243,9 @@ const BlogDetails = () => {
                                 said this model has dominated the industry for over four decades and is now past its
                                 use-by date.
                             </p>
-                        </div>
+                        </Element>
 
-                        <div id="engaging"
-                             className={`point py-4 section ${activeSection === 'engaging' ? 'active_blog_tab' : ''}`}
-                        >
+                        <Element name="engaging" className="point mt-4 text-justify">
                             <h4 className="text-[18px] font-semibold">Engaging with Others</h4>
                             <p className="mt-1">
                                 Fallon said: “We learn by engaging and sharing with others, and a digital environment
@@ -300,20 +255,18 @@ const BlogDetails = () => {
                                 and Spotify generation”. Textbook writers are worried they will earn less from their
                                 books as digital products are sold on a subscription basis.
                             </p>
-                        </div>
+                        </Element>
 
-                        <div id="discussion"
-                             className={`point py-4 section ${activeSection === 'discussion' ? 'active_blog_tab' : ''}`}
-                        >
+                        <Element name="discussion" className="point mt-4 text-justify">
                             <h4 className="text-[18px] font-semibold">Discussion</h4>
                             <p className="mt-1">1. Paper books are better than e-books. Do you agree or disagree? </p>
                             <p className="mt-1">2. Do you think in the next few years people will become hybrid readers,
                                 who juggle devices and
                                 paper?</p>
-                        </div>
+                        </Element>
 
-                        <div className="tag_area mt-4 block sm:flex items-center gap-4">
-                            <h4 className="text-[14px] mb-3 sm:mb-0">Related Tags</h4>
+                        <div className="tag_area mt-4 flex items-center gap-4">
+                            <h4 className="text-[14px]">Related Tags</h4>
                             <button type="type"
                                     className="text-[14px] py-1 px-4 rounded border border-gray-200 hover:bg-primary hover:text-white">
                                 Business
@@ -330,38 +283,38 @@ const BlogDetails = () => {
                             </button>
                         </div>
 
-                        <ul className="mt-4 flex lg:hidden items-center gap-4">
+                        <ul className="mt-4 flex items-center gap-4">
                             <li>
                                 <Tooltip content="Facebook">
-                                    <Link to='#' className="cursor-pointer">
+                                    <Link to='#'>
                                         <SiFacebook size={21} className="h-7 text-[#0866FF]"/>
                                     </Link>
                                 </Tooltip>
                             </li>
                             <li>
                                 <Tooltip content="Twitter">
-                                    <Link to='#' className="cursor-pointer">
+                                    <Link to='#'>
                                         <SiTwitter size={19} className="h-7 text-[#000000]"/>
                                     </Link>
                                 </Tooltip>
                             </li>
                             <li>
                                 <Tooltip content="Linkedin">
-                                    <Link to='#' className="cursor-pointer">
+                                    <Link to='#'>
                                         <SiLinkedin size={18} className="h-7 text-primary"/>
                                     </Link>
                                 </Tooltip>
                             </li>
                             <li>
                                 <Tooltip content="Envelope">
-                                    <Link to='#' className="cursor-pointer">
+                                    <Link to='#'>
                                         <PiEnvelopeThin size={24} className="h-7 text-gray-600"/>
                                     </Link>
                                 </Tooltip>
                             </li>
                             <li>
                                 <Tooltip content={copied ? "Copied" : "Link"}>
-                                    <Link onClick={handleClick} to='#' className="cursor-pointer">
+                                    <Link onClick={handleClick} to='#'>
                                         <PiLinkSimpleLight size={22} className="h-7 text-blue-600"/>
                                     </Link>
                                 </Tooltip>
