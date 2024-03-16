@@ -17,8 +17,9 @@ import catImg4 from "../../assets/images/hiring/cblog4.jpeg";
 import catImg5 from "../../assets/images/hiring/cblog5.jpg";
 import catImg6 from "../../assets/images/hiring/cblog6.jpeg";
 import catImg7 from "../../assets/images/hiring/cblog7.jpeg";
-import {SiFacebook, SiTwitter, SiLinkedin,} from "react-icons/si";
+import {SiFacebook, SiLinkedin,} from "react-icons/si";
 import {PiEnvelopeThin, PiLinkSimpleLight} from "react-icons/pi";
+import {FaXTwitter} from "react-icons/fa6";
 import {Link} from 'react-scroll';
 import LogoImg from "../../assets/images/logo.svg";
 
@@ -182,40 +183,41 @@ const BlogDetails = () => {
                                 <ul className="space-y-3">
 
                                     <li>
-                                        <Tooltip content="Facebook">
+                                        <div>
                                             <Link to='#'>
                                                 <SiFacebook size={25} className="h-7 cursor-pointer text-[#0866FF]"/>
                                             </Link>
-                                        </Tooltip>
+                                        </div>
                                     </li>
                                     <li>
-                                        <Tooltip content="Twitter">
+                                        <div>
                                             <Link to='#'>
-                                                <SiTwitter size={22} className="h-7 cursor-pointer text-[#000000]"/>
+                                                <FaXTwitter size={21} className="h-7 cursor-pointer text-[#000000]"/>
                                             </Link>
-                                        </Tooltip>
+                                        </div>
                                     </li>
                                     <li>
-                                        <Tooltip content="Linkedin">
+                                        <div>
                                             <Link to='#'>
                                                 <SiLinkedin size={22} className="h-7 cursor-pointer text-primary"/>
                                             </Link>
-                                        </Tooltip>
+                                        </div>
                                     </li>
                                     <li>
-                                        <Tooltip content="Envelope">
+                                        <div>
                                             <Link to='#'>
                                                 <PiEnvelopeThin size={27} className="h-7 cursor-pointer text-gray-600"/>
                                             </Link>
-                                        </Tooltip>
+                                        </div>
                                     </li>
                                     <li>
-                                        <Tooltip content={copied ? "Copied" : "Link"}>
+                                        <Tooltip content={copied ? "Copied" : "Link"} placement="bottom">
                                             <Link onClick={handleClick} to='#'>
                                                 <PiLinkSimpleLight size={25}
                                                                    className="h-7 cursor-pointer text-blue-600"/>
                                             </Link>
                                         </Tooltip>
+
                                     </li>
                                 </ul>
                             </div>
@@ -335,35 +337,35 @@ const BlogDetails = () => {
 
                         <ul className="mt-4 flex lg:hidden items-center gap-4">
                             <li>
-                                <Tooltip content="Facebook">
+                                <div>
                                     <Link to='#' className="cursor-pointer">
                                         <SiFacebook size={21} className="h-7 text-[#0866FF]"/>
                                     </Link>
-                                </Tooltip>
+                                </div>
                             </li>
                             <li>
-                                <Tooltip content="Twitter">
+                                <div>
                                     <Link to='#' className="cursor-pointer">
-                                        <SiTwitter size={19} className="h-7 text-[#000000]"/>
+                                        <FaXTwitter size={19} className="h-7 text-[#000000]"/>
                                     </Link>
-                                </Tooltip>
+                                </div>
                             </li>
                             <li>
-                                <Tooltip content="Linkedin">
+                                <div>
                                     <Link to='#' className="cursor-pointer">
                                         <SiLinkedin size={18} className="h-7 text-primary"/>
                                     </Link>
-                                </Tooltip>
+                                </div>
                             </li>
                             <li>
-                                <Tooltip content="Envelope">
+                                <div>
                                     <Link to='#' className="cursor-pointer">
                                         <PiEnvelopeThin size={24} className="h-7 text-gray-600"/>
                                     </Link>
-                                </Tooltip>
+                                </div>
                             </li>
                             <li>
-                                <Tooltip content={copied ? "Copied" : "Link"}>
+                                <Tooltip content={copied ? "Copied" : "Link"} placement="bottom">
                                     <Link onClick={handleClick} to='#' className="cursor-pointer">
                                         <PiLinkSimpleLight size={22} className="h-7 text-blue-600"/>
                                     </Link>
