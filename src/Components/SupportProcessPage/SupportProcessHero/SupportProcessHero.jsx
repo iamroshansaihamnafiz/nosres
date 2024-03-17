@@ -1,6 +1,5 @@
 import React from 'react';
 import heroImage from "../../../assets/images/support/support-banner.jpeg";
-import {AiOutlineSearch} from "react-icons/ai";
 
 const SupportProcessHero = () => {
     return (
