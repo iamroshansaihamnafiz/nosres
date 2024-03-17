@@ -87,7 +87,7 @@ function Header(props) {
                         </div>
 
 
-                        <div className="hidden lg:flex relative">
+                        <div className="hidden lg:flex search-bar relative">
                             <input
                                 type="text"
                                 className="border text-[14px] border-gray-300 rounded pl-10 py-1 focus:outline-none focus:border-primary focus:ring-0"
@@ -95,25 +95,27 @@ function Header(props) {
                                 value={searchText}
                                 onChange={(e) => setSearchText(e.target.value)}
                             />
-                            <div
-                                className="absolute right-0 inset-y-0 flex items-center cursor-pointer"
-                                onClick={handleClearText}
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="-ml-1 mr-3 h-4 w-4 text-gray-400 hover:text-gray-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
+                            {searchText && (
+                                <div
+                                    className="absolute right-0 inset-y-0 flex items-center cursor-pointer"
+                                    onClick={handleClearText}
                                 >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                </svg>
-                            </div>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="-ml-1 mr-3 h-4 w-4 text-gray-400 hover:text-gray-500"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M6 18L18 6M6 6l12 12"
+                                        />
+                                    </svg>
+                                </div>
+                            )}
                             <div className="absolute left-0 inset-y-0 flex items-center">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -484,25 +486,27 @@ function Header(props) {
                                 value={searchText}
                                 onChange={(e) => setSearchText(e.target.value)}
                             />
-                            <div
-                                className="absolute right-0 inset-y-0 flex items-center cursor-pointer"
-                                onClick={handleClearText}
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="-ml-1 mr-3 h-4 w-4 text-gray-400 hover:text-gray-500"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
+                            {searchText && (
+                                <div
+                                    className="absolute right-0 inset-y-0 flex items-center cursor-pointer"
+                                    onClick={handleClearText}
                                 >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                </svg>
-                            </div>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="-ml-1 mr-3 h-4 w-4 text-gray-400 hover:text-gray-500"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M6 18L18 6M6 6l12 12"
+                                        />
+                                    </svg>
+                                </div>
+                            )}
                             <div className="absolute left-0 inset-y-0 flex items-center">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
