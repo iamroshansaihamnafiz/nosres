@@ -10,7 +10,7 @@ const SupportProcess = () => {
             <SupportPageHeader/>
             <SupportProcessHero/>
             <SupportProcessPage/>
-            {/*<SupportPageFooter/>*/}
+            <SupportPageFooter/>
         </>
     );
 };

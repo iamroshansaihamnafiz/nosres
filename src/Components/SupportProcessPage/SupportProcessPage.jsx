@@ -1067,7 +1067,7 @@ const SupportProcessPage = () => {
                             <p className="mt-2">
                                 Try the following options:
                             </p>
-                            <div className="block sm:flex items-center gap-4 mt-6">
+                            <div className="block sm:flex items-center gap-4 mt-6 pb-10">
                                 <div className="box flex items-center gap-3 bg-white border px-6 py-4 rounded">
                                     <img src={forumImG} className="w-12" alt="iconImg"/>
                                     <div className="content">
@@ -1090,6 +1090,10 @@ const SupportProcessPage = () => {
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                            <hr/>
+                            <div className="pt-8">
+                                <Link to='#' className="text-primary text-[14px] hover:underline">Give us feedback</Link>
                             </div>
                         </div>
                     </div>
