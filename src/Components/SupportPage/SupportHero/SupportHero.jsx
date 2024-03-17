@@ -25,7 +25,7 @@ const SupportHero = () => {
                                     </span>
                             <input type="text"
                                    className="border w-full text-[14px] border-gray-300 rounded-full pl-10 py-2 focus:outline-none focus:border-primary focus:ring-0"
-                                   placeholder="Search Jobs"/>
+                                   placeholder="Search"/>
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ const SupportArticle = () => {
                 <div className="container">
                     <hr/>
                     <div className="pt-16"></div>
-                    <h4 className="text-center text-[24px] font-semibold">Top Article</h4>
+                    <h4 className="text-center text-[24px] font-semibold">Top Articles</h4>
                     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div className="col">
                             <div className="box bg-white px-6 py-4 rounded">
@@ -26,7 +26,7 @@ const SupportArticle = () => {
                                     <HiOutlineArrowRightCircle size={30}/>
                                     <Link to='/'
                                           className="text-[14px]">
-                                        Learn More
+                                        Read More
                                     </Link>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@ const SupportArticle = () => {
                                     <HiOutlineArrowRightCircle size={30}/>
                                     <Link to='/'
                                           className="text-[14px]">
-                                        Learn More
+                                        Read More
                                     </Link>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ const SupportArticle = () => {
                                     <HiOutlineArrowRightCircle size={30}/>
                                     <Link to='/'
                                           className="text-[14px]">
-                                        Learn More
+                                        Read More
                                     </Link>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@ const SupportArticle = () => {
                     <hr/>
                 </div>
                 <div className="container py-12">
-                    <Link to='#' className="text-primary hover:underline">Give us feedback</Link>
+                    <Link to='#' className="text-primary text-[14px] hover:underline">Give us feedback</Link>
                 </div>
             </section>
         </>

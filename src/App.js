@@ -17,6 +17,7 @@ import Blog from "./Pages/Blog";
 import BlogDetail from "./Pages/BlogDetail";
 import Legal from "./Pages/Legal";
 import Support from "./Pages/Support";
+import SupportProcess from "./Pages/SupportProcess";
 
 function App() {
     return (
@@ -37,6 +38,7 @@ function App() {
                     <Route path="/blog-details" element={<BlogDetail/>}/>
                     <Route path="/legal" element={<Legal/>}/>
                     <Route path="/support" element={<Support/>}/>
+                    <Route path="/support-process" element={<SupportProcess/>}/>
                 </Routes>
             </BrowserRouter>
             <ToastContainer/>

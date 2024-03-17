@@ -1,8 +1,8 @@
 'use client';
 import React, {useState} from 'react';
 import {Link, NavLink} from "react-router-dom";
-import {AiOutlineClose, AiOutlineSearch} from "react-icons/ai";
-import { HiUserCircle } from "react-icons/hi";
+import {AiOutlineClose} from "react-icons/ai";
+import {HiUserCircle} from "react-icons/hi";
 import {IoIosArrowDown} from "react-icons/io";
 import {HiOutlineBars3} from "react-icons/hi2";
 import WhoImg1 from '../../assets/images/m1.svg';
@@ -57,6 +57,13 @@ function Header(props) {
     };
 
     const [openModal, setOpenModal] = useState(false);
+
+    // Search Text
+    const [searchText, setSearchText] = useState('');
+
+    const handleClearText = () => {
+        setSearchText('');
+    };
     return (
         <>
             <section id="header-section" className="relative">
@@ -79,13 +86,50 @@ function Header(props) {
                             </button>
                         </div>
 
-                        <div className="hidden lg:flex search-bar relative">
-                            <span className="absolute left-4 top-[12px] text-lg text-gray-400">
-                                <AiOutlineSearch size={16}/>
-                            </span>
-                            <input type="text"
-                                   className="border text-[14px] border-gray-300 rounded-full pl-9 py-2 focus:outline-none focus:border-primary focus:ring-0"
-                                   placeholder="Search..."/>
+
+                        <div className="hidden lg:flex relative">
+                            <input
+                                type="text"
+                                className="border text-[14px] border-gray-300 rounded pl-10 py-1 focus:outline-none focus:border-primary focus:ring-0"
+                                placeholder="Search nosres.com"
+                                value={searchText}
+                                onChange={(e) => setSearchText(e.target.value)}
+                            />
+                            <div
+                                className="absolute right-0 inset-y-0 flex items-center cursor-pointer"
+                                onClick={handleClearText}
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="-ml-1 mr-3 h-4 w-4 text-gray-400 hover:text-gray-500"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                </svg>
+                            </div>
+                            <div className="absolute left-0 inset-y-0 flex items-center">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5 ml-3 text-gray-400 hover:text-gray-500"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                                    />
+                                </svg>
+                            </div>
                         </div>
 
                         <div className="nav hidden lg:flex items-center text-[14px] gap-6">
@@ -432,13 +476,49 @@ function Header(props) {
                 {/* Mobile Menu */}
                 <div id="mobile_menu" className="block lg:hidden bg-white z-50 overflow-hidden w-full h-[100%]">
                     <div className="navbar-wrapper px-4 pt-20 space-y-5">
-                        <div className="m-4 flex search-bar relative">
-                            <span className="absolute left-4 top-[12px] text-lg text-gray-400">
-                                <AiOutlineSearch size={16}/>
-                            </span>
-                            <input type="text"
-                                   className="w-full text-[14px] border border-gray-300 rounded-full pl-9 py-2 focus:outline-none focus:border-primary focus:ring-0"
-                                   placeholder="Search..."/>
+                        <div className="m-4 search-bar flex lg:hidden relative">
+                            <input
+                                type="text"
+                                className="border w-full text-[14px] border-gray-300 rounded pl-10 py-1 focus:outline-none focus:border-primary focus:ring-0"
+                                placeholder="Search nosres.com"
+                                value={searchText}
+                                onChange={(e) => setSearchText(e.target.value)}
+                            />
+                            <div
+                                className="absolute right-0 inset-y-0 flex items-center cursor-pointer"
+                                onClick={handleClearText}
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="-ml-1 mr-3 h-4 w-4 text-gray-400 hover:text-gray-500"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                </svg>
+                            </div>
+                            <div className="absolute left-0 inset-y-0 flex items-center">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5 ml-3 text-gray-400 hover:text-gray-500"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                                    />
+                                </svg>
+                            </div>
                         </div>
 
                         <details className="group pb-0 p-4">
