@@ -1,20 +1,24 @@
 import React, {useState} from 'react';
-import {AiOutlineSearch} from "react-icons/ai";
 import {Link} from "react-router-dom";
 import {RxPlus} from "react-icons/rx";
 import supportImgOne from '../../assets/images/support/sp1.svg';
 import supportImgTwo from '../../assets/images/support/sp2.svg';
 import supportImgThree from '../../assets/images/support/sp3.svg';
 import supportImgFive from '../../assets/images/support/sp5.svg';
-import forumImG from '../../assets/images/support/forum.svg';
-import contactImG from '../../assets/images/support/contact.svg';
 import {HiChevronRight} from "react-icons/hi2";
+import { HiOutlineChatBubbleLeftRight, HiOutlineEnvelope } from "react-icons/hi2";
 
 const SupportProcessPage = () => {
     const [activeTab, setActiveTab] = useState('createAccount');
 
     const handleListItemClick = (tabName) => {
         setActiveTab(tabName);
+    };
+    // Search Text
+    const [searchText, setSearchText] = useState('');
+
+    const handleClearText = () => {
+        setSearchText('');
     };
     return (
         <>
@@ -23,13 +27,51 @@ const SupportProcessPage = () => {
                     <div className="mt-4 grid grid-cols-1 lg:grid-cols-12 gap-6">
                         <div className="col lg:col-span-5 border-r">
                             <div className="box bg-white rounded pl-0 pr-8">
-                                <div className="flex search-job relative">
-                                    <span className="absolute left-4 top-[12px] text-lg text-gray-400">
-                                        <AiOutlineSearch size={20}/>
-                                    </span>
-                                    <input type="text"
-                                           className="border w-full text-[14px] border-gray-300 rounded-full pl-10 py-2 focus:outline-none focus:border-primary focus:ring-0"
-                                           placeholder="Search Registration..."/>
+                                <div className="search-bar relative">
+                                    <input
+                                        type="text"
+                                        className="border w-full text-[14px] border-gray-300 rounded pl-10 py-2 focus:outline-none focus:border-primary focus:ring-0"
+                                        placeholder="Search..."
+                                        value={searchText}
+                                        onChange={(e) => setSearchText(e.target.value)}
+                                    />
+                                    {searchText && (
+                                        <div
+                                            className="absolute right-0 inset-y-0 flex items-center cursor-pointer"
+                                            onClick={handleClearText}
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="-ml-1 mr-3 h-4 w-4 text-gray-400 hover:text-gray-500"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth="2"
+                                                    d="M6 18L18 6M6 6l12 12"
+                                                />
+                                            </svg>
+                                        </div>
+                                    )}
+                                    <div className="absolute left-0 inset-y-0 flex items-center">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-5 w-5 ml-3 text-gray-400 hover:text-gray-500"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                                            />
+                                        </svg>
+                                    </div>
                                 </div>
 
                                 <details className="group mt-8 pb-5" open>
@@ -1069,7 +1111,7 @@ const SupportProcessPage = () => {
                             </p>
                             <div className="block sm:flex items-center gap-4 mt-6 pb-10">
                                 <div className="box flex items-center gap-3 bg-white border px-6 py-4 rounded">
-                                    <img src={forumImG} className="w-12" alt="iconImg"/>
+                                    <HiOutlineChatBubbleLeftRight size={60} className="text-gray-300" />
                                     <div className="content">
                                         <div className="block sm:flex items-center gap-6">
                                             <h1 className="text-[16px] font-semibold">Forum</h1>
@@ -1081,8 +1123,9 @@ const SupportProcessPage = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-4 sm:mt-0 box flex items-center gap-4 bg-white border px-6 py-4 rounded">
-                                    <img src={contactImG} className="w-12" alt="iconImg"/>
+                                <div
+                                    className="mt-4 sm:mt-0 box flex items-center gap-4 bg-white border px-6 py-4 rounded">
+                                    <HiOutlineEnvelope size={60} className="text-gray-300" />
                                     <div className="content">
                                         <h1 className="text-[16px] font-semibold">Contact Us</h1>
                                         <p className="mt-2">
@@ -1093,7 +1136,8 @@ const SupportProcessPage = () => {
                             </div>
                             <hr/>
                             <div className="pt-8">
-                                <Link to='#' className="text-primary text-[14px] hover:underline">Give us feedback</Link>
+                                <Link to='#' className="text-primary text-[14px] hover:underline">Give us
+                                    feedback</Link>
                             </div>
                         </div>
                     </div>
