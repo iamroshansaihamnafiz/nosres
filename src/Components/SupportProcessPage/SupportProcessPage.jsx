@@ -76,7 +76,7 @@ const SupportProcessPage = () => {
 
                                 <details className="group mt-8 pb-5" open>
                                     <summary
-                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[16px] font-[500] focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[16px] font-normal focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                         <div className="flex items-center gap-2">
                                             <img src={supportImgOne} className="w-6 h-6" alt="supportimg"/>
                                             Account Registration
@@ -99,7 +99,7 @@ const SupportProcessPage = () => {
 
                                 <details className="group mt-4 pb-5">
                                     <summary
-                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[16px] font-[500] focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[16px] font-normal focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                         <div className="flex items-center gap-2">
                                             <img src={supportImgTwo} className="w-6 h-6" alt="supportimg"/>
                                             Account Management
@@ -134,7 +134,7 @@ const SupportProcessPage = () => {
 
                                 <details className="group mt-4 pb-5">
                                     <summary
-                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[16px] font-[500] focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[16px] font-normal focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                         <div className="flex items-center gap-2">
                                             <img src={supportImgThree} className="w-6 h-6" alt="supportimg"/>
                                             Account Security
@@ -157,7 +157,7 @@ const SupportProcessPage = () => {
 
                                 <details className="group mt-4 pb-5">
                                     <summary
-                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[16px] font-[500] focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[16px] font-normal focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                         <div className="flex items-center gap-2">
                                             <img src={supportImgFive} className="w-6 h-6" alt="supportimg"/>
                                             Account Privacy
@@ -196,7 +196,7 @@ const SupportProcessPage = () => {
 
                                 <details className="group mt-4 pb-5">
                                     <summary
-                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[16px] font-[500] focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
+                                        className="relative flex cursor-pointer list-none text-gray-600 gap-4 pr-8 text-[16px] font-normal focus-visible:outline-none group-hover:text-slate-800 [&::-webkit-details-marker]:hidden">
                                         <div className="flex items-center gap-2">
                                             <img src={supportImgFive} className="w-6 h-6" alt="supportimg"/>
                                             Account Recovery

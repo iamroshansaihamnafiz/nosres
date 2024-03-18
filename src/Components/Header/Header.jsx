@@ -424,7 +424,7 @@ function Header(props) {
                             <div className="five">
                                 <div className="dropdown inline-block relative">
                                     <div onClick={handleAccountClick}
-                                         className="text-center cursor-pointer text-primary transition relative">
+                                         className="mt-2 text-center cursor-pointer text-primary transition relative">
                                         <HiUserCircle size={35}/>
                                     </div>
 

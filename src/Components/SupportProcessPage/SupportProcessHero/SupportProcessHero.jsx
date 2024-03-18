@@ -4,8 +4,8 @@ import heroImage from "../../../assets/images/support/support-banner.jpeg";
 const SupportProcessHero = () => {
     return (
         <>
-            <div className="pt-16">
-                <section id="banner-section" className="bg-cover bg-no-repeat bg-center flex items-center h-[220px]"
+            <div className="pt-0">
+                <section id="banner-section" className="bg-cover bg-no-repeat bg-center flex items-center pt-[50px] h-[245px]"
                          style={{
                              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(${heroImage})`,
                              backgroundSize: 'cover',
@@ -16,7 +16,7 @@ const SupportProcessHero = () => {
                             Nosres Account
                         </h1>
                         <h4 className="text-white">
-                            Make yourself familair with {`{Account Registration}`}?
+                            Make yourself familair with {`{Account Registration}`}.
                         </h4>
                     </div>
                 </section>

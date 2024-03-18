@@ -1,5 +1,7 @@
 import React from 'react';
 import sellBannerImg from '../../../assets/images/business/sell-banner.png';
+import bSBannerImg from '../../../assets/images/business/bsbanner2.png';
+import bSBannerThreeImg from '../../../assets/images/business/bsbanner3.png';
 import {HiOutlineArrowRightCircle} from "react-icons/hi2";
 import {Link} from "react-router-dom";
 
@@ -27,7 +29,7 @@ const SellOn = () => {
                         </div>
                         <div className="col">
                             <h1 className="font-semibold text-[24px]">
-                                Discover the power of great business tools
+                                Sell on Nosres
                             </h1>
                             <p className="mt-2">
                                 We give people the possibility to sell a variety of products and services in a trusted,
@@ -44,6 +46,62 @@ const SellOn = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="bg-[#FAFAFA] py-10 mt-14">
+                    <div className="container">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                            <div className="col">
+                                <h1 className="font-semibold text-[24px]">
+                                    Use Nosres Fulfillment Center
+                                </h1>
+                                <p className="mt-2">
+                                    We take care of your inventory and fulfill your orders, so you have more time to
+                                    focus
+                                    on growing your business.
+                                </p>
+                                <div
+                                    className="mt-4 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
+                                    <HiOutlineArrowRightCircle size={30}/>
+                                    <Link to='/'
+                                          className="text-[14px]">
+                                        Learn More
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="col mt-2">
+                                <img src={bSBannerImg} className="rounded" alt="bSBannerImg"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="container">
+                    <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
+                        <div className="col mt-2">
+                            <img src={bSBannerThreeImg} className="rounded" alt="bSBannerThreeImg"/>
+                        </div>
+                        <div className="col">
+                            <h1 className="font-semibold text-[24px]">
+                                Advertise on Nosres
+                            </h1>
+                            <p className="mt-2">
+                                We provide AI-powered advertising solutions to help customers discover your brand and
+                                increase traffic to your store. Customers can be targeted by gender, age, location,
+                                interest, etc.
+                            </p>
+                            <div
+                                className="mt-4 flex cursor-pointer items-center gap-1 justify-start text-primary hover:text-[#3A5F8A]">
+                                <HiOutlineArrowRightCircle size={30}/>
+                                <Link to='/'
+                                      className="text-[14px]">
+                                    Learn More
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </>
     );
