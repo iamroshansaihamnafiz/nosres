@@ -10,8 +10,8 @@ function Hero(props) {
                 <div className="container">
                     <h1 className="text-2xl text-center md:text-[38px] leading-0 md:leading-10 text-[#263F5C] font-bold md:font-medium">
                         Build a dynamic business <br/>
-                        <span className="text-primary">ecosystem and inspire humanity</span> <br/>
-                        to achieve more.
+                        <span className="text-[#3A5F8A]">ecosystem and inspire humanity</span> <br/>
+                        <span className="text-primary">to achieve more.</span>
                     </h1>
                 </div>
             </section>

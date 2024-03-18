@@ -93,7 +93,7 @@ const BlogCat = () => {
                     <div className="all_content_wrapper gap-8 mt-12">
                         {activeTab === 'all' && (
                             <div className="all_tab_content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                <div className="col image-box bg-white shadow rounded-md">
+                                <div data-aos="zoom-in" data-aos-duration="500" className="col image-box bg-white shadow rounded-md">
                                     <img src={blogImg1} className="w-full h-52 rounded-md rounded-b-none"
                                          alt="blogImg"/>
                                     <div className="content px-4 py-4">
@@ -112,7 +112,7 @@ const BlogCat = () => {
                                     </div>
                                 </div>
 
-                                <div className="col image-box bg-white shadow rounded-md">
+                                <div data-aos="zoom-in" data-aos-duration="500" className="col image-box bg-white shadow rounded-md">
                                     <img src={blogImg2} className="w-full h-52 rounded-md rounded-b-none"
                                          alt="blogImg"/>
                                     <div className="content px-4 py-4">
@@ -131,7 +131,7 @@ const BlogCat = () => {
                                     </div>
                                 </div>
 
-                                <div className="col image-box bg-white shadow rounded-md">
+                                <div data-aos="zoom-in" data-aos-duration="500" className="col image-box bg-white shadow rounded-md">
                                     <img src={blogImg3} className="w-full h-52 rounded-md rounded-b-none"
                                          alt="blogImg"/>
                                     <div className="content px-4 py-4">
@@ -150,7 +150,7 @@ const BlogCat = () => {
                                     </div>
                                 </div>
 
-                                <div className="col image-box bg-white shadow rounded-md">
+                                <div data-aos="zoom-in" data-aos-duration="500" className="col image-box bg-white shadow rounded-md">
                                     <img src={blogImg3} className="w-full h-52 rounded-md rounded-b-none"
                                          alt="blogImg"/>
                                     <div className="content px-4 py-4">
@@ -169,7 +169,7 @@ const BlogCat = () => {
                                     </div>
                                 </div>
 
-                                <div className="col image-box bg-white shadow rounded-md">
+                                <div data-aos="zoom-in" data-aos-duration="500" className="col image-box bg-white shadow rounded-md">
                                     <img src={blogImg3} className="w-full h-52 rounded-md rounded-b-none"
                                          alt="blogImg"/>
                                     <div className="content px-4 py-4">
@@ -188,7 +188,7 @@ const BlogCat = () => {
                                     </div>
                                 </div>
 
-                                <div className="col image-box bg-white shadow rounded-md">
+                                <div data-aos="zoom-in" data-aos-duration="500" className="col image-box bg-white shadow rounded-md">
                                     <img src={blogImg3} className="w-full h-52 rounded-md rounded-b-none"
                                          alt="blogImg"/>
                                     <div className="content px-4 py-4">
@@ -211,7 +211,7 @@ const BlogCat = () => {
                         {activeTab === 'marketplace' && (
                             <div
                                 className="marketplace_tab_content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                <div className="col image-box bg-white shadow rounded-md">
+                                <div data-aos="zoom-in" data-aos-duration="500" className="col image-box bg-white shadow rounded-md">
                                     <img src={blogImg2} className="w-full h-52 rounded-md rounded-b-none"
                                          alt="blogImg"/>
                                     <div className="content px-4 py-4">
@@ -230,7 +230,7 @@ const BlogCat = () => {
                                     </div>
                                 </div>
 
-                                <div className="col image-box bg-white shadow rounded-md">
+                                <div data-aos="zoom-in" data-aos-duration="500" className="col image-box bg-white shadow rounded-md">
                                     <img src={blogImg2} className="w-full h-52 rounded-md rounded-b-none"
                                          alt="blogImg"/>
                                     <div className="content px-4 py-4">
@@ -249,7 +249,7 @@ const BlogCat = () => {
                                     </div>
                                 </div>
 
-                                <div className="col image-box bg-white shadow rounded-md">
+                                <div data-aos="zoom-in" data-aos-duration="500" className="col image-box bg-white shadow rounded-md">
                                     <img src={blogImg3} className="w-full h-52 rounded-md rounded-b-none"
                                          alt="blogImg"/>
                                     <div className="content px-4 py-4">
@@ -272,7 +272,7 @@ const BlogCat = () => {
                         {activeTab === 'newsroom' && (
                             <div
                                 className="marketplace_tab_content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                <div className="col image-box bg-white shadow rounded-md">
+                                <div data-aos="zoom-in" data-aos-duration="500" className="col image-box bg-white shadow rounded-md">
                                     <img src={blogImg1} className="w-full h-52 rounded-md rounded-b-none"
                                          alt="blogImg"/>
                                     <div className="content px-4 py-4">
@@ -291,7 +291,7 @@ const BlogCat = () => {
                                     </div>
                                 </div>
 
-                                <div className="col image-box bg-white shadow rounded-md">
+                                <div data-aos="zoom-in" data-aos-duration="500" className="col image-box bg-white shadow rounded-md">
                                     <img src={blogImg2} className="w-full h-52 rounded-md rounded-b-none"
                                          alt="blogImg"/>
                                     <div className="content px-4 py-4">

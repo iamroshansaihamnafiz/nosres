@@ -22,6 +22,11 @@ module.exports = {
             }
         },
     },
+    variants: {
+        extend: {
+            translate: ['responsive', 'hover'],
+        },
+    },
     plugins: [
         require('flowbite/plugin'),
     ],
