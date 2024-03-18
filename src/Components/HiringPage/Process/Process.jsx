@@ -23,9 +23,9 @@ const Process = () => {
                     </div>
 
                     <div className="mt-16 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10">
-                        <div className="box flex flex-col items-center text-center">
+                        <div className="box group flex flex-col items-center text-center">
                             <div className="bimage_wrap border border-gray-300 rounded-full w-36 h-36">
-                                <img src={hpImg1} className="w-36 h-36 p-10" alt="hpImg1"/>
+                                <img src={hpImg1} className="group-hover:scale-110 w-36 h-36 p-10" alt="hpImg1"/>
                             </div>
                             <h4 className="mt-4">Job Application</h4>
                             <p className="mt-2">
@@ -36,9 +36,9 @@ const Process = () => {
                             </p>
                         </div>
 
-                        <div className="box flex flex-col items-center text-center">
+                        <div className="box group flex flex-col items-center text-center">
                             <div className="bimage_wrap border border-gray-300 rounded-full w-36 h-36">
-                                <img src={hpImg2} className="w-36 h-36 p-10" alt="hpImg2"/>
+                                <img src={hpImg2} className="group-hover:scale-110 w-36 h-36 p-10" alt="hpImg2"/>
                             </div>
                             <h4 className="mt-4">Application Review</h4>
                             <p className="mt-2">
@@ -48,10 +48,10 @@ const Process = () => {
                             </p>
                         </div>
 
-                        <div className="box flex flex-col items-center text-center">
+                        <div className="box group flex flex-col items-center text-center">
                             <div
                                 className="third-bimage-wrap bimage_wrap border border-gray-300 rounded-full w-36 h-36">
-                                <img src={hpImg3} className="w-36 h-36 p-10" alt="hpImg3"/>
+                                <img src={hpImg3} className="group-hover:scale-110 w-36 h-36 p-10" alt="hpImg3"/>
                             </div>
                             <h4 className="mt-4">Job Interviews</h4>
                             <p className="mt-2">
@@ -62,9 +62,9 @@ const Process = () => {
                             </p>
                         </div>
 
-                        <div className="box flex flex-col items-center text-center">
+                        <div className="box group flex flex-col items-center text-center">
                             <div className="bimage_wrap border border-gray-300 rounded-full w-36 h-36">
-                                <img src={hpImg4} className="w-36 h-36 p-10" alt="hpImg4"/>
+                                <img src={hpImg4} className="group-hover:scale-110 w-36 h-36 p-10" alt="hpImg4"/>
                             </div>
                             <h4 className="mt-4">Decision and Job Offer</h4>
                             <p className="mt-2">
@@ -75,9 +75,9 @@ const Process = () => {
                             </p>
                         </div>
 
-                        <div className="box flex flex-col items-center text-center">
+                        <div className="box group flex flex-col items-center text-center">
                             <div className="last-bimage-wrap bimage_wrap border border-gray-300 rounded-full w-36 h-36">
-                                <img src={hpImg5} className="w-36 h-36 p-10" alt="hpImg5"/>
+                                <img src={hpImg5} className="group-hover:scale-110 w-36 h-36 p-10" alt="hpImg5"/>
                             </div>
                             <h4 className="mt-4">Onboarding</h4>
                             <p className="mt-2">

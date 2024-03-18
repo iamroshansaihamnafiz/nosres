@@ -21,7 +21,7 @@ function Patner(props) {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                        <div className="col image-box bg-white rounded-md">
+                        <div className="card1 col image-box bg-white rounded-md">
                             <img src={patnerImg1} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-6 py-6">
                                 <h2 className="font-semibold text-[16px]">Expand your business</h2>
@@ -36,7 +36,7 @@ function Patner(props) {
                             </div>
                         </div>
 
-                        <div className="col image-box bg-white rounded-md">
+                        <div className="card1 col image-box bg-white rounded-md">
                             <img src={patnerImg3} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-6 py-6">
                                 <h2 className="font-semibold">Strengthen your brand</h2>
@@ -49,7 +49,7 @@ function Patner(props) {
                             </div>
                         </div>
 
-                        <div className="col image-box bg-white rounded-md">
+                        <div className="card1 col image-box bg-white rounded-md">
                             <img src={patnerImg2} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-6 py-6">
                                 <h2 className="font-semibold">Get exposure to our management team</h2>
@@ -62,7 +62,8 @@ function Patner(props) {
                         </div>
                     </div>
 
-                    <div className="mt-8 flex cursor-pointer items-center gap-1 justify-center text-primary hover:text-[#3A5F8A]">
+                    <div
+                        className="mt-8 flex cursor-pointer items-center gap-1 justify-center text-primary hover:text-[#3A5F8A]">
                         <HiOutlineArrowRightCircle size={30}/>
                         <Link to='/'
                               className="text-[14px]">

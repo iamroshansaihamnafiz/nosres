@@ -403,7 +403,7 @@ function PersonalInfoPage(props) {
                                         <div className="five">
                                             <div className="dropdown inline-block relative">
                                                 <div onClick={handleAccountClick}
-                                                     className="text-center cursor-pointer text-gray-700 hover:text-primary transition relative">
+                                                     className="text-center mt-2 cursor-pointer text-gray-700 hover:text-primary transition relative">
                                                     <HiUserCircle className="text-primary" size={35}/>
                                                 </div>
 

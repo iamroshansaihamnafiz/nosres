@@ -65,8 +65,8 @@ const JobCategory = () => {
                             }}
                         >
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
-                                    <img src={catImg1} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
+                                <div className="h-[360px] group overflow-hidden image-box bg-white shadow rounded-md">
+                                    <img src={catImg1} className="w-full group-hover:scale-105 h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
                                             Engineering & Technology
@@ -86,8 +86,8 @@ const JobCategory = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
-                                    <img src={catImg2} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
+                                <div className="h-[360px] group overflow-hidden image-box bg-white shadow rounded-md">
+                                    <img src={catImg2} className="group-hover:scale-105 w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
                                             Human Resources
@@ -109,8 +109,8 @@ const JobCategory = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
-                                    <img src={catImg3} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
+                                <div className="h-[360px] group overflow-hidden image-box bg-white shadow rounded-md">
+                                    <img src={catImg3} className="w-full group-hover:scale-105 h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
                                             Marketing
@@ -132,8 +132,8 @@ const JobCategory = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
-                                    <img src={catImg4} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
+                                <div className="h-[360px] group overflow-hidden image-box bg-white shadow rounded-md">
+                                    <img src={catImg4} className="w-full group-hover:scale-105 h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
                                             Business Development
@@ -155,8 +155,8 @@ const JobCategory = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
-                                    <img src={catImg5} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
+                                <div className="h-[360px] group overflow-hidden image-box bg-white shadow rounded-md">
+                                    <img src={catImg5} className="w-full group-hover:scale-105 h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
                                             Finance
@@ -177,8 +177,8 @@ const JobCategory = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
-                                    <img src={catImg6} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
+                                <div className="h-[360px] group overflow-hidden image-box bg-white shadow rounded-md">
+                                    <img src={catImg6} className="w-full group-hover:scale-105 h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
                                             Design
@@ -199,8 +199,8 @@ const JobCategory = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="h-[360px] image-box bg-white shadow rounded-md">
-                                    <img src={catImg7} className="w-full h-48 rounded-md rounded-b-none" alt="catImg"/>
+                                <div className="h-[360px] group overflow-hidden image-box bg-white shadow rounded-md">
+                                    <img src={catImg7} className="w-full group-hover:scale-105 h-48 rounded-md rounded-b-none" alt="catImg"/>
                                     <div className="content px-4 py-4">
                                         <h2 className="font-semibold text-[16px]">
                                             Business Operations

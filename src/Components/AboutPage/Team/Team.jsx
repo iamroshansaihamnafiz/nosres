@@ -29,7 +29,7 @@ function Team(props) {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-8">
                         <div onClick={() => setOpenModal(true)}
-                             className="col cursor-pointer image-box bg-white rounded-md">
+                             className="hover:-translate-y-2 col cursor-pointer image-box bg-white rounded-md">
                             <img src={teamImg1} className="w-full h-52 rounded-md rounded-b-none" alt="teamImg"/>
                             <div className="content px-4 py-4">
                                 <h3 className="font-semibold text-primary text-[16px]">
@@ -42,7 +42,7 @@ function Team(props) {
                         </div>
 
                         <div onClick={() => setOpenModal(true)}
-                             className="col cursor-pointer image-box bg-white rounded-md">
+                             className="hover:-translate-y-2 col cursor-pointer image-box bg-white rounded-md">
                             <img src={teamImg1} className="w-full h-52 rounded-md rounded-b-none" alt="teamImg"/>
                             <div className="content px-4 py-4">
                                 <h3 className="font-semibold text-primary text-[16px]">
@@ -55,7 +55,7 @@ function Team(props) {
                         </div>
 
                         <div onClick={() => setOpenModal(true)}
-                             className="col cursor-pointer image-box bg-white rounded-md">
+                             className="hover:-translate-y-2 col cursor-pointer image-box bg-white rounded-md">
                             <img src={teamImg1} className="w-full h-52 rounded-md rounded-b-none" alt="teamImg"/>
                             <div className="content px-4 py-4">
                                 <h3 className="font-semibold text-primary text-[16px]">
@@ -68,7 +68,7 @@ function Team(props) {
                         </div>
 
                         <div onClick={() => setOpenModal(true)}
-                             className="col cursor-pointer image-box bg-white rounded-md">
+                             className="hover:-translate-y-2 col cursor-pointer image-box bg-white rounded-md">
                             <img src={teamImg1} className="w-full h-52 rounded-md rounded-b-none" alt="teamImg"/>
                             <div className="content px-4 py-4">
                                 <h3 className="font-semibold text-primary text-[16px]">

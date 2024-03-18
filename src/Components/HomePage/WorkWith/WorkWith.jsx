@@ -34,7 +34,7 @@ function WorkWith(props) {
 
                     <h1 className="mt-10 font-semibold text-[24px]">The latest posts from our blog</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
-                        <div className="col image-box bg-white shadow rounded-md">
+                        <div className="col hover:-translate-y-2 image-box bg-white shadow rounded-md">
                             <img src={blogImg1} className="w-full h-52 rounded-md rounded-b-none" alt="blogImg"/>
                             <div className="content px-4 py-4">
                                 <h2 className="font-semibold text-[16px]">Choosing The Best Platform</h2>
@@ -52,7 +52,7 @@ function WorkWith(props) {
                             </div>
                         </div>
 
-                        <div className="col image-box bg-white shadow rounded-md">
+                        <div className="col hover:-translate-y-2 image-box bg-white shadow rounded-md">
                             <img src={blogImg2} className="w-full h-52 rounded-md rounded-b-none" alt="blogImg"/>
                             <div className="content px-4 py-4">
                                 <h2 className="font-semibold text-[16px]">Choosing The Best Platform</h2>
@@ -70,7 +70,7 @@ function WorkWith(props) {
                             </div>
                         </div>
 
-                        <div className="col image-box bg-white shadow rounded-md">
+                        <div className="col hover:-translate-y-2 image-box bg-white shadow rounded-md">
                             <img src={blogImg3} className="w-full h-52 rounded-md rounded-b-none" alt="blogImg"/>
                             <div className="content px-4 py-4">
                                 <h2 className="font-semibold text-[16px]">Choosing The Best Platform</h2>

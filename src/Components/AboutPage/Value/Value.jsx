@@ -27,44 +27,45 @@ function Value(props) {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
-                        <div className="col box flex flex-col text-center items-center">
-                            <img src={valueImg1} className="w-24" alt="valueImg"/>
+
+                        <div className="col group box flex flex-col text-center items-center">
+                            <img src={valueImg1} className="w-24 group-hover:scale-110" alt="valueImg"/>
                             <h3 className='mt-3 text-[16px] font-semibold'>Entrepreneurship</h3>
                             <p className="mt-2">
                                 We are risk-takers and we are not afraid of failure.
                             </p>
                         </div>
-                        <div className="col box flex flex-col text-center items-center">
-                            <img src={valueImg2} className="w-24" alt="valueImg"/>
+                        <div className="col group box flex flex-col text-center items-center">
+                            <img src={valueImg2} className="w-24 group-hover:scale-110" alt="valueImg"/>
                             <h3 className='mt-3 text-[16px] font-semibold'>Passion</h3>
                             <p className="mt-2">
                                 We follow our hearts and intuition, and we love what we do.
                             </p>
                         </div>
-                        <div className="col box flex flex-col text-center items-center">
-                            <img src={valueImg3} className="w-24" alt="valueImg"/>
+                        <div className="col group box flex flex-col text-center items-center">
+                            <img src={valueImg3} className="w-24 group-hover:scale-110" alt="valueImg"/>
                             <h3 className='mt-3 text-[16px] font-semibold'>Curiosity</h3>
                             <p className="mt-2">
                                 We are eager to learn and know about the world around us.
                             </p>
                         </div>
 
-                        <div className="col box flex flex-col text-center items-center">
-                            <img src={valueImg4} className="w-24" alt="valueImg"/>
+                        <div className="col group box flex flex-col text-center items-center">
+                            <img src={valueImg4} className="w-24 group-hover:scale-110" alt="valueImg"/>
                             <h3 className='mt-3 text-[16px] font-semibold'>Creativity</h3>
                             <p className="mt-2">
                                 WWe use our imagination to develop new products and services.
                             </p>
                         </div>
-                        <div className="col box flex flex-col text-center items-center">
-                            <img src={valueImg5} className="w-24" alt="valueImg"/>
+                        <div className="col group box flex flex-col text-center items-center">
+                            <img src={valueImg5} className="w-24 group-hover:scale-110" alt="valueImg"/>
                             <h3 className='mt-3 text-[16px] font-semibold'>Innovation</h3>
                             <p className="mt-2">
                                 We challenge the status quo and we change things.
                             </p>
                         </div>
-                        <div className="col box flex flex-col text-center items-center">
-                            <img src={valueImg6} className="w-24" alt="valueImg"/>
+                        <div className="col group box flex flex-col text-center items-center">
+                            <img src={valueImg6} className="w-24 group-hover:scale-110" alt="valueImg"/>
                             <h3 className='mt-3 text-[16px] font-semibold'>Simplicity</h3>
                             <p className="mt-2">
                                 We create and innovate intuitive products and services.
