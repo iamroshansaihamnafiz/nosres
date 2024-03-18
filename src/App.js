@@ -18,6 +18,7 @@ import BlogDetail from "./Pages/BlogDetail";
 import Legal from "./Pages/Legal";
 import Support from "./Pages/Support";
 import SupportProcess from "./Pages/SupportProcess";
+import Business from "./Pages/Business";
 
 function App() {
     return (
@@ -39,6 +40,7 @@ function App() {
                     <Route path="/legal" element={<Legal/>}/>
                     <Route path="/support" element={<Support/>}/>
                     <Route path="/support-process" element={<SupportProcess/>}/>
+                    <Route path="/business" element={<Business/>}/>
                 </Routes>
             </BrowserRouter>
             <ToastContainer/>

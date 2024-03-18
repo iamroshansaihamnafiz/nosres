@@ -48,9 +48,8 @@ function DashboardPage(props) {
     return (
         <>
             <section id="dashboard-section" className="bg-[#F9FAFB]">
-                <nav
-                    className="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
-                    <div className="px-3 py-2 lg:px-5 lg:pl-3">
+                <nav className="fixed top-0 flex items-center h-[50px] z-50 w-full bg-white border-b border-gray-200">
+                    <div className="px-3 py-2 lg:px-5 lg:pl-3 w-full">
                         <div className="flex items-center justify-between">
                             <div className="flex items-center justify-start rtl:justify-end">
                                 <button onClick={toggleSidebar} type="button"

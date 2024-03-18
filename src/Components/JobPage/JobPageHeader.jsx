@@ -26,7 +26,7 @@ function JobPageHeader(props) {
     return (
         <>
             <section id="header-section" className="relative">
-                <header className="py-4 lg:py-2 shadow-sm bg-white w-full lg:relative z-50"
+                <header className="py-4 flex items-center h-[50px] lg:py-2 shadow-sm bg-white w-full lg:relative z-50"
                         style={{
                             position: 'fixed',
                         }}

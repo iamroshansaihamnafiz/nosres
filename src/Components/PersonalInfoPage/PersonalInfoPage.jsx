@@ -376,8 +376,8 @@ function PersonalInfoPage(props) {
         <>
             <section id="dashboard-section" className="bg-[#F9FAFB]">
                 <nav
-                    className="fixed top-0 z-50 w-full bg-white border-b border-gray-200">
-                    <div className="px-3 py-2 lg:px-5 lg:pl-3">
+                    className="fixed flex items-center h-[50px] top-0 z-50 w-full bg-white border-b border-gray-200">
+                    <div className="px-3 w-full py-2 lg:px-5 lg:pl-3">
                         <div className="flex items-center justify-between">
                             <div className="flex items-center justify-start rtl:justify-end">
                                 <button onClick={toggleSidebar} type="button"
