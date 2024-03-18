@@ -1,47 +1,49 @@
-import './App.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Register from "./Pages/Register";
-import Login from "./Pages/Login";
-import DashboardPage from "./Components/DashboardPage/DashboardPage";
-import PersonalInfo from "./Pages/PersonalInfo";
-import {ToastContainer} from "react-toastify";
+import React, {Suspense, lazy} from 'react';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import React from "react";
-import Accounts from "./Pages/Accounts";
-import Jobs from "./Pages/Jobs";
-import UserDetails from "./Pages/UserDetails";
-import Hiring from "./Pages/Hiring";
-import Blog from "./Pages/Blog";
-import BlogDetail from "./Pages/BlogDetail";
-import Legal from "./Pages/Legal";
-import Support from "./Pages/Support";
-import SupportProcess from "./Pages/SupportProcess";
-import Business from "./Pages/Business";
+
+const Home = lazy(() => import('./Pages/Home'));
+const About = lazy(() => import('./Pages/About'));
+const Register = lazy(() => import('./Pages/Register'));
+const Login = lazy(() => import('./Pages/Login'));
+const DashboardPage = lazy(() => import('./Components/DashboardPage/DashboardPage'));
+const PersonalInfo = lazy(() => import('./Pages/PersonalInfo'));
+const Accounts = lazy(() => import('./Pages/Accounts'));
+const Jobs = lazy(() => import('./Pages/Jobs'));
+const UserDetails = lazy(() => import('./Pages/UserDetails'));
+const Hiring = lazy(() => import('./Pages/Hiring'));
+const Blog = lazy(() => import('./Pages/Blog'));
+const BlogDetail = lazy(() => import('./Pages/BlogDetail'));
+const Legal = lazy(() => import('./Pages/Legal'));
+const Support = lazy(() => import('./Pages/Support'));
+const SupportProcess = lazy(() => import('./Pages/SupportProcess'));
+const Business = lazy(() => import('./Pages/Business'));
 
 function App() {
     return (
         <>
             <BrowserRouter>
-                <Routes>
-                    <Route index element={<Home/>}/>
-                    <Route path="/about" element={<About/>}/>
-                    <Route path="/register" element={<Register/>}/>
-                    <Route path="/login" element={<Login/>}/>
-                    <Route path="/dashboard" element={<DashboardPage/>}/>
-                    <Route path="/personal-info" element={<PersonalInfo/>}/>
-                    <Route path="/accounts" element={<Accounts/>}/>
-                    <Route path="/jobs" element={<Jobs/>}/>
-                    <Route path="/user-details" element={<UserDetails/>}/>
-                    <Route path="/hiring" element={<Hiring/>}/>
-                    <Route path="/blog" element={<Blog/>}/>
-                    <Route path="/blog-details" element={<BlogDetail/>}/>
-                    <Route path="/legal" element={<Legal/>}/>
-                    <Route path="/support" element={<Support/>}/>
-                    <Route path="/support-process" element={<SupportProcess/>}/>
-                    <Route path="/business" element={<Business/>}/>
-                </Routes>
+                <Suspense>
+                    <Routes>
+                        <Route index element={<Home/>}/>
+                        <Route path="/about" element={<About/>}/>
+                        <Route path="/register" element={<Register/>}/>
+                        <Route path="/login" element={<Login/>}/>
+                        <Route path="/dashboard" element={<DashboardPage/>}/>
+                        <Route path="/personal-info" element={<PersonalInfo/>}/>
+                        <Route path="/accounts" element={<Accounts/>}/>
+                        <Route path="/jobs" element={<Jobs/>}/>
+                        <Route path="/user-details" element={<UserDetails/>}/>
+                        <Route path="/hiring" element={<Hiring/>}/>
+                        <Route path="/blog" element={<Blog/>}/>
+                        <Route path="/blog-details" element={<BlogDetail/>}/>
+                        <Route path="/legal" element={<Legal/>}/>
+                        <Route path="/support" element={<Support/>}/>
+                        <Route path="/support-process" element={<SupportProcess/>}/>
+                        <Route path="/business" element={<Business/>}/>
+                    </Routes>
+                </Suspense>
             </BrowserRouter>
             <ToastContainer/>
         </>
