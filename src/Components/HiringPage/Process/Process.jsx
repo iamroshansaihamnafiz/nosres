@@ -23,7 +23,7 @@ const Process = () => {
                     </div>
 
                     <div className="mt-16 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10">
-                        <div className="box group flex flex-col items-center text-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="box group flex flex-col items-center text-center">
                             <div className="bimage_wrap border border-gray-300 rounded-full w-36 h-36">
                                 <img src={hpImg1} className="group-hover:scale-110 w-36 h-36 p-10" alt="hpImg1"/>
                             </div>
@@ -36,7 +36,7 @@ const Process = () => {
                             </p>
                         </div>
 
-                        <div className="box group flex flex-col items-center text-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="box group flex flex-col items-center text-center">
                             <div className="bimage_wrap border border-gray-300 rounded-full w-36 h-36">
                                 <img src={hpImg2} className="group-hover:scale-110 w-36 h-36 p-10" alt="hpImg2"/>
                             </div>
@@ -48,7 +48,7 @@ const Process = () => {
                             </p>
                         </div>
 
-                        <div className="box group flex flex-col items-center text-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="box group flex flex-col items-center text-center">
                             <div
                                 className="third-bimage-wrap bimage_wrap border border-gray-300 rounded-full w-36 h-36">
                                 <img src={hpImg3} className="group-hover:scale-110 w-36 h-36 p-10" alt="hpImg3"/>
@@ -62,7 +62,7 @@ const Process = () => {
                             </p>
                         </div>
 
-                        <div className="box group flex flex-col items-center text-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="box group flex flex-col items-center text-center">
                             <div className="bimage_wrap border border-gray-300 rounded-full w-36 h-36">
                                 <img src={hpImg4} className="group-hover:scale-110 w-36 h-36 p-10" alt="hpImg4"/>
                             </div>
@@ -75,7 +75,7 @@ const Process = () => {
                             </p>
                         </div>
 
-                        <div className="box group flex flex-col items-center text-center">
+                        <div data-aos="zoom-in" data-aos-duration="500" className="box group flex flex-col items-center text-center">
                             <div className="last-bimage-wrap bimage_wrap border border-gray-300 rounded-full w-36 h-36">
                                 <img src={hpImg5} className="group-hover:scale-110 w-36 h-36 p-10" alt="hpImg5"/>
                             </div>

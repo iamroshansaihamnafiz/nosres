@@ -19,7 +19,7 @@ function WhyNeed(props) {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                        <div className="col card1 rounded box py-8 px-4 border border-gray-200 items-center text-center justify-center flex flex-col">
+                        <div data-aos="zoom-in-right" data-aos-duration="1000" className="col card1 rounded box py-8 px-4 border border-gray-200 items-center text-center justify-center flex flex-col">
                             <img src={wyImg1} className="w-32" alt="wyImg1"/>
                             <h3 className="mt-4 text-[16px] text-black">A Free Pass</h3>
                             <p className="mt-2">
@@ -28,7 +28,7 @@ function WhyNeed(props) {
                             </p>
                         </div>
 
-                        <div className="col card1 rounded box py-8 px-4 border border-gray-200 items-center text-center justify-center flex flex-col">
+                        <div data-aos="zoom-in" data-aos-duration="1000" className="col card1 rounded box py-8 px-4 border border-gray-200 items-center text-center justify-center flex flex-col">
                             <img src={wyImg2} className="w-24" alt="wyImg2"/>
                             <h3 className="mt-4 text-[16px] text-black">A Real Timesaver</h3>
                             <p className="mt-2">
@@ -37,7 +37,7 @@ function WhyNeed(props) {
                             </p>
                         </div>
 
-                        <div className="col card1 rounded box py-8 px-4 border border-gray-200 items-center text-center justify-center flex flex-col">
+                        <div data-aos="zoom-in-left" data-aos-duration="1000" className="col card1 rounded box py-8 px-4 border border-gray-200 items-center text-center justify-center flex flex-col">
                             <img src={wyImg3} className="w-24" alt="wyImg3"/>
                             <h3 className="mt-4 text-[16px] text-black">Privacy Protection</h3>
                             <p className="mt-2">

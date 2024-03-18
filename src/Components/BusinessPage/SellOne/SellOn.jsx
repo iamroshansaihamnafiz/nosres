@@ -24,7 +24,8 @@ const SellOn = () => {
                     </div>
 
                     <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
-                        <div className="col mt-2">
+                        <div data-aos="fade-up"
+                             data-aos-duration="1000" className="col mt-2">
                             <img src={sellBannerImg} className="rounded hover:-translate-y-2" alt="sellBannerImg"/>
                         </div>
                         <div className="col">
@@ -69,7 +70,8 @@ const SellOn = () => {
                                 </div>
                             </div>
 
-                            <div className="col mt-2">
+                            <div data-aos="fade-up"
+                                 data-aos-duration="1000" className="col mt-2">
                                 <img src={bSBannerImg} className="rounded hover:-translate-y-2" alt="bSBannerImg"/>
                             </div>
                         </div>
@@ -78,7 +80,8 @@ const SellOn = () => {
 
                 <div className="container">
                     <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
-                        <div className="col mt-2">
+                        <div data-aos="fade-up"
+                             data-aos-duration="1000" className="col mt-2">
                             <img src={bSBannerThreeImg} className="rounded hover:-translate-y-2" alt="bSBannerThreeImg"/>
                         </div>
                         <div className="col">

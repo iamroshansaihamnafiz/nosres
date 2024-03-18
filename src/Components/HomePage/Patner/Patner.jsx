@@ -21,7 +21,7 @@ function Patner(props) {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                        <div className="card1 col image-box bg-white rounded-md">
+                        <div data-aos="fade-right" data-aos-duration="1000" className="card1 col image-box bg-white rounded-md">
                             <img src={patnerImg1} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-6 py-6">
                                 <h2 className="font-semibold text-[16px]">Expand your business</h2>
@@ -36,7 +36,7 @@ function Patner(props) {
                             </div>
                         </div>
 
-                        <div className="card1 col image-box bg-white rounded-md">
+                        <div data-aos="zoom-in" data-aos-duration="1000" className="card1 col image-box bg-white rounded-md">
                             <img src={patnerImg3} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-6 py-6">
                                 <h2 className="font-semibold">Strengthen your brand</h2>
@@ -49,7 +49,7 @@ function Patner(props) {
                             </div>
                         </div>
 
-                        <div className="card1 col image-box bg-white rounded-md">
+                        <div data-aos="fade-left" data-aos-duration="1000" className="card1 col image-box bg-white rounded-md">
                             <img src={patnerImg2} className="w-full rounded-md" alt="patnerImg"/>
                             <div className="content px-6 py-6">
                                 <h2 className="font-semibold">Get exposure to our management team</h2>
