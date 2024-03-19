@@ -372,6 +372,32 @@ h2 {
     transform: translateY(-5px) !important;
 }
 
+/*-------------------------- Investor Page Site A -------------------*/
+#investor-faq-section h2 {
+    font-size: 16px !important;
+    color: black;
+}
+
+#investor-faq-section svg {
+    display: none !important;
+}
+
+#investor-faq-section .divide-y {
+    border: none !important;
+}
+
+#investor-faq-section button {
+    background: none;
+    padding-left: 0 !important;
+    border-bottom: 1px solid rgb(255 255 255 / 38%);
+    outline: none !important;
+}
+
+#investor-faq-section button:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
 /* ------------------- Media Query ----------------*/
 @media only screen and (max-width: 1100px) {
     #hiring-section .bimage_wrap::before {
