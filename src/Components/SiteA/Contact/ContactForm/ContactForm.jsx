@@ -76,8 +76,8 @@ const ContactForm = () => {
                                     <div className="flex items-start gap-2">
                                         <Checkbox id="category1"/>
                                         <Label htmlFor="category1" className="text-gray-500 font-normal">
-                                            Please tick the box to indicate that you have read and agree to Nosres <Link
-                                            to='#' className="text-primary hover:underline">Terms
+                                            Please tick the box to confirm that you have read and agree to Nosres'<Link
+                                            to='#' className="text-primary hover:underline"> Terms
                                             of Use</Link> and <Link to='#' className="text-primary hover:underline">Privacy
                                             Policy.</Link>
                                         </Label>
@@ -85,7 +85,8 @@ const ContactForm = () => {
                                 </div>
 
                                 <div className="mt-4">
-                                    <button className="bg-primary py-2 px-8 rounded-full text-white">
+                                    <button
+                                        className="bg-primary py-2 px-8 rounded border border-primary text-white hover:bg-transparent hover:text-primary hover:border-primary">
                                         Submit
                                     </button>
                                 </div>
@@ -125,7 +126,7 @@ const ContactForm = () => {
                             <h4 className="mt-2 text-[14px]">
                                 If you don’t see what you’re looking for, please feel free to contact us directly or
                                 fill out the form. And if you cannot complete the form successfully, please feel free to
-                                send us email, call us or mail us.
+                                email us, call us, or mail us.
                             </h4>
 
                             <h1 className="mb-1 flex gap-2 items-center mt-6 font-semibold text-[14px]">
@@ -136,15 +137,15 @@ const ContactForm = () => {
                                 <li>General Inquiries</li>
                                 <li>info@nosres.com</li>
 
-                                <li className="mt-4">Press & Editorial</li>
-                                <li className="mt-4">press@nosres.com</li>
+                                <li className="mt-2">Press & Editorial</li>
+                                <li className="mt-2">press@nosres.com</li>
 
 
-                                <li className="mt-4">Legal</li>
-                                <li className="mt-4">legal@nosres.com</li>
+                                <li className="mt-2">Legal</li>
+                                <li className="mt-2">legal@nosres.com</li>
 
-                                <li className="mt-4">Human Resource</li>
-                                <li className="mt-4">careers@nosres.com</li>
+                                <li className="mt-2">Human Resource</li>
+                                <li className="mt-2">careers@nosres.com</li>
                             </ul>
                             <hr/>
 
