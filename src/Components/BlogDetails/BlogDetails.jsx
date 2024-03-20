@@ -6,6 +6,7 @@ import userImage from '../../assets/images/blog/user-image.jpg';
 import postImage from '../../assets/images/blog/blog-feature.jpg';
 import {Tooltip} from 'flowbite-react';
 
+import 'swiper/css';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {A11y, Navigation, Scrollbar} from "swiper/modules";
 import 'swiper/css/navigation';
