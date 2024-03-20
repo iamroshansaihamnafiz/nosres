@@ -1,6 +1,7 @@
 import React, {Suspense, lazy} from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {ToastContainer} from 'react-toastify';
+import {Helmet} from 'react-helmet';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Home = lazy(() => import('./Pages/Home'));
@@ -29,7 +30,6 @@ function App() {
                 <Suspense>
                     <Routes>
                         <Route index element={<Home/>}/>
-                        <Route path="/about" element={<About/>}/>
                         <Route path="/register" element={<Register/>}/>
                         <Route path="/login" element={<Login/>}/>
                         <Route path="/dashboard" element={<DashboardPage/>}/>
@@ -45,8 +45,37 @@ function App() {
                         <Route path="/support-process" element={<SupportProcess/>}/>
                         <Route path="/business" element={<Business/>}/>
                         {/* Site A */}
-                        <Route path="/sitea-investors" element={<Investors/>}/>
-                        <Route path="/sitea-contact" element={<Contact/>}/>
+                        <Route path="/sitea-investors"
+                               element={
+                                   <>
+                                       <Helmet>
+                                           <title>Nosres - Investors</title>
+                                       </Helmet>
+                                       <Investors/>
+                                   </>
+                               }
+                        />
+                        <Route path="/sitea-contact"
+                               element={
+                                   <>
+                                       <Helmet>
+                                           <title>Nosres - Contact</title>
+                                       </Helmet>
+                                       <Contact/>
+                                   </>
+                               }
+                        />
+
+                        <Route path="/sitea-about"
+                               element={
+                                   <>
+                                       <Helmet>
+                                           <title>Nosres - About</title>
+                                       </Helmet>
+                                       <About/>
+                                   </>
+                               }
+                        />
                     </Routes>
                 </Suspense>
             </BrowserRouter>
