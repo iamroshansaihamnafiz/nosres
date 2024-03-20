@@ -22,6 +22,7 @@ const SupportProcess = lazy(() => import('./Pages/SupportProcess'));
 const Business = lazy(() => import('./Pages/Business'));
 const Investors = lazy(() => import('./Pages/SiteA/Investors'));
 const Contact = lazy(() => import('./Pages/SiteA/Contact'));
+const Marketplace = lazy(() => import('./Pages/SiteA/Marketplace'));
 
 function App() {
     return (
@@ -73,6 +74,16 @@ function App() {
                                            <title>Nosres - About</title>
                                        </Helmet>
                                        <About/>
+                                   </>
+                               }
+                        />
+                        <Route path="/sitea-marketplace"
+                               element={
+                                   <>
+                                       <Helmet>
+                                           <title>Nosres - Marketplace</title>
+                                       </Helmet>
+                                       <Marketplace/>
                                    </>
                                }
                         />

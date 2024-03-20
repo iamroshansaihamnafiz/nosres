@@ -22,6 +22,7 @@ import RsImg2 from '../../assets/images/rs2.svg';
 import RsImg3 from '../../assets/images/rs3.svg';
 import RsImg4 from '../../assets/images/rs4.svg';
 import RsImg5 from '../../assets/images/rs5.svg';
+import RsImg6 from '../../assets/images/rs6.svg';
 
 import LogoImg from '../../assets/images/logo.svg';
 
@@ -416,6 +417,21 @@ function Header(props) {
                                                 </div>
                                             </div>
 
+                                            <div
+                                                className="col hover:bg-[#F0F0F0] flex items-center px-4 h-[85px] cursor-pointer">
+                                                <div className="flex items-center gap-3">
+                                                    <img src={RsImg6} className="w-8" alt="icon"/>
+                                                    <div className="text">
+                                                        <h2 className="text-[#252C32] font-[500] text-[14px]">
+                                                            Nosres for Partners
+                                                        </h2>
+                                                        <p className="mt-1 text-xs text-[#828D9E]">
+                                                            Learn how to become a Nosres company.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -610,6 +626,9 @@ function Header(props) {
                                 </li>
                                 <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
                                     <NavLink to='/'>Nosres for Media</NavLink>
+                                </li>
+                                <li className="text-[12px] font-normal pb-2 hover:text-primary border-b">
+                                    <NavLink to='/'>Nosres for Partners</NavLink>
                                 </li>
                             </ul>
                         </details>
