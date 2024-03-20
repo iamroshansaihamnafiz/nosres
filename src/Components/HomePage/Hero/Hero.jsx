@@ -17,7 +17,7 @@ function Hero(props) {
                         <span className="text-primary">ecosystem.</span>
                     </h1>
                     <p>
-                        We mean business
+                        We mean business.
                     </p>
                     <div className="mt-8">
                         <Link to='#'

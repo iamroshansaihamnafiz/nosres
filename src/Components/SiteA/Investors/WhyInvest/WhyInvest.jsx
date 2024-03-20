@@ -24,7 +24,7 @@ const WhyInvest = () => {
                         <div className="col md:col-span-4">
                             <div className="box rounded border p-4">
                                 <h1 className="pb-3 font-semibold text-[16px]">
-                                    Meet the team
+                                    Contact Us
                                 </h1>
                                 <hr/>
                                 <p className="pt-4">

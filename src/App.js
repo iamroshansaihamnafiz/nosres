@@ -20,6 +20,7 @@ const Support = lazy(() => import('./Pages/Support'));
 const SupportProcess = lazy(() => import('./Pages/SupportProcess'));
 const Business = lazy(() => import('./Pages/Business'));
 const Investors = lazy(() => import('./Pages/SiteA/Investors'));
+const Contact = lazy(() => import('./Pages/SiteA/Contact'));
 
 function App() {
     return (
@@ -45,6 +46,7 @@ function App() {
                         <Route path="/business" element={<Business/>}/>
                         {/* Site A */}
                         <Route path="/sitea-investors" element={<Investors/>}/>
+                        <Route path="/sitea-contact" element={<Contact/>}/>
                     </Routes>
                 </Suspense>
             </BrowserRouter>
