@@ -119,6 +119,10 @@ h2 {
     color: #39393B !important;
 }
 
+.register_form textarea {
+    color: #39393B !important;
+}
+
 .register_form .valid_input {
     border: 1px solid red;
 }

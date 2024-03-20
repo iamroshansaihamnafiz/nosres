@@ -93,32 +93,42 @@ const ContactForm = () => {
                         </div>
 
                         <div className="col mt-1 md:mt-16 lg:mt-0">
-                            <h1 className="mb-1 pb-3 font-semibold text-[24px]">
+                            <h1 className="mb-1 pb-3 font-semibold text-[16px]">
                                 DO YOU NEED HELP?
                             </h1>
                             <hr/>
-                            <p className="mt-2">
+                            <h4 className="mt-2 text-[14px]">
                                 If so, please visit Nosres Support or select one of the following:
-                            </p>
+                            </h4>
                             <div className="mt-2 flex items-center gap-6">
-                                <img src={contactOneImg} className="w-14 h-14" alt="contactOneImg"/>
-                                <img src={contactTwoImg} className="w-14 h-12" alt="contactOneImg"/>
-                                <img src={contactThreeImg} className="mt-2 w-14 h-14" alt="contactOneImg"/>
-                                <img src={contactForeImg} className="mt-1 w-12 h-10" alt="contactOneImg"/>
-                                <img src={contactFiveImg} className="mt-3 w-12 h-10" alt="contactOneImg"/>
+                                <Link to='#'>
+                                    <img src={contactOneImg} className="w-14 h-14" alt="contactOneImg"/>
+                                </Link>
+                                <Link to='#'>
+                                    <img src={contactTwoImg} className="w-14 h-12" alt="contactOneImg"/>
+                                </Link>
+                                <Link to='#'>
+                                    <img src={contactThreeImg} className="mt-2 w-14 h-14" alt="contactOneImg"/>
+                                </Link>
+                                <Link to='#'>
+                                    <img src={contactForeImg} className="mt-1 w-12 h-10" alt="contactOneImg"/>
+                                </Link>
+                                <Link to='#'>
+                                    <img src={contactFiveImg} className="mt-3 w-12 h-10" alt="contactOneImg"/>
+                                </Link>
                             </div>
 
-                            <h1 className="mb-1 mt-6 pb-3 font-semibold text-[24px]">
+                            <h1 className="mb-1 mt-6 pb-3 font-semibold text-[16px]">
                                 CONTACT INFORMATION
                             </h1>
                             <hr/>
-                            <p className="mt-2">
+                            <h4 className="mt-2 text-[14px]">
                                 If you don’t see what you’re looking for, please feel free to contact us directly or
                                 fill out the form. And if you cannot complete the form successfully, please feel free to
                                 send us email, call us or mail us.
-                            </p>
+                            </h4>
 
-                            <h1 className="mb-1 flex gap-2 items-center mt-6 font-semibold text-[18px]">
+                            <h1 className="mb-1 flex gap-2 items-center mt-6 font-semibold text-[14px]">
                                 <img src={contactIconOne} className="w-8" alt="contactIcon"/>
                                 EMAIL US
                             </h1>
@@ -138,7 +148,7 @@ const ContactForm = () => {
                             </ul>
                             <hr/>
 
-                            <h1 className="mb-1 flex gap-2 items-center mt-6 font-semibold text-[18px]">
+                            <h1 className="mb-1 flex gap-2 items-center mt-6 font-semibold text-[14px]">
                                 <img src={contactIconTwo} className="w-8" alt="contactIcon"/>
                                 CALL US
                             </h1>
@@ -147,7 +157,7 @@ const ContactForm = () => {
                             </ul>
                             <hr/>
 
-                            <h1 className="mb-1 flex gap-2 items-center mt-6 font-semibold text-[18px]">
+                            <h1 className="mb-1 flex gap-2 items-center mt-6 font-semibold text-[14px]">
                                 <img src={contactIconThree} className="w-8" alt="contactIcon"/>
                                 MAIL US
                             </h1>
