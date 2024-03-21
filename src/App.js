@@ -23,6 +23,7 @@ const Investors = lazy(() => import('./Pages/SiteA/Investors'));
 const Contact = lazy(() => import('./Pages/SiteA/Contact'));
 const Marketplace = lazy(() => import('./Pages/SiteA/Marketplace'));
 const Pay = lazy(() => import('./Pages/SiteA/Pay'));
+const Logistic = lazy(() => import('./Pages/SiteA/Logistic'));
 
 function App() {
     return (
@@ -51,6 +52,7 @@ function App() {
                         <Route path="/sitea-about" element={<About/>}/>
                         <Route path="/sitea-marketplace" element={<Marketplace/>}/>
                         <Route path="/sitea-pay" element={<Pay/>}/>
+                        <Route path="/sitea-logistic" element={<Logistic/>}/>
                     </Routes>
                 </Suspense>
             </BrowserRouter>
