@@ -6,8 +6,10 @@ import Value from "../Components/AboutPage/Value/Value";
 import Team from "../Components/AboutPage/Team/Team";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
+import useTitle from "../Components/useTitle";
 
 function About(props) {
+    useTitle("About")
     return (
         <>
             <Header/>

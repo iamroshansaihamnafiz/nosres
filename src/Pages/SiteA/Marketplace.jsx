@@ -6,8 +6,10 @@ import MarketplaceAbout from "../../Components/SiteA/Marketplace/MarketplaceAbou
 import MarketplaceBenefit from "../../Components/SiteA/Marketplace/MarketplaceBenefit/MarketplaceBenefit";
 import MarketplaceNetwork from "../../Components/SiteA/Marketplace/MarketplaceNetwork/MarketplaceNetwork";
 import MarketplaceJoin from "../../Components/SiteA/Marketplace/MarketplaceJoin/MarketplaceJoin";
+import useTitle from "../../Components/useTitle";
 
 const Marketplace = () => {
+    useTitle("Marketplace")
     return (
         <>
             <Header/>

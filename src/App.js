@@ -1,7 +1,6 @@
 import React, {Suspense, lazy} from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {ToastContainer} from 'react-toastify';
-import {Helmet} from 'react-helmet';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Home = lazy(() => import('./Pages/Home'));
@@ -23,6 +22,7 @@ const Business = lazy(() => import('./Pages/Business'));
 const Investors = lazy(() => import('./Pages/SiteA/Investors'));
 const Contact = lazy(() => import('./Pages/SiteA/Contact'));
 const Marketplace = lazy(() => import('./Pages/SiteA/Marketplace'));
+const Pay = lazy(() => import('./Pages/SiteA/Pay'));
 
 function App() {
     return (
@@ -46,47 +46,11 @@ function App() {
                         <Route path="/support-process" element={<SupportProcess/>}/>
                         <Route path="/business" element={<Business/>}/>
                         {/* Site A */}
-                        <Route path="/sitea-investors"
-                               element={
-                                   <>
-                                       <Helmet>
-                                           <title>Nosres - Investors</title>
-                                       </Helmet>
-                                       <Investors/>
-                                   </>
-                               }
-                        />
-                        <Route path="/sitea-contact"
-                               element={
-                                   <>
-                                       <Helmet>
-                                           <title>Nosres - Contact</title>
-                                       </Helmet>
-                                       <Contact/>
-                                   </>
-                               }
-                        />
-
-                        <Route path="/sitea-about"
-                               element={
-                                   <>
-                                       <Helmet>
-                                           <title>Nosres - About</title>
-                                       </Helmet>
-                                       <About/>
-                                   </>
-                               }
-                        />
-                        <Route path="/sitea-marketplace"
-                               element={
-                                   <>
-                                       <Helmet>
-                                           <title>Nosres - Marketplace</title>
-                                       </Helmet>
-                                       <Marketplace/>
-                                   </>
-                               }
-                        />
+                        <Route path="/sitea-investors" element={<Investors/>}/>
+                        <Route path="/sitea-contact" element={<Contact/>}/>
+                        <Route path="/sitea-about" element={<About/>}/>
+                        <Route path="/sitea-marketplace" element={<Marketplace/>}/>
+                        <Route path="/sitea-pay" element={<Pay/>}/>
                     </Routes>
                 </Suspense>
             </BrowserRouter>
