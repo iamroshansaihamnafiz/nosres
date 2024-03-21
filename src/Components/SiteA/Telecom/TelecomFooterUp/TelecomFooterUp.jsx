@@ -1,21 +1,20 @@
 import React from 'react';
-import locationImg from '../../../../assets/images/sitea/location.svg';
-import supportImg from '../../../../assets/images/sitea/customer-support.svg';
+import locationImg from "../../../../assets/images/sitea/location.svg";
+import supportImg from "../../../../assets/images/sitea/customer-support.svg";
 
-const LogisticFooterUp = () => {
+const TelecomFooterUp = () => {
     return (
         <>
-            <section id="logistic-footer-up-section">
-                <div className="container pt-24">
+            <section id="telecom-footer-up-section">
+                <div className="container pt-16">
                     <div className="grid w-full lg:w-[800px] mx-auto grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="col">
                             <div className="box rounded flex items-center gap-6 border p-4">
                                 <img src={locationImg} className="w-10" alt="locationImg"/>
                                 <div className="r">
-                                    <h4 className="text-[16px]">Find a Location</h4>
+                                    <h4 className="text-[16px]">Find a Retailer</h4>
                                     <p className="mt-1">
-                                        Find the closest the distributed warehousing
-                                        facilities and drop-off locations to you.
+                                        Find the nearest retailer<br/> to you.
                                     </p>
                                 </div>
                             </div>
@@ -26,7 +25,7 @@ const LogisticFooterUp = () => {
                                 <div className="r">
                                     <h4 className="text-[16px]">Customer Support</h4>
                                     <p className="mt-1">
-                                        Reap the benefits of our incredible 24/7
+                                        Reap the benefits of our incredible 24/7 <br/>
                                         customer service support.
                                     </p>
                                 </div>
@@ -39,4 +38,4 @@ const LogisticFooterUp = () => {
     );
 };
 
-export default LogisticFooterUp;
+export default TelecomFooterUp;
