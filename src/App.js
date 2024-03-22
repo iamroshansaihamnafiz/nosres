@@ -25,6 +25,8 @@ const Marketplace = lazy(() => import('./Pages/SiteA/Marketplace'));
 const Pay = lazy(() => import('./Pages/SiteA/Pay'));
 const Logistic = lazy(() => import('./Pages/SiteA/Logistic'));
 const Telecom = lazy(() => import('./Pages/SiteA/Telecom'));
+const Company = lazy(() => import('./Pages/SiteA/Company'));
+const NosresInvite = lazy(() => import('./Pages/SiteA/NosresInvite'));
 
 function App() {
     return (
@@ -55,6 +57,8 @@ function App() {
                         <Route path="/sitea-pay" element={<Pay/>}/>
                         <Route path="/sitea-logistic" element={<Logistic/>}/>
                         <Route path="/sitea-telecom" element={<Telecom/>}/>
+                        <Route path="/sitea-company" element={<Company/>}/>
+                        <Route path="/sitea-nosresinvite" element={<NosresInvite/>}/>
                     </Routes>
                 </Suspense>
             </BrowserRouter>
