@@ -8,7 +8,7 @@ import CompanyPatner from "../../Components/SiteA/Company/CompanyPatner/CompanyP
 import CompanyFooterUp from "../../Components/SiteA/Company/CompanyFooterUp/CompanyFooterUp";
 
 const Company = () => {
-    useTitle("Become A Company")
+    useTitle("partners")
     return (
         <>
             <Header/>

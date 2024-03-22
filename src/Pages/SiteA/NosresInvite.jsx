@@ -5,8 +5,10 @@ import NosresInviteHero from "../../Components/SiteA/NosresInvite/NosresInviteHe
 import InviteWork from "../../Components/SiteA/NosresInvite/InviteWork/InviteWork";
 import InviteStatus from "../../Components/SiteA/NosresInvite/InviteStatus/InviteStatus";
 import InviteFooterUp from "../../Components/SiteA/NosresInvite/InviteFooterUp/InviteFooterUp";
+import useTitle from "../../Components/useTitle";
 
 const NosresInvite = () => {
+    useTitle("Invite")
     return (
         <>
             <Header/>
