@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {BsExclamationTriangleFill} from "react-icons/bs";
 import {CiCircleChevRight, CiCircleChevLeft} from "react-icons/ci";
 import {GoDotFill} from "react-icons/go";
@@ -107,11 +107,39 @@ const ProposalForm = () => {
     const handleDraftButtonClick = () => {
         notifyDraft();
     };
+
+    // ------------------ Country Select ------------------//
+    const [selectedOptionCountry, setSelectedOptionCountry] = useState('');
+    const [isOptionsVisibleCountry, setIsOptionsVisibleCountry] = useState(false);
+
+    const selectBoxRefCountry = useRef(null);
+
+    const handleOptionClickCountry = (option) => {
+        setSelectedOptionCountry(option);
+        toggleOptionsVisibilityCountry();
+    };
+
+    const toggleOptionsVisibilityCountry = () => {
+        setIsOptionsVisibleCountry(!isOptionsVisibleCountry);
+    };
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (selectBoxRefCountry.current && !selectBoxRefCountry.current.contains(event.target)) {
+                setIsOptionsVisibleCountry(false);
+            }
+        };
+
+        document.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
     return (
         <>
             <section id="proposal-form-section">
                 <div className="container pt-16">
-                    <ol className="items-center justify-center w-full space-y-4 md:flex md:space-x-3 md:space-y-0 rtl:space-x-reverse">
+                    <ol className="items-center justify-start w-full space-y-4 md:flex md:space-x-3 md:space-y-0 rtl:space-x-reverse">
                         <li className="flex items-center gap-1">
                             {currentStep === 1 ? (
                                 <BsExclamationTriangleFill size={15} className="text-red-500"/>
@@ -267,13 +295,32 @@ const ProposalForm = () => {
                                             <h4 className="text-[14px]">
                                                 Country/Region <span className="text-red-600">*</span>
                                             </h4>
-                                            <input
-                                                className="mt-1 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"
-                                                type="text"
-                                                value={formData[currentStep]?.region || ''}
-                                                onChange={(e) => handleInputChange(currentStep, 'region', e.target.value)}
-                                                placeholder="Enter your country or region"
-                                            />
+                                            <div className="select-box mt-2" ref={selectBoxRefCountry}>
+                                                <div className="country-select-wrapper">
+                                                    <div className="country-select-option flex"
+                                                         onClick={toggleOptionsVisibilityCountry}>
+                                                        <input
+                                                            type="text"
+                                                            placeholder="Select"
+                                                            readOnly
+                                                            value={selectedOptionCountry}
+                                                            className="focus:ring focus:ring-transparent focus:outline-none focus:border-gray-300"
+                                                        />
+                                                    </div>
+                                                    {isOptionsVisibleCountry && (
+                                                        <div className="country_content">
+                                                            <ul className="options">
+                                                                <li onClick={() => handleOptionClickCountry("United States")}>United
+                                                                    States
+                                                                </li>
+                                                                <li onClick={() => handleOptionClickCountry("India")}>India</li>
+                                                                <li onClick={() => handleOptionClickCountry("Bangladesh")}>Bangladesh</li>
+                                                                <li onClick={() => handleOptionClickCountry("Pakistan")}>Pakistan</li>
+                                                            </ul>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
