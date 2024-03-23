@@ -1,7 +1,7 @@
 import React from 'react';
-import howImg1 from "../../../../assets/images/sitea/invite-1.png";
-import howImg2 from "../../../../assets/images/sitea/invite-2.png";
-import howImg3 from "../../../../assets/images/sitea/invite-3.png";
+import howImg1 from "../../../../assets/images/sitea/invite-1.svg";
+import howImg2 from "../../../../assets/images/sitea/invite-2.svg";
+import howImg3 from "../../../../assets/images/sitea/invite-3.svg";
 
 const InviteWork = () => {
     return (

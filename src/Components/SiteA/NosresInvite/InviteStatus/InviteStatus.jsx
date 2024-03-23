@@ -1,6 +1,6 @@
 import React from 'react';
 import clockImg from "../../../../assets/images/sitea/clock.png";
-import moneyImg from "../../../../assets/images/sitea/invite-3.png";
+import moneyImg from "../../../../assets/images/sitea/invite-3.svg";
 import {Link} from "react-router-dom";
 
 const InviteStatus = () => {

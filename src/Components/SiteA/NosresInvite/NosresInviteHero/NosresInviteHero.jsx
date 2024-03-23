@@ -1,11 +1,11 @@
 import React from 'react';
-import heroImage from "../../../../assets/images/sitea/invite-banner.png";
+import heroImage from "../../../../assets/images/sitea/invite-banner.jpeg";
 import {Link} from "react-router-dom";
 
 const NosresInviteHero = () => {
     return (
         <>
-            <section id="banner-section" className="bg-cover bg-no-repeat bg-center h-[500px] py-[10rem]"
+            <section id="banner-section" className="bg-cover bg-no-repeat bg-center h-[500px] pt-[12rem] pb-[8rem]"
                      style={{backgroundImage: `url(${heroImage})`}}>
                 <div className="container text-center">
                     <h1 className="text-2xl md:text-[38px] leading-0 md:leading-10 text-white font-bold md:font-medium mb-4">

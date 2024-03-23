@@ -8,7 +8,7 @@ import InviteFooterUp from "../../Components/SiteA/NosresInvite/InviteFooterUp/I
 import useTitle from "../../Components/useTitle";
 
 const NosresInvite = () => {
-    useTitle("Invite")
+    useTitle("Referral")
     return (
         <>
             <Header/>
