@@ -5,7 +5,7 @@ const AffiliateCommision = () => {
     return (
         <>
             <section id="affiliate-commision-section" className="bg-[#F8F9FA] mt-10">
-                <div className="container pt-12">
+                <div className="container py-12">
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
                         <div className="col">
                             <h1 className="font-semibold text-[24px]">
