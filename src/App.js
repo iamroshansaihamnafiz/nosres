@@ -29,6 +29,7 @@ const Company = lazy(() => import('./Pages/SiteA/Company'));
 const NosresInvite = lazy(() => import('./Pages/SiteA/NosresInvite'));
 const Affiliat = lazy(() => import('./Pages/SiteA/Affiliat'));
 const Verification = lazy(() => import('./Pages/SiteA/Verification'));
+const Proposal = lazy(() => import('./Pages/SiteA/Proposal'));
 
 function App() {
     return (
@@ -63,6 +64,7 @@ function App() {
                         <Route path="/sitea-nosresinvite" element={<NosresInvite/>}/>
                         <Route path="/sitea-affiliate" element={<Affiliat/>}/>
                         <Route path="/sitea-verification" element={<Verification/>}/>
+                        <Route path="/sitea-proposal" element={<Proposal/>}/>
                     </Routes>
                 </Suspense>
             </BrowserRouter>

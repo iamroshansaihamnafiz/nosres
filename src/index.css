@@ -128,8 +128,23 @@ h2 {
 }
 
 .register_form input:focus {
-    /*border: 0.5px solid #4D7FB8;*/
     outline: none !important;
+}
+
+.submit_form input:focus {
+    outline: none !important;
+}
+
+.submit_form input {
+    background-color: rgba(250, 250, 250, 0.73);
+    color: black;
+}
+
+.submit_form textarea {
+    color: black;
+    outline: none !important;
+    box-shadow: none !important;
+    background: rgba(250, 250, 250, 0.73);
 }
 
 .register_form input[type=email]:focus {
