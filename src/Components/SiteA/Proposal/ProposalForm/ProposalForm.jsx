@@ -111,7 +111,7 @@ const ProposalForm = () => {
         <>
             <section id="proposal-form-section">
                 <div className="container pt-16">
-                    <ol className="items-center justify-start w-full space-y-4 sm:flex sm:space-x-3 sm:space-y-0 rtl:space-x-reverse">
+                    <ol className="items-center justify-center w-full space-y-4 md:flex md:space-x-3 md:space-y-0 rtl:space-x-reverse">
                         <li className="flex items-center gap-1">
                             {currentStep === 1 ? (
                                 <BsExclamationTriangleFill size={15} className="text-red-500"/>
@@ -186,8 +186,8 @@ const ProposalForm = () => {
                         </li>
                     </ol>
 
-                    <div className="grid mt-8">
-                        <div className="col">
+                    <div className="w-full flex flex-col items-center justify-center">
+                        <div className="mt-8 col w-full lg:w-[700px]">
 
                             {/* Personal info form */}
                             {currentStep === 1 && (
@@ -211,18 +211,6 @@ const ProposalForm = () => {
                                         </div>
                                         <div className="input-box w-full">
                                             <h4 className="text-[14px]">
-                                                Middle Name (optional)
-                                            </h4>
-                                            <input
-                                                className="mt-1 rounded w-full py-1 px-3 focus:ring focus:ring-transparent text-[#ABABAB] text-[12px] focus:outline-none"
-                                                type="text"
-                                                value={formData[currentStep]?.middleName || ''}
-                                                onChange={(e) => handleInputChange(currentStep, 'middleName', e.target.value)}
-                                                placeholder="Enter your middle name"
-                                            />
-                                        </div>
-                                        <div className="input-box w-full">
-                                            <h4 className="text-[14px]">
                                                 Last Name <span className="text-red-600">*</span>
                                             </h4>
                                             <input
@@ -235,7 +223,7 @@ const ProposalForm = () => {
                                         </div>
                                     </div>
 
-                                    <div className="block sm:flex space-y-3 sm:space-y-0 items-center gap-4 pt-6">
+                                    <div className="block sm:flex space-y-3 sm:space-y-0 items-center gap-4 pt-4">
                                         <div className="input-box w-full">
                                             <h4 className="text-[14px]">
                                                 City
@@ -260,6 +248,9 @@ const ProposalForm = () => {
                                                 placeholder="Enter your state"
                                             />
                                         </div>
+                                    </div>
+
+                                    <div className="block sm:flex space-y-3 sm:space-y-0 items-center gap-4 pt-4">
                                         <div className="input-box w-full">
                                             <h4 className="text-[14px]">
                                                 ZIP/Postal Code
@@ -272,9 +263,6 @@ const ProposalForm = () => {
                                                 placeholder="Enter your postal code"
                                             />
                                         </div>
-                                    </div>
-
-                                    <div className="block sm:flex space-y-3 sm:space-y-0 items-center gap-4 pt-3">
                                         <div className="input-box w-full">
                                             <h4 className="text-[14px]">
                                                 Country/Region <span className="text-red-600">*</span>
@@ -287,6 +275,9 @@ const ProposalForm = () => {
                                                 placeholder="Enter your country or region"
                                             />
                                         </div>
+                                    </div>
+
+                                    <div className="block sm:flex space-y-3 sm:space-y-0 items-center gap-4 pt-4">
                                         <div className="input-box w-full">
                                             <h4 className="text-[14px]">
                                                 Email Address <span className="text-red-600">*</span>
@@ -299,7 +290,6 @@ const ProposalForm = () => {
                                                 placeholder="jondoe@mail.com"
                                             />
                                         </div>
-
                                         <div className="input-box w-full">
                                             <h4 className="text-[14px]">
                                                 Phone Number <span className="text-red-600">*</span>
@@ -959,7 +949,6 @@ const ProposalForm = () => {
                                     )}
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
