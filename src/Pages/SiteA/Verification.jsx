@@ -6,7 +6,7 @@ import VerificationIntership from "../../Components/SiteA/Verification/Verificat
 import useTitle from "../../Components/useTitle";
 
 const Verification = () => {
-    useTitle("Verification")
+    useTitle("Certificate Verification")
     return (
         <>
             <Header/>

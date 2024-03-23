@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImage from "../../../../assets/images/sitea/alliliat-banner.png";
+import heroImage from "../../../../assets/images/sitea/alliliat-banner.jpeg";
 import {Link} from "react-router-dom";
 
 const AffiliatHero = () => {

@@ -8,7 +8,7 @@ import AffiliateCommision from "../../Components/SiteA/Affiliat/AffiliateCommisi
 import AffiliateFooterUp from "../../Components/SiteA/Affiliat/AffiliateFooterUp/AffiliateFooterUp";
 
 const Affiliat = () => {
-    useTitle("Become A Affiliate")
+    useTitle("Affiliates")
     return (
         <>
             <Header/>
